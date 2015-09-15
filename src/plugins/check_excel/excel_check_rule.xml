@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<check_list src_directory="E:\codes\projects\tools\src\plugins\check_excel">
+	<repeat_list>
+		<repeat src_excel_name="1.xlsx" src_excel_sheet_name="Sheet1" src_excel_sheet_col="id"/>
+	</repeat_list>
+	<rule_list>
+		<rule src_excel_name="1.xlsx" src_excel_sheet_name="Sheet1" src_excel_sheet_col="id" des_excel_name="衣服_属性表.xlsx" des_excel_sheet_name="Sheet1" des_excel_sheet_col="id"/>
+	</rule_list>
+</check_list>
