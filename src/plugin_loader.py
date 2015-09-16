@@ -1,5 +1,3 @@
-__author__ = 'zouhao'
-
 import os
 import sys
 import traceback
