@@ -1,13 +1,13 @@
 import os
-from common import common
+import sys
+from PyQt4 import QtCore, QtGui
 
-def convert_dic_to_lua(dic):
-	lua = {}
-	return lua
+def main():
+	app = QtGui.QApplication(sys.argv)
+	btn = QtGui.QPushButton("Quit")
+	btn.show()
+	sys.exit(app.exec_())
 
+if __name__ == '__main__':
+	main()
 
-def convert_excel_to_lua(filename):
-	excel = common.ToolsUtil.load_excel(filename)
-	dic = common.ToolsUtil.convert_excel_to_dic(excel)
-	lua = convert_dic_to_lua(dic)
-	# lua = convert_dic_to_lua(dic)
