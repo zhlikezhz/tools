@@ -31,6 +31,7 @@ class InputDialog(gui.QDialog):
 
 
 
+
 def main():
 	app = gui.QApplication(sys.argv)
 	dialog = InputDialog()
