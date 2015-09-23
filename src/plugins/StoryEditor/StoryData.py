@@ -3,229 +3,110 @@ import os
 import sys
 from PyQt4 import QtGui, QtCore
 
-class StoryData(object):
-    def __init__(self, filename = ""):
-        self.storyData = {
-            'chapter_1': [
-                { 
-                'type': 'dialog',
-                'dialog': '你好么！',
-                'sound': '1.mp3',
-                'branch': [],
-                },
+# class StoryData(object):
+#     def __init__(self, filename = ""):
+#         self.storyData = {
+#             'chapter_1': [
+#                 { 
+#                 'type': 'dialog',
+#                 'dialog': '你好么！',
+#                 'sound': '1.mp3',
+#                 'branch': [],
+#                 },
 
-                {
-                'type': 'choose',
-                'dialog': '...........',
-                'sound': '4.mp3',
-                'branch': 
-                        [
-                            {
-                            'type': 'dialog',
-                            'dialog': '我不好！',
-                            'sound': '2.mp3',
-                            'branch': [],
-                            },
-                            {
-                            'type': 'dialog',
-                            'dialog': "我很好！",
-                            'sound': "3.mp3",
-                            'branch': [],
-                            },
-                        ],
-                },
-            ],
-            'chapter_2': [
-                { 
-                'type': 'dialog',
-                'dialog': '你好么！',
-                'sound': '1.mp3',
-                'branch': [],
-                },
+#                 {
+#                 'type': 'choose',
+#                 'dialog': '...........',
+#                 'sound': '4.mp3',
+#                 'branch': 
+#                         [
+#                             {
+#                             'type': 'dialog',
+#                             'dialog': '我不好！',
+#                             'sound': '2.mp3',
+#                             'branch': [],
+#                             },
+#                             {
+#                             'type': 'dialog',
+#                             'dialog': "我很好！",
+#                             'sound': "3.mp3",
+#                             'branch': [],
+#                             },
+#                         ],
+#                 },
+#             ],
+#             'chapter_2': [
+#                 { 
+#                 'type': 'dialog',
+#                 'dialog': '你好么！',
+#                 'sound': '1.mp3',
+#                 'branch': [],
+#                 },
 
-                {
-                'type': 'choose',
-                'dialog': '...........',
-                'sound': '4.mp3',
-                'branch': 
-                        [
-                            {
-                            'type': 'dialog',
-                            'dialog': '我不好！',
-                            'sound': '2.mp3',
-                            'branch': [],
-                            },
-                            {
-                            'type': 'dialog',
-                            'dialog': "我很好！",
-                            'sound': "3.mp3",
-                            'branch': [],
-                            },
-                        ],
-                },
-            ],
-        }
+#                 {
+#                 'type': 'choose',
+#                 'dialog': '...........',
+#                 'sound': '4.mp3',
+#                 'branch': 
+#                         [
+#                             {
+#                             'type': 'dialog',
+#                             'dialog': '我不好！',
+#                             'sound': '2.mp3',
+#                             'branch': [],
+#                             },
+#                             {
+#                             'type': 'dialog',
+#                             'dialog': "我很好！",
+#                             'sound': "3.mp3",
+#                             'branch': [],
+#                             },
+#                         ],
+#                 },
+#             ],
+#         }
 
-    def getChapterData(self, chapter):
-        if(self.storyData[chapter] == None):
-            return None
+    # def getChapterData(self, chapter):
+    #     if(self.storyData[chapter] == None):
+    #         return None
 
-        stack = []
-        chapterData = []
-        for item in self.storyData[chapter]:
-            chapterItem = ChapterItem(item, None)
-            chapterData.append(chapterItem)
-            stack.append(chapterItem)
+    #     stack = []
+    #     chapterData = []
+    #     for item in self.storyData[chapter]:
+    #         chapterItem = ChapterItem(item, None)
+    #         chapterData.append(chapterItem)
+    #         stack.append(chapterItem)
 
-        while(len(stack) > 0):
-            parentItem = stack.pop()
-            for child in parentItem.itemData['branch']:
-                chapterItem = ChapterItem(child, parentItem)
-                parentItem.appendChild(chapterItem)
-                stack.append(chapterItem)
+    #     while(len(stack) > 0):
+    #         parentItem = stack.pop()
+    #         for child in parentItem.itemData['branch']:
+    #             chapterItem = ChapterItem(child, parentItem)
+    #             parentItem.appendChild(chapterItem)
+    #             stack.append(chapterItem)
 
-        return chapterData
-
-
-    def getStoryData(self):
-        storyData = []
-        for item in self.storyData.keys():
-            storyItem = StoryItem(item)
-            storyData.append(storyItem)
-        return storyData
-
-# class StoryItem(object):
-#     def __init__(self, data, parent = None):
-#         self.parentItem = parent
-#         self.itemData = data
-#         self.childrenItem = []
-
-#     def appendChild(self, child):
-#         self.childrenItem.append(child)
-
-#     def child(self, row):
-#         return self.childrenItem[row]
-
-#     def childCount(self):
-#         return len(self.childrenItem)
-
-#     def columnCount(self):
-#         return 1
-
-#     def data(self, column):
-#         val = None
-#         if(column == 0):
-#             val = QtCore.QString.fromUtf8(self.itemData)
-#         return val
-
-#     def parent(self):
-#         return self.parentItem
-
-#     def row(self):
-#         return self.parentItem.childrenItem.index(self)
-
-#     def setData(self, column, value):
-#         if column < 0 or column >= len(self.itemData):
-#             return False
-
-#         self.itemData = value.toString()
-
-#         return True
-
-#     def insertChildren(self, position, count, columns):
-#         if position < 0 or position > len(self.childrenItem):
-#             return False
-
-#         for row in range(count):
-#             data = 'No data'
-#             item = StoryItem(data, self)
-#             self.childrenItem.insert(position, item)
-
-#         return True
-
-#     def removeChildren(self, position, count):
-#         if position < 0 or position + count > len(self.childrenItem):
-#             return False
-
-#         for row in range(count):
-#             self.childrenItem.pop(position)
-
-#         return True
+    #     return chapterData
 
 
-
-# class ChapterItem(object):
-#     def __init__(self, data, parent = None):
-#         self.parentItem = parent
-#         self.itemData = data
-#         self.childrenItem = []
-
-#     def appendChild(self, child):
-#         self.childrenItem.append(child)
-
-#     def child(self, row):
-#         return self.childrenItem[row]
-
-#     def childCount(self):
-#         return len(self.childrenItem)
-
-#     def columnCount(self):
-#         return 2
-
-#     def data(self, column):
-#         val = None
-#         if(column == 0):
-#             val = QtCore.QString.fromUtf8(self.itemData['type'])
-#         elif(column == 1):
-#             val = QtCore.QString.fromUtf8(self.itemData['dialog'])
-#         return val
-
-#     def parent(self):
-#         return self.parentItem
-
-#     def row(self):
-#         return self.parentItem.childrenItem.index(self)
-
-
-#     def setData(self, column, value):
-#         if column < 0 or column >= len(self.itemData):
-#             return False
-
-#         if(column == 0):
-#             self.itemData['type'] = value.toString()
-#         elif(column == 1):
-#             self.itemData['dialog'] = value.toString()
-
-#         return True
-
-#     def insertChildren(self, position, count, columns):
-#         if position < 0 or position > len(self.childrenItem):
-#             return False
-
-#         for row in range(count):
-#             data = 'No data'
-#             item = StoryItem(data, self)
-#             self.childrenItem.insert(position, item)
-
-#         return True
-
-#     def removeChildren(self, position, count):
-#         if position < 0 or position + count > len(self.childrenItem):
-#             return False
-
-#         for row in range(count):
-#             self.childrenItem.pop(position)
-
-#         return True
-
+    # def getStoryData(self):
+    #     storyData = []
+    #     for item in self.storyData.keys():
+    #         storyItem = StoryItem(item)
+    #         storyData.append(storyItem)
+    #     return storyData
 
 class TreeItem(object):
-    def __init__(self, data, parent=None):
+    def __init__(self):
+        pass
+
+    def setParent(self, parent):
         self.parentItem = parent
-        self.itemData = data
-        self.childItems = []
+
+    def getParent(self):
+        return self.parentItem
 
     def child(self, row):
+        if(row >= len(self.childItems)):
+            return None
         return self.childItems[row]
 
     def childCount(self):
@@ -306,15 +187,18 @@ class TreeItem(object):
         return True
 
 class ChapterItem(TreeItem):
-    def __init__(self, data, parent=None):
-        super(ChapterItem, self).__init__(data, parent)
+    def __init__(self, itemData, children, parent = None):
+        super(ChapterItem, self).__init__()
+        self.parentItem = parent
+        self.itemData = itemData
+        self.childItems = children
 
     def data(self, column):
         val = None
         if(column == 0):
-            val = QtCore.QString.fromUtf8(self.itemData['type'])
+            val = QtCore.QString.fromUtf8(self.itemData['desc'])
         elif(column == 1):
-            val = QtCore.QString.fromUtf8(self.itemData['dialog'])
+            val = QtCore.QString.fromUtf8(self.itemData['sentence'])
         return val 
 
     def setData(self, column, value):
@@ -322,9 +206,20 @@ class ChapterItem(TreeItem):
             return False
 
         if(column == 0):
-            self.itemData['type'] = value.toString()
+            self.itemData['desc'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
         elif(column == 1):
-            self.itemData['dialog'] = value.toString()
+            self.itemData['sentence'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
+
+        return True
+
+    def insertChildren(self, position, count, columns):
+        if position < 0 or position > len(self.childItems):
+            return False
+
+        for row in range(count):
+            data = {'desc': 'default', 'sentence': 'default'}
+            item = ChapterItem(data, [], self)
+            self.childItems.insert(position, item)
 
         return True
 
@@ -332,8 +227,13 @@ class ChapterItem(TreeItem):
         return 2
 
 class StoryItem(TreeItem):
-    def __init__(self, data, parent=None):
-        super(StoryItem, self).__init__(data, parent)
+    storyData = []
+
+    def __init__(self, itemData, children, parent = None):
+        super(StoryItem, self).__init__()
+        self.parentItem = parent
+        self.itemData = itemData
+        self.childItems = children
 
     def data(self, column):
         val = None
@@ -346,9 +246,18 @@ class StoryItem(TreeItem):
             return False
 
         if(column == 0):
-            self.itemData = value.toString()
+            self.itemData = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
 
         return True
+
+    def insertChildren(self, position, count, columns):
+        if position < 0 or position > len(self.childItems):
+            return False
+
+        for row in range(count):
+            data = "default"
+            item = StoryItem(data, [], self)
+            self.childItems.insert(position, item)
 
     def columnCount(self):
         return 1
@@ -358,11 +267,11 @@ class StoryItem(TreeItem):
 
 
 class TreeModel(QtCore.QAbstractItemModel):
-    def __init__(self, data, rootItem, parent=None):
+    def __init__(self, rootItem, parent=None):
         super(TreeModel, self).__init__(parent)
-
         self.rootItem = rootItem
-        self.setModelData(data, self.rootItem)
+        # self.rootItem = []
+        # self.setModelData(data, self.rootItem)
 
     def columnCount(self, parent=QtCore.QModelIndex()):
         return self.rootItem.columnCount()
@@ -482,20 +391,18 @@ class TreeModel(QtCore.QAbstractItemModel):
 
         return result
 
-    def setModelData(self, data, parent):
-        for item in data:
-            item.parentItem = parent
-            parent.appendChild(item)
+    # def setModelData(self, data, parent):
+    #     for item in data:
+    #         item.parentItem = parent
+    #         parent.appendChild(item)
 
 class ChapterModel(TreeModel):
-    def __init__(self, data, parent=None):
-        rootItem = ChapterItem({'type': "类型", 'dialog': "语句"})
-        super(ChapterModel, self).__init__(data, rootItem, parent)
+    def __init__(self, rootItem, parent=None):
+        super(ChapterModel, self).__init__(rootItem, parent)
 
 
 class StoryModel(TreeModel):
-    def __init__(self, data, parent=None):
-        rootItem = StoryItem('剧情')
-        super(StoryModel, self).__init__(data, rootItem, parent)
+    def __init__(self, rootItem, parent=None):
+        super(StoryModel, self).__init__(rootItem, parent)
 
 ######################################################################################################################
