@@ -19,6 +19,24 @@ except AttributeError:
 	def _translate(context, text, disambig):
 		return QtGui.QApplication.translate(context, text, disambig)
 
+def getTypelist():
+	typeList = [
+		{'val': '对话', 'key': 'dialog'},
+		{'val': '分支', 'key': 'branch'},
+		{'val': '分支选择', 'key': 'choose'},
+	]
+	return typeList
+
+def typeMapping(types):
+	val = "类型"
+	if(types == 'choose'):
+		val = '分支选择'
+	elif(types == 'dialog'):
+		val = '对话'
+	elif(types == 'branch'):
+		val = '分支'
+	return val
+
 
 class Story(object):
 	mCurrStoryFileName = ''
@@ -32,13 +50,18 @@ class Story(object):
 	def saveToLua(self, filename):
 		fd = open(filename, 'w')
 
+		(path,name)=os.path.split(filename)
+		name = name.split('.')[0]
+		print name
+
 		luaList = []
-		luaList.append("module(\"order_info_data\", package.seeall)\n\n")
+		luaList.append("module(\"%s\", package.seeall)\n\n" % (name))
 		luaList.append("gdStory = {\n")
+
 
 		for card in self.story:
 			for story in card.childItems:
-				tmp = ('\t\"%s_%s\" = {\n') % (card.itemData, story.itemData)
+				tmp = ('\t\"%s_%s\" = {\n') % (card.itemData['desc'], story.itemData['desc'])
 				luaList.append(tmp)
 				cnt = 1
 				for ele in story.storyData:
@@ -49,22 +72,16 @@ class Story(object):
 				luaList.append("\t}\n")
 		luaList.append("}\n")
 		luaStr = ''.join(luaList)
-		print(luaStr)
+		# print(luaStr)
 		fd.write(luaStr)
 		fd.close( )
 
 	def decodeSaveToLua(self, ele, cntTab):
-		types = "no"
+		types = ele.itemData['type']
 		sentence = ele.itemData['sentence']
-		if(ele.itemData['desc'] == _fromUtf8('分支选择')):
-			types = 'choose'
-		elif(ele.itemData['desc'] == _fromUtf8('分支')):
-			types = 'branch'
-		elif(ele.itemData['desc'] == _fromUtf8('对话')):
-			types = 'dialog'
 
 		luaList = []
-		if(ele.itemData['desc'] == _fromUtf8('分支选择')):
+		if(ele.itemData['type'] == 'choose'):
 			luaList.append(cntTab * '\t')
 			luaList.append('\"type\" = \"%s\"\n' % types)
 			luaList.append(cntTab * '\t')
@@ -97,11 +114,11 @@ class Story(object):
 		for card in self.story:
 			print(card.itemData)
 			cardNode = xml.SubElement(root, 'card')
-			cardNode.attrib = {'desc': card.itemData}
+			cardNode.attrib = {'desc': card.itemData['desc']}
 			for story in card.childItems:
 				print(story.itemData)
 				storyNode = xml.SubElement(cardNode, 'story')
-				storyNode.attrib =  {'desc': story.itemData}
+				storyNode.attrib =  {'desc': story.itemData['desc']}
 				for ele in story.storyData:
 					self.decodeElement(storyNode, ele)
 				# cardNode.append(storyNode)
@@ -112,38 +129,35 @@ class Story(object):
 	def decodeElement(self, parent, ele):
 		cardNode = xml.SubElement(parent, 'element')
 		dic = {}
+		dic['type'] = ele.itemData['type']
 		dic['sentence'] = ele.itemData['sentence']
-		if(ele.itemData['desc'] == _fromUtf8('分支选择')):
-			dic['type'] = 'choose'
+		if(ele.itemData['type'] == 'choose'):
 			for val in ele.childItems:
 				self.decodeElement(cardNode, val)
-		elif(ele.itemData['desc'] == _fromUtf8('分支')):
-			dic['type'] = 'branch'
-		elif(ele.itemData['desc'] == _fromUtf8('对话')):
-			dic['type'] = 'dialog'
-		else:
-			dic['type'] = "no"
+
 		cardNode.attrib = dic
 		return cardNode
 
+	def newStory(self, filename):
+		self.mCurrStoryFileName = filename
+		self.story = []
+
 
 	def loadStory(self, filename):
-		print(filename)
-
 		self.story = []
 		self.mCurrStoryFileName = filename
 
-		# dom = xml.dom.minidom.parse(filename)
-		# root = dom.documentElement
 		root = xml.parse(filename).getroot()
 		for cardXml in root.findall('card'):
 			card = []
 			cardDesc = cardXml.attrib['desc']
-			cardItem = StoryItem(cardDesc, card)
+			data = {'desc': cardDesc, 'type': 'card'}
+			cardItem = StoryItem(data, card)
 			for storyXml in cardXml.findall('story'):
 				story = []
 				storyDesc = storyXml.attrib['desc']
-				storyItem = StoryItem(storyDesc, [], cardItem)
+				data = {'desc': storyDesc, 'type': 'story'}
+				storyItem = StoryItem(data, [], cardItem)
 				storyItem.storyData = story
 				for eleXml in storyXml.findall('element'):
 					story.append(self.encodeElement(eleXml))
@@ -157,42 +171,41 @@ class Story(object):
 
 		data['type'] = eleXml.attrib['type']
 		data['sentence'] = eleXml.attrib['sentence']
-
 		if(data['type'] == 'choose'):
-			data['desc'] = _fromUtf8('分支选择')
 			for eXml in eleXml.findall('element'):
 				branch.append(self.encodeElement(eXml, parentItem))
-		elif(data['type'] == "dialog"):
-			data['desc'] = _fromUtf8('对话')
-		elif(data['type'] == "branch"):
-			data['desc'] = _fromUtf8('分支')
+
 		return parentItem
 
 	def getStory(self, card, story):
 		for item1 in self.story:
-			if(item1.itemData == card):
+			if(item1.itemData['desc'] == card):
 				for item2 in item1.childItems:
-					if(item2.itemData == story):
+					if(item2.itemData['desc'] == story):
 						return item2.storyData
 		return None
 
 	def getCardStoryData(self, card, story):
 		branch = self.getStory(card, story)
+		data = {'type': '类型', 'sentence': '语句'}
 		if(branch == None):
 			return None
+		# 	print(('None %s   %s') % (card, story))
+		# 	parentItem = ChapterItem(data, [])
+		# else:
+		print(branch)
 
-		data = {'desc': '类型', 'sentence': '语句'}
+		print(('%s   %s') % (card, story))
 		parentItem = ChapterItem(data, branch)
 		for item in branch:
 			item.setParent(parentItem)
-
 		return parentItem
 
 	def getStoryData(self):
 		if(self.story == None):
 			return None
 
-		data = '剧情'
+		data = {'type': 'parent', 'desc': '剧情'}
 		branch = self.story
 		parentItem = StoryItem(data, branch)
 

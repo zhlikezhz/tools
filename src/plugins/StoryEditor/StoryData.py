@@ -1,98 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
+import time
+import units
 from PyQt4 import QtGui, QtCore
-
-# class StoryData(object):
-#     def __init__(self, filename = ""):
-#         self.storyData = {
-#             'chapter_1': [
-#                 { 
-#                 'type': 'dialog',
-#                 'dialog': '你好么！',
-#                 'sound': '1.mp3',
-#                 'branch': [],
-#                 },
-
-#                 {
-#                 'type': 'choose',
-#                 'dialog': '...........',
-#                 'sound': '4.mp3',
-#                 'branch': 
-#                         [
-#                             {
-#                             'type': 'dialog',
-#                             'dialog': '我不好！',
-#                             'sound': '2.mp3',
-#                             'branch': [],
-#                             },
-#                             {
-#                             'type': 'dialog',
-#                             'dialog': "我很好！",
-#                             'sound': "3.mp3",
-#                             'branch': [],
-#                             },
-#                         ],
-#                 },
-#             ],
-#             'chapter_2': [
-#                 { 
-#                 'type': 'dialog',
-#                 'dialog': '你好么！',
-#                 'sound': '1.mp3',
-#                 'branch': [],
-#                 },
-
-#                 {
-#                 'type': 'choose',
-#                 'dialog': '...........',
-#                 'sound': '4.mp3',
-#                 'branch': 
-#                         [
-#                             {
-#                             'type': 'dialog',
-#                             'dialog': '我不好！',
-#                             'sound': '2.mp3',
-#                             'branch': [],
-#                             },
-#                             {
-#                             'type': 'dialog',
-#                             'dialog': "我很好！",
-#                             'sound': "3.mp3",
-#                             'branch': [],
-#                             },
-#                         ],
-#                 },
-#             ],
-#         }
-
-    # def getChapterData(self, chapter):
-    #     if(self.storyData[chapter] == None):
-    #         return None
-
-    #     stack = []
-    #     chapterData = []
-    #     for item in self.storyData[chapter]:
-    #         chapterItem = ChapterItem(item, None)
-    #         chapterData.append(chapterItem)
-    #         stack.append(chapterItem)
-
-    #     while(len(stack) > 0):
-    #         parentItem = stack.pop()
-    #         for child in parentItem.itemData['branch']:
-    #             chapterItem = ChapterItem(child, parentItem)
-    #             parentItem.appendChild(chapterItem)
-    #             stack.append(chapterItem)
-
-    #     return chapterData
-
-
-    # def getStoryData(self):
-    #     storyData = []
-    #     for item in self.storyData.keys():
-    #         storyItem = StoryItem(item)
-    #         storyData.append(storyItem)
-    #     return storyData
 
 class TreeItem(object):
     def __init__(self):
@@ -196,7 +107,7 @@ class ChapterItem(TreeItem):
     def data(self, column):
         val = None
         if(column == 0):
-            val = QtCore.QString.fromUtf8(self.itemData['desc'])
+            val = QtCore.QString.fromUtf8(units.typeMapping(self.itemData['type']))
         elif(column == 1):
             val = QtCore.QString.fromUtf8(self.itemData['sentence'])
         return val 
@@ -206,7 +117,7 @@ class ChapterItem(TreeItem):
             return False
 
         if(column == 0):
-            self.itemData['desc'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
+            self.itemData['type'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
         elif(column == 1):
             self.itemData['sentence'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
 
@@ -217,7 +128,8 @@ class ChapterItem(TreeItem):
             return False
 
         for row in range(count):
-            data = {'desc': 'default', 'sentence': 'default'}
+            string = ('%d') % time.time()
+            data = {'type': string, 'sentence': 'default'}
             item = ChapterItem(data, [], self)
             self.childItems.insert(position, item)
 
@@ -238,7 +150,7 @@ class StoryItem(TreeItem):
     def data(self, column):
         val = None
         if(column == 0):
-            val = QtCore.QString.fromUtf8(self.itemData)
+            val = QtCore.QString.fromUtf8(self.itemData['desc'])
         return val
 
     def setData(self, column, value):
@@ -246,7 +158,16 @@ class StoryItem(TreeItem):
             return False
 
         if(column == 0):
-            self.itemData = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
+            desc = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
+            self.itemData['desc'] = desc
+            if(desc[0] == 'c'):
+                print('card')
+                print(desc)
+                self.itemData['type'] = 'card'
+            elif(desc[0] == 's'):
+                print('story')
+                print(desc)
+                self.itemData['type'] = 'story'
 
         return True
 
@@ -255,9 +176,13 @@ class StoryItem(TreeItem):
             return False
 
         for row in range(count):
-            data = "default"
-            item = StoryItem(data, [], self)
+            string = ('%d') % time.time()
+            data = {'type': string, 'desc': string}
+            branch = []
+            item = StoryItem(data, branch, self)
             self.childItems.insert(position, item)
+
+        return True
 
     def columnCount(self):
         return 1
@@ -400,9 +325,18 @@ class ChapterModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(ChapterModel, self).__init__(rootItem, parent)
 
+    def flags(self, index):
+        if not index.isValid():
+            return 0
+
+        return QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
+
+        # return QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable
 
 class StoryModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(StoryModel, self).__init__(rootItem, parent)
+
+
 
 ######################################################################################################################

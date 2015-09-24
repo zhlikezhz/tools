@@ -13,6 +13,8 @@ class ChapterView(QtGui.QTreeView):
         # self.model = ChapterModel(chapter)
         # super(ChapterView, self).setModel(self.model)
     def setData(self, story):
+        self.reset()
+        self.story = story
         self.model = ChapterModel(story)
         super(ChapterView, self).setModel(self.model)
 
@@ -21,7 +23,7 @@ class ChapterView(QtGui.QTreeView):
         if item.isValid():
             chapterItem = item.internalPointer()
             menu = QtGui.QMenu()
-            # menu.addAction(units._fromUtf8('新建'), self.insertRow)
+            menu.addAction(units._fromUtf8('新建'), self.insertRow)
             menu.addAction(units._fromUtf8('新建分支'), self.insertChild)
             menu.addAction(units._fromUtf8('删除'), self.removeRow)
             menu.addAction(units._fromUtf8('编辑'), self.editRow)
@@ -40,9 +42,24 @@ class ChapterView(QtGui.QTreeView):
         print('paste')
 
     def editRow(self):
-        print('edit')
+        from StoryAttrEdit import StoryAttrEdit
 
+        index = self.selectionModel().currentIndex()
+        item = self.model.getItem(index)
 
+        edit = StoryAttrEdit(self)
+        edit.setData(item)
+        edit.exec_()
+
+    def setAttr(self, data):
+        print("getAttr")
+        index = self.selectionModel().currentIndex()
+        parent = index.parent()
+        row = index.row()
+        child = self.model.index(row, 0, parent)
+        self.model.setData(child, QtCore.QVariant(data['type']), QtCore.Qt.EditRole)
+        child = self.model.index(row, 1, parent)
+        self.model.setData(child, QtCore.QVariant(data['sentence']), QtCore.Qt.EditRole)
 
     def mousePressEvent(self, evt):
         super(ChapterView, self).mousePressEvent(evt)
@@ -52,35 +69,47 @@ class ChapterView(QtGui.QTreeView):
     def insertChild(self):
         index = self.selectionModel().currentIndex()
 
-        if self.model.columnCount(index) == 0:
-            if not self.model.insertColumn(0, index):
-                return
+        # if self.model.columnCount(index) == 0:
+        #     if not self.model.insertColumn(0, index):
+        #         return
+        item = index.internalPointer()
+        row = item.childCount()
 
-        if not self.model.insertRow(0, index):
+        if not self.model.insertRow(row, index):
             return
 
         for column in range(self.model.columnCount(index)):
-            child = self.model.index(0, column, index)
-            self.model.setData(child, "[No data]", QtCore.Qt.EditRole)
+            child = self.model.index(row, column, index)
+            self.model.setData(child, QtCore.QVariant("[No data]"), QtCore.Qt.EditRole)
             if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
                 self.model.setHeaderData(column, QtCore.Qt.Horizontal,
                         "[No header]", QtCore.Qt.EditRole)
 
-        self.selectionModel().setCurrentIndex(self.model.index(0, 0, index),
+        self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
                 QtGui.QItemSelectionModel.ClearAndSelect)
         self.updateActions()
+
+        self.editRow()
 
     def insertRow(self):
         index = self.selectionModel().currentIndex()
 
-        if not self.model.insertRow(index.row()+1, index.parent()):
+        row = index.row() + 1
+        if not self.model.insertRow(row, index.parent()):
             return
 
         self.updateActions()
 
         for column in range(self.model.columnCount(index.parent())):
-            child = self.model.index(index.row()+1, column, index.parent())
-            self.model.setData(child, "[No data]", QtCore.Qt.EditRole)
+            child = self.model.index(row, column, index.parent())
+            self.model.setData(child, QtCore.QVariant("[No data]"), QtCore.Qt.EditRole)
+            if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
+                self.model.setHeaderData(column, QtCore.Qt.Horizontal,
+                        "[No header]", QtCore.Qt.EditRole)
+
+        self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()),
+                QtGui.QItemSelectionModel.ClearAndSelect)
+        # self.editRow()
 
     def removeRow(self):
         index = self.selectionModel().currentIndex()
@@ -91,3 +120,29 @@ class ChapterView(QtGui.QTreeView):
     def updateActions(self):
         if self.selectionModel().currentIndex().isValid():
             self.closePersistentEditor(self.selectionModel().currentIndex())
+
+    # def appendRow(self):
+    #     print('appendRow')
+    #     item = self.rootItem
+    #     index = self.model.createIndex(item.childNumber(), 0, item)
+    #     row = item.childCount()
+
+    #     if not self.model.insertRow(row, index):
+    #         return
+
+    #     val = 'card'
+    #     if(item.itemData['type'] == 'card'):
+    #         val = 'story'
+
+    #     for column in range(self.model.columnCount(index)):
+    #         child = self.model.index(row, 0, index)
+    #         self.model.setData(child, QtCore.QVariant(('%s_%d') % (val, row)), QtCore.Qt.EditRole)
+    #         print(('%s_%d') % (val, row))
+    #         if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
+    #             self.model.setHeaderData(column, QtCore.Qt.Horizontal,
+    #                     "[No header]", QtCore.Qt.EditRole)
+
+    #     self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
+    #             QtGui.QItemSelectionModel.ClearAndSelect)
+    #     self.updateActions()
+    #     self.clickRow()
