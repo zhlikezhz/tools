@@ -14,13 +14,17 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		super(storyWindow, self).setupUi(self)
 
 	def newCard(self):
-		self.scriptTree.insertRow()
+		self.scriptTree.appendRow()
 
 	def newDialog(self):
 		self.chapterView.insertRow()
 
 	def newStory(self):
-		print("new")
+		filename = QtGui.QFileDialog.getSaveFileName(self, 
+										"save story to lua", ".", 
+										"story file(*.xml)")
+		if(filename.isEmpty() == False):
+			self.newStoryFile(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 
 	def saveStory(self):
 		print("save")
@@ -28,11 +32,11 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 			self.story.saveStory(self.story.getCurrStoryFileName())
 
 	def saveToLua(self):
-		filename = QtGui.QFileDialog.getOpenFileName(self, 
-										"save story", ".", 
-										"story (*.lua)")
+		filename = QtGui.QFileDialog.getSaveFileName(self, 
+										"save story to lua", ".", 
+										"story file(*.lua)")
 		if(filename.isEmpty() == False and self.story):
-			self.story.saveToLua(filename)
+			self.story.saveToLua(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 
 	def openStory(self):
 		filename = QtGui.QFileDialog.getOpenFileName(self, 
@@ -47,6 +51,14 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 		self.statusBar.showMessage("file load success", 2000)
 		self.scriptTree.setData(self.story.getStoryData())
+
+	def newStoryFile(self, filename):
+		self.story = Story()
+		self.statusBar.showMessage("loading " + filename, 2000)
+		# self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
+		self.story.newStory(filename)
+		self.scriptTree.setData(self.story.getStoryData())
+
 
 	def clickStory(self, card, story):
 		self.chapterView.setData(self.story.getCardStoryData(card, story))
