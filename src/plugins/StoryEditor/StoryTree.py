@@ -8,7 +8,7 @@ from StoryData import StoryItem, StoryModel
 class StoryView(QtGui.QTreeView):
     def __init__(self, parent = None):
         super(StoryView, self).__init__(parent)
-        self.clickStory = QtCore.pyqtSignal(QtCore.QString, QtCore.QString)
+        self.clickStory = QtCore.pyqtSignal(int, int)
         # self.story = StoryData()
         # self.model = StoryModel(self.story.getStoryData())
         # super(StoryView, self).setModel(self.model)
@@ -48,19 +48,17 @@ class StoryView(QtGui.QTreeView):
         print("paste")
 
     def clickRow(self):
-        item = self.currentIndex()
-        if(item == None):
+        childItem = self.currentIndex()
+        if(childItem == None):
             return 
 
-        childItem = item.internalPointer()
-        if(childItem == None):
+        fatherItem = self.model.parent(childItem)
+        if(fatherItem == None):
             return
+        print(fatherItem.row())
+        print(childItem.row())
 
-        fatherItem = childItem.getParent()
-        if(fatherItem == None or fatherItem == self.rootItem):
-            return
-
-        self.emit(QtCore.SIGNAL("clickStory(QString,QString)") , fatherItem.itemData['desc'], childItem.itemData['desc'])
+        self.emit(QtCore.SIGNAL("clickStory(int,int)") , fatherItem.row(), childItem.row())
 
     def mousePressEvent(self, evt):
         super(StoryView, self).mousePressEvent(evt)
@@ -93,16 +91,14 @@ class StoryView(QtGui.QTreeView):
                 self.model.setHeaderData(column, QtCore.Qt.Horizontal,
                         "[No header]", QtCore.Qt.EditRole)
 
-        # self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()),
-        #         QtGui.QItemSelectionModel.ClearAndSelect)
-        # self.clickRow()
+        self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()),
+                QtGui.QItemSelectionModel.ClearAndSelect)
 
     def removeRow(self):
         index = self.selectionModel().currentIndex()
 
         if (self.model.removeRow(index.row(), index.parent())):
             self.updateActions()
-        # self.clickRow()
 
     def updateActions(self):
         if self.selectionModel().currentIndex().isValid():
@@ -128,10 +124,9 @@ class StoryView(QtGui.QTreeView):
                 self.model.setHeaderData(column, QtCore.Qt.Horizontal,
                         "[No header]", QtCore.Qt.EditRole)
 
-        # self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
-        #         QtGui.QItemSelectionModel.ClearAndSelect)
+        self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
+                QtGui.QItemSelectionModel.ClearAndSelect)
         self.updateActions()
-        # self.clickRow()
 
     def appendRow(self):
         print('appendRow')
@@ -157,4 +152,3 @@ class StoryView(QtGui.QTreeView):
         self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
                 QtGui.QItemSelectionModel.ClearAndSelect)
         self.updateActions()
-        # self.clickRow()

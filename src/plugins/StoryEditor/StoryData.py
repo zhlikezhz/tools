@@ -128,8 +128,7 @@ class ChapterItem(TreeItem):
             return False
 
         for row in range(count):
-            string = ('%d') % time.time()
-            data = {'type': string, 'sentence': 'default'}
+            data = {'type': 'defualt', 'sentence': 'default'}
             item = ChapterItem(data, [], self)
             self.childItems.insert(position, item)
 
@@ -180,6 +179,7 @@ class StoryItem(TreeItem):
             data = {'type': string, 'desc': string}
             branch = []
             item = StoryItem(data, branch, self)
+            item.storyData = []
             self.childItems.insert(position, item)
 
         return True

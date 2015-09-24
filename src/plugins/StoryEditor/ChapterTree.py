@@ -52,7 +52,7 @@ class ChapterView(QtGui.QTreeView):
         edit.exec_()
 
     def setAttr(self, data):
-        print("getAttr")
+        print("chapter getAttr")
         index = self.selectionModel().currentIndex()
         parent = index.parent()
         row = index.row()
@@ -68,10 +68,6 @@ class ChapterView(QtGui.QTreeView):
 
     def insertChild(self):
         index = self.selectionModel().currentIndex()
-
-        # if self.model.columnCount(index) == 0:
-        #     if not self.model.insertColumn(0, index):
-        #         return
         item = index.internalPointer()
         row = item.childCount()
 
@@ -92,6 +88,7 @@ class ChapterView(QtGui.QTreeView):
         self.editRow()
 
     def insertRow(self):
+        print("chapter insert row")
         index = self.selectionModel().currentIndex()
 
         row = index.row() + 1
@@ -109,7 +106,7 @@ class ChapterView(QtGui.QTreeView):
 
         self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()),
                 QtGui.QItemSelectionModel.ClearAndSelect)
-        # self.editRow()
+        self.editRow()
 
     def removeRow(self):
         index = self.selectionModel().currentIndex()

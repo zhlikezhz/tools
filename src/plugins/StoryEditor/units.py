@@ -141,7 +141,9 @@ class Story(object):
 	def newStory(self, filename):
 		self.mCurrStoryFileName = filename
 		self.story = []
-
+		data = {'desc': 'card_0', 'type': 'card'}
+		cardItem = StoryItem(data, [])
+		self.story.append(cardItem)
 
 	def loadStory(self, filename):
 		self.story = []
@@ -186,19 +188,20 @@ class Story(object):
 		return None
 
 	def getCardStoryData(self, card, story):
-		branch = self.getStory(card, story)
+		branch = None
+		if(card < 0 or story < 0):
+			branch = None
+		else:
+			branch = self.story[card].childItems[story].storyData
+
 		data = {'type': '类型', 'sentence': '语句'}
 		if(branch == None):
-			return None
-		# 	print(('None %s   %s') % (card, story))
-		# 	parentItem = ChapterItem(data, [])
-		# else:
-		print(branch)
-
-		print(('%s   %s') % (card, story))
-		parentItem = ChapterItem(data, branch)
-		for item in branch:
-			item.setParent(parentItem)
+			parentItem = ChapterItem(data, [])
+		else:
+			print(('%s   %s') % (card, story))
+			parentItem = ChapterItem(data, branch)
+			for item in branch:
+				item.setParent(parentItem)
 		return parentItem
 
 	def getStoryData(self):

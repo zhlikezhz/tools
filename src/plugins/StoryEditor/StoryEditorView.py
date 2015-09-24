@@ -181,7 +181,7 @@ class Ui_storyWindow(object):
         QtCore.QObject.connect(self.newAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.newStory)
         QtCore.QObject.connect(self.openAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.openStory)
         QtCore.QObject.connect(self.saveAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.saveStory)
-        QtCore.QObject.connect(self.scriptTree, QtCore.SIGNAL(_fromUtf8("clickStory(QString,QString)")), storyWindow.clickStory)
+        QtCore.QObject.connect(self.scriptTree, QtCore.SIGNAL(_fromUtf8("clickStory(int,int)")), storyWindow.clickStory)
         QtCore.QObject.connect(self.cardAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.newCard)
         QtCore.QObject.connect(self.dialogAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.newDialog)
         QtCore.QObject.connect(self.saveLuaAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.saveToLua)
