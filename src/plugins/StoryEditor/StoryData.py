@@ -104,7 +104,7 @@ class ChapterItem(TreeItem):
             return False
 
         for row in range(count):
-            data = {'type': 'defualt', 'sentence': 'default'}
+            data = {'type': 'dialog', 'sentence': 'No data'}
             item = ChapterItem(data, [], self)
             self.childItems.insert(position, item)
 
@@ -114,13 +114,13 @@ class ChapterItem(TreeItem):
         return 2
 
 class StoryItem(TreeItem):
-    storyData = []
 
     def __init__(self, itemData, children, parent = None):
         super(StoryItem, self).__init__()
         self.parentItem = parent
         self.itemData = itemData
         self.childItems = children
+        self.storyData = []
 
     def data(self, column):
         val = None
@@ -153,9 +153,7 @@ class StoryItem(TreeItem):
         for row in range(count):
             string = ('%d') % time.time()
             data = {'type': string, 'desc': string}
-            branch = []
-            item = StoryItem(data, branch, self)
-            item.storyData = []
+            item = StoryItem(data, [], self)
             self.childItems.insert(position, item)
 
         return True

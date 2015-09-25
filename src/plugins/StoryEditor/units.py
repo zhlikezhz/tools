@@ -198,9 +198,9 @@ class Story(object):
 		if(branch == None):
 			parentItem = ChapterItem(data, [])
 		else:
-			print(('%s   %s') % (card, story))
 			parentItem = ChapterItem(data, branch)
 			for item in branch:
+				print(len(branch))
 				item.setParent(parentItem)
 		return parentItem
 

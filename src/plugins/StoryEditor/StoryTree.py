@@ -3,7 +3,7 @@ import os
 import sys
 import units
 from PyQt4 import QtGui, QtCore
-from StoryData import StoryItem, StoryModel
+from StoryData import StoryItem, StoryModel, ChapterItem
 
 class StoryView(QtGui.QTreeView):
     def __init__(self, parent = None):
@@ -18,7 +18,11 @@ class StoryView(QtGui.QTreeView):
         self.clickRow()
 
     def menuRequested(self):
-        item = self.currentIndex()
+        model = self.selectionModel()
+        if(model == None):
+            return
+
+        item = model.currentIndex()
         if item.isValid():
             chapterItem = item.internalPointer()
 
@@ -41,16 +45,32 @@ class StoryView(QtGui.QTreeView):
     def pasteRow(self):
         print("paste")
 
+    def addItem(self):
+        # index = self.currentIndex()
+        # if index.isValid():
+        if self.hasFocus():
+            self.insertRow()
+
+    def deleteItem(self):
+        # index = self.currentIndex()
+        # if index.isValid():
+        if self.hasFocus():
+            self.removeRow()
+
     def clickRow(self):
-        childItem = self.currentIndex()
+        model = self.selectionModel()
+        if(model == None):
+            return
+
+        childItem = model.currentIndex()
         if(childItem == None):
             return 
 
         fatherItem = self.model.parent(childItem)
         if(fatherItem == None):
             return
-        print(fatherItem.row())
-        print(childItem.row())
+        # print(fatherItem.row())
+        # print(childItem.row())
 
         self.emit(QtCore.SIGNAL("clickStory(int,int)") , fatherItem.row(), childItem.row())
 
@@ -82,6 +102,9 @@ class StoryView(QtGui.QTreeView):
 
         self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()),
                 QtGui.QItemSelectionModel.ClearAndSelect)
+
+        self.addDialog(typeVal)
+
 
     def removeRow(self):
         index = self.selectionModel().currentIndex()
@@ -117,6 +140,8 @@ class StoryView(QtGui.QTreeView):
                 QtGui.QItemSelectionModel.ClearAndSelect)
         self.updateActions()
 
+        self.addDialog(val)
+
     def appendRow(self):
         print('appendRow')
         item = self.rootItem
@@ -141,3 +166,11 @@ class StoryView(QtGui.QTreeView):
         self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
                 QtGui.QItemSelectionModel.ClearAndSelect)
         self.updateActions()
+        self.addDialog(val)
+
+    def addDialog(self, typeVal):
+        if(typeVal == 'story'):
+            index = self.selectionModel().currentIndex()
+            item = index.internalPointer()
+            data = {'type': 'dialog', 'sentence': 'No data'}
+            item.storyData.append(ChapterItem(data, [], self))

@@ -17,7 +17,7 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		self.scriptTree.appendRow()
 
 	def newDialog(self):
-		self.chapterView.insertRow()
+		self.chapterView.appendRow()
 
 	def newStory(self):
 		filename = QtGui.QFileDialog.getSaveFileName(self, 
