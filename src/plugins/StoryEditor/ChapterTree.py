@@ -88,7 +88,6 @@ class ChapterView(QtGui.QTreeView):
         self.editRow()
 
     def insertRow(self):
-        print("chapter insert row")
         index = self.selectionModel().currentIndex()
 
         row = index.row() + 1
@@ -117,29 +116,3 @@ class ChapterView(QtGui.QTreeView):
     def updateActions(self):
         if self.selectionModel().currentIndex().isValid():
             self.closePersistentEditor(self.selectionModel().currentIndex())
-
-    # def appendRow(self):
-    #     print('appendRow')
-    #     item = self.rootItem
-    #     index = self.model.createIndex(item.childNumber(), 0, item)
-    #     row = item.childCount()
-
-    #     if not self.model.insertRow(row, index):
-    #         return
-
-    #     val = 'card'
-    #     if(item.itemData['type'] == 'card'):
-    #         val = 'story'
-
-    #     for column in range(self.model.columnCount(index)):
-    #         child = self.model.index(row, 0, index)
-    #         self.model.setData(child, QtCore.QVariant(('%s_%d') % (val, row)), QtCore.Qt.EditRole)
-    #         print(('%s_%d') % (val, row))
-    #         if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
-    #             self.model.setHeaderData(column, QtCore.Qt.Horizontal,
-    #                     "[No header]", QtCore.Qt.EditRole)
-
-    #     self.selectionModel().setCurrentIndex(self.model.index(row, 0, index),
-    #             QtGui.QItemSelectionModel.ClearAndSelect)
-    #     self.updateActions()
-    #     self.clickRow()

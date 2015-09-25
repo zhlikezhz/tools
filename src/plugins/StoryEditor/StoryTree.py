@@ -9,9 +9,6 @@ class StoryView(QtGui.QTreeView):
     def __init__(self, parent = None):
         super(StoryView, self).__init__(parent)
         self.clickStory = QtCore.pyqtSignal(int, int)
-        # self.story = StoryData()
-        # self.model = StoryModel(self.story.getStoryData())
-        # super(StoryView, self).setModel(self.model)
 
     def setData(self, story):
         self.reset()
@@ -30,9 +27,6 @@ class StoryView(QtGui.QTreeView):
                 menu.addAction(units._fromUtf8('插入卡牌'), self.insertRow)
                 menu.addAction(units._fromUtf8('加入剧情'), self.insertChild)
                 menu.addAction(units._fromUtf8('删除'), self.removeRow)
-                # menu.addAction(units._fromUtf8('剪切'), self.cutRow)
-                # menu.addAction(units._fromUtf8('复制'), self.copyRow)
-                # menu.addAction(units._fromUtf8('粘贴'), self.pasteRow)
             elif(chapterItem.itemData['type'] == 'story'):
                 menu.addAction(units._fromUtf8('插入剧情'), self.insertRow)
                 menu.addAction(units._fromUtf8('删除'), self.removeRow)
@@ -66,11 +60,6 @@ class StoryView(QtGui.QTreeView):
             self.menuRequested()
         elif(evt.button() == QtCore.Qt.LeftButton):
         	self.clickRow()
-
-    # def mouseDoubleClickEvent(self, evt):
-    #     super(StoryView, self).mouseDoubleClickEvent(evt)
-    #     if(evt.button() == QtCore.Qt.LeftButton):
-    #         self.editChapter()
 
     def insertRow(self):
         print('insertRow')

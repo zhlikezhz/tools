@@ -53,18 +53,6 @@ class TreeItem(object):
 
         return True
 
-    # def insertColumns(self, position, columns):
-    #     if position < 0 or position > len(self.itemData):
-    #         return False
-
-    #     for column in range(columns):
-    #         self.itemData.insert(position, None)
-
-    #     for child in self.childItems:
-    #         child.insertColumns(position, columns)
-
-    #     return True
-
     def parent(self):
         return self.parentItem
 
@@ -76,18 +64,6 @@ class TreeItem(object):
             self.childItems.pop(position)
 
         return True
-
-    # def removeColumns(self, position, columns):
-    #     if position < 0 or position + columns > len(self.itemData):
-    #         return False
-
-    #     for column in range(columns):
-    #         self.itemData.pop(position)
-
-    #     for child in self.childItems:
-    #         child.removeColumns(position, columns)
-
-    #     return True
 
     def setData(self, column, value):
         if column < 0 or column >= len(self.itemData):
@@ -316,11 +292,6 @@ class TreeModel(QtCore.QAbstractItemModel):
 
         return result
 
-    # def setModelData(self, data, parent):
-    #     for item in data:
-    #         item.parentItem = parent
-    #         parent.appendChild(item)
-
 class ChapterModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(ChapterModel, self).__init__(rootItem, parent)
@@ -331,12 +302,9 @@ class ChapterModel(TreeModel):
 
         return QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
 
-        # return QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable
-
 class StoryModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(StoryModel, self).__init__(rootItem, parent)
-
 
 
 ######################################################################################################################
