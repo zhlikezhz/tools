@@ -6,6 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+from RuleView import RuleView
 from PyQt4 import QtCore, QtGui
 
 try:
@@ -21,8 +22,6 @@ try:
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
-
-
 
 class Ui_excelCheckWin(object):
     def setupUi(self, excelCheckWin):
@@ -55,7 +54,7 @@ class Ui_excelCheckWin(object):
         self.textBrowser_2.setObjectName(_fromUtf8("textBrowser_2"))
         self.horizontalLayout.addWidget(self.textBrowser_2)
         self.verticalLayout.addLayout(self.horizontalLayout)
-        self.tableView = QtGui.QTableView(self.centralWidget)
+        self.tableView = RuleView(self.centralWidget)
         self.tableView.setObjectName(_fromUtf8("tableView"))
         self.verticalLayout.addWidget(self.tableView)
         self.horizontalLayout_2.addLayout(self.verticalLayout)
@@ -89,6 +88,9 @@ class Ui_excelCheckWin(object):
         self.action_6.setObjectName(_fromUtf8("action_6"))
         self.action_7 = QtGui.QAction(excelCheckWin)
         self.action_7.setObjectName(_fromUtf8("action_7"))
+        self.action_8 = QtGui.QAction(excelCheckWin)
+        self.action_8.setObjectName(_fromUtf8("action_8"))
+        self.menuDakai.addAction(self.action_8)
         self.menuDakai.addAction(self.action_3)
         self.menuDakai.addAction(self.action_2)
         self.menuDakai.addAction(self.action_4)
@@ -109,6 +111,7 @@ class Ui_excelCheckWin(object):
         QtCore.QObject.connect(self.action_2, QtCore.SIGNAL(_fromUtf8("triggered()")), excelCheckWin.saveRules)
         QtCore.QObject.connect(self.action_3, QtCore.SIGNAL(_fromUtf8("triggered()")), excelCheckWin.openRules)
         QtCore.QObject.connect(self.action_4, QtCore.SIGNAL(_fromUtf8("triggered()")), excelCheckWin.openFolder)
+        QtCore.QObject.connect(self.action_8, QtCore.SIGNAL(_fromUtf8("triggered()")), excelCheckWin.newRules)
         QtCore.QMetaObject.connectSlotsByName(excelCheckWin)
 
     def retranslateUi(self, excelCheckWin):
@@ -122,10 +125,12 @@ class Ui_excelCheckWin(object):
         self.action_3.setShortcut(_translate("excelCheckWin", "Ctrl+O", None))
         self.action_4.setText(_translate("excelCheckWin", "导入文件夹", None))
         self.action.setText(_translate("excelCheckWin", "插入规则", None))
-        self.action.setShortcut(_translate("excelCheckWin", "Ctrl+N", None))
+        self.action.setShortcut(_translate("excelCheckWin", "+", None))
         self.action_5.setText(_translate("excelCheckWin", "删除规则", None))
         self.action_5.setShortcut(_translate("excelCheckWin", "Del", None))
         self.action_6.setText(_translate("excelCheckWin", "运行规则", None))
         self.action_6.setShortcut(_translate("excelCheckWin", "F6", None))
         self.action_7.setText(_translate("excelCheckWin", "运行所有规则", None))
         self.action_7.setShortcut(_translate("excelCheckWin", "F5", None))
+        self.action_8.setText(_translate("excelCheckWin", "新建规则", None))
+        self.action_8.setShortcut(_translate("excelCheckWin", "Ctrl+N", None))

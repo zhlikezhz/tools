@@ -11,10 +11,12 @@ class ExcelMgr(object):
 		if(ExcelMgr.excelList.get(filename)):
 			return ExcelMgr.excelList[filename]
 		else:
-			excel = xlrd.open_workbook(filename) 
-			ExcelMgr.excelList[filename] = excel
-			return excel
-
+			try: 
+				excel = xlrd.open_workbook(filename) 
+				ExcelMgr.excelList[filename] = excel
+				return excel
+			except Exception, e: 
+				return None
 
 	@staticmethod
 	def getExcelRowData(filename, sheetName, sheetColomn): 
