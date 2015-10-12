@@ -17,10 +17,19 @@ class ExcelMgr(object):
 				return excel
 			except Exception, e: 
 				return None
+			
+	@staticmethod
+	def loadExcel1(filename): 
+		try: 
+			excel = xlrd.open_workbook(filename) 
+			ExcelMgr.excelList[filename] = excel
+			return excel
+		except Exception, e: 
+			return None
 
 	@staticmethod
 	def getExcelRowData(filename, sheetName, sheetColomn): 
-		excel = ExcelMgr.loadExcel(filename) 
+		excel = ExcelMgr.loadExcel1(filename) 
 		if(excel == None):
 			return None
 

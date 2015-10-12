@@ -3,7 +3,7 @@ import os
 import sys
 import units
 import UIRuleEdit
-from CheckRule import CheckUnit
+from CheckRule import CheckUnit, CheckType
 from ExcelMgr import ExcelMgr
 from PyQt4 import QtGui, QtCore
 
@@ -17,9 +17,11 @@ class RuleEdit(QtGui.QDialog, UIRuleEdit.Ui_Dialog):
 		self.descFullPath = ''
 		self.mFileList = []
 
-		self.comboBox.addItem(units._fromUtf8('关联'))
-		self.comboBox.addItem(units._fromUtf8('格式匹配'))
-		self.comboBox.addItem(units._fromUtf8('数据范围'))
+		# self.comboBox.addItem(units._fromUtf8('关联'))
+		# self.comboBox.addItem(units._fromUtf8('格式匹配'))
+		# self.comboBox.addItem(units._fromUtf8('数据范围'))
+		for val in CheckType:
+			self.comboBox.addItem(units._fromUtf8(val))
 
 		self.unit = CheckUnit()
 

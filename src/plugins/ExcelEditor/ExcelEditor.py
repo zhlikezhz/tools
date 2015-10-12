@@ -65,6 +65,9 @@ class ExcelEditor(QtGui.QMainWindow, UIExcelEditor.Ui_excelCheckWin):
 		pass
 
 	def runRules(self):
+		self.textBrowser.clear()
+		self.textBrowser_2.clear()
+
 		cnt = 0
 		self.saveRules()
 		rules = self.tableView.getRules()
@@ -73,12 +76,14 @@ class ExcelEditor(QtGui.QMainWindow, UIExcelEditor.Ui_excelCheckWin):
 			check = CheckRule()
 			re = check.check(rule, self.mDirPath)
 			if(re == -1):
-				print check.error()
+				self.textBrowser_2.append('[rule %d]\n' % cnt)
 				self.textBrowser_2.append(check.error())
-				self.textBrowser_2.append('----------------------------------')
 				self.textBrowser_2.append('----------------------------------')
 				self.textBrowser.append('rule %d error!!!' % (cnt))
 			else:
+				# p2 = QtGui.QPalette()
+				# p2.setColor(QtGui.QPalette.Text, QtGui.QColor(QtCore.Qt.black))
+				# self.textBrowser.setPalette(p2)
 				self.textBrowser.append('rule %d success.' % (cnt))
 
 

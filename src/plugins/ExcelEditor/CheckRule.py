@@ -3,6 +3,13 @@ import os
 import re
 from ExcelMgr import ExcelMgr
 
+CheckType = [
+	'关联',
+	'格式匹配',
+	'数据范围',
+]
+
+
 class CheckUnit(object):
 	def __init__(self):
 		self.mType = ''
@@ -22,11 +29,12 @@ class CheckRule(object):
 	def check(self, rule, dirPath):
 		self.mRule = rule
 		self.mDirPath = dirPath
-		if(rule.mType == '关联'):
+		print rule.mType
+		if(rule.mType == CheckType[0]):
 			return self.checkRelate()
-		elif(rule.mType == '格式匹配'):
+		elif(rule.mType == CheckType[1]):
 			return self.checkFormat()
-		elif(rule.mType == '数据范围'):
+		elif(rule.mType == CheckType[2]):
 			return self.checkRange()
 		return 0
 
@@ -42,7 +50,7 @@ class CheckRule(object):
 		checkList = []
 		formatList = self.formatString(str(data))
 		for i in range(0, len(formatList)):
-			if(formatList[i][0] == '('):
+			if(formatList[i].find('(') >= 0 and formatList[i].find(')') >= 0):
 				checkList.append(i)
 		return checkList
 
@@ -62,9 +70,11 @@ class CheckRule(object):
 			self.printError("[%s] or [%s] not exist!!" % (self.mRule.mSrcTitle, self.mRule.mDescTitle))
 			return -1
 
+		cnt = 1
 		accept = True
 		checkList = self.formatCheckList(self.mRule.mRule)
 		for src in srcData:
+			cnt = cnt + 1
 			formatList = self.formatString(src)
 			for idx in checkList:
 				exist = False
@@ -73,7 +83,7 @@ class CheckRule(object):
 					if(int(val) == int(desc)):
 						exist = True
 				if(exist == False):
-					self.printError('relate error : %s\n' % (val))
+					self.printError('relate error row: %d\nrelate error value: %s\n' % (cnt, val))
 					self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
 					self.printError('[%s]  [%s]  [%s]\n\n' % (self.mRule.mDescName, self.mRule.mDescSheet, self.mRule.mDescTitle))
 					accept = False
@@ -114,7 +124,55 @@ class CheckRule(object):
 		return 0
 
 	def checkRange(self):
-		pass
+		print '-----------------------------'
+		srcFullPath = os.path.join(self.mDirPath, self.mRule.mSrcName)
+
+		srcExcel = ExcelMgr.loadExcel(srcFullPath)
+		if(srcExcel == None):
+			self.printError("[%s] not exist!!" % (srcFullPath))
+			return -1
+
+		srcData = ExcelMgr.getExcelRowData(srcFullPath, self.mRule.mSrcSheet, self.mRule.mSrcTitle)
+		if(srcData == None):
+			self.printError("[%s] not exist!!" % (self.mRule.mSrcTitle))
+			return -1
+
+		baseList = self.formatString(self.mRule.mRule)
+		print baseList
+		rangeList = self.formatCheckList(self.mRule.mRule)
+		print rangeList
+		rangeValList = []
+		for idx in rangeList:
+			base = baseList[idx]
+			rangeVal = base[(base.find('(') + 1):(base.find(')'))]
+			# valList = self.formatString(rangeVal)
+			valList = re.split('[-]', rangeVal)
+			rangeValList.append(int(valList[0]))
+			rangeValList.append(int(valList[1]))
+
+		for val in rangeValList:
+			print val
+
+		cnt = 1
+		accept = True
+		checkList = self.formatCheckList(self.mRule.mRule)
+		for src in srcData:
+			cnt = cnt + 1
+			formatList = self.formatString(src)
+			cntt = 0
+			for idx in checkList:
+				exist = False
+				val = formatList[idx]
+				tmp = cntt * 2
+				if(int(val) < rangeValList[tmp] or rangeValList[tmp + 1] < int(val)):
+					self.printError('range error row: %d\n %d not in range %d-%d\n' % (cnt, int(val), rangeValList[tmp], rangeValList[tmp + 1]))
+					self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
+					accept = False
+				cntt = cntt + 1
+
+		if(accept == False):
+			return -1
+		return 0
 
 	def error(self):
 		return ''.join(self.mErrorLog)

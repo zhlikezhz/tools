@@ -22,11 +22,10 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(568, 483)
+        Dialog.resize(718, 483)
         Dialog.setSizeGripEnabled(True)
         self.horizontalLayout_5 = QtGui.QHBoxLayout(Dialog)
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
@@ -78,7 +77,7 @@ class Ui_Dialog(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.comboBox.sizePolicy().hasHeightForWidth())
         self.comboBox.setSizePolicy(sizePolicy)
-        self.comboBox.setMinimumSize(QtCore.QSize(450, 0))
+        self.comboBox.setMinimumSize(QtCore.QSize(600, 0))
         self.comboBox.setObjectName(_fromUtf8("comboBox"))
         self.verticalLayout.addWidget(self.comboBox)
         self.horizontalLayout = QtGui.QHBoxLayout()
@@ -144,4 +143,3 @@ class Ui_Dialog(object):
         self.label_3.setText(_translate("Dialog", "目标文件：", None))
         self.pushButton.setText(_translate("Dialog", "保存", None))
         self.pushButton_2.setText(_translate("Dialog", "取消", None))
-
