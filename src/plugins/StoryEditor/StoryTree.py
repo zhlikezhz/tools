@@ -46,14 +46,10 @@ class StoryView(QtGui.QTreeView):
         print("paste")
 
     def addItem(self):
-        # index = self.currentIndex()
-        # if index.isValid():
         if self.hasFocus():
             self.insertRow()
 
     def deleteItem(self):
-        # index = self.currentIndex()
-        # if index.isValid():
         if self.hasFocus():
             self.removeRow()
 
@@ -69,8 +65,6 @@ class StoryView(QtGui.QTreeView):
         fatherItem = self.model.parent(childItem)
         if(fatherItem == None):
             return
-        # print(fatherItem.row())
-        # print(childItem.row())
 
         self.emit(QtCore.SIGNAL("clickStory(int,int)") , fatherItem.row(), childItem.row())
 

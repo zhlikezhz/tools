@@ -5,7 +5,6 @@ import sys
 from units import Story
 import StoryEditorView
 from PyQt4 import QtGui, QtCore
-# from StroyTree import StoryTree
 
 class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 

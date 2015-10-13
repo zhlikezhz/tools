@@ -121,8 +121,6 @@ class Story(object):
 				storyNode.attrib =  {'desc': story.itemData['desc']}
 				for ele in story.storyData:
 					self.decodeElement(storyNode, ele)
-				# cardNode.append(storyNode)
-			# root.append(cardNode)
 
 		tree.write(filename, "utf-8", True)
 
