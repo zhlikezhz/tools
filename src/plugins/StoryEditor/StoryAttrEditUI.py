@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from PyQt4 import QtCore, QtGui
+from StoryAttrTable import StoryAttrTable
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -30,10 +31,11 @@ class Ui_storyAttrEditor(object):
         self.dialogEdit = QtGui.QTextEdit(storyAttrEditor)
         self.dialogEdit.setObjectName(_fromUtf8("dialogEdit"))
         self.verticalLayout.addWidget(self.dialogEdit)
-        self.attrTable = QtGui.QTableWidget(storyAttrEditor)
+        # self.attrTable = QtGui.QTableWidget(storyAttrEditor)
+        self.attrTable = StoryAttrTable()
         self.attrTable.setObjectName(_fromUtf8("attrTable"))
-        self.attrTable.setColumnCount(0)
-        self.attrTable.setRowCount(0)
+        # self.attrTable.setColumnCount(0)
+        # self.attrTable.setRowCount(0)
         self.verticalLayout.addWidget(self.attrTable)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))

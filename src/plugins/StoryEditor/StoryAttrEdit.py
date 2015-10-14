@@ -28,6 +28,7 @@ class StoryAttrEdit(QtGui.QDialog, Ui_storyAttrEditor):
 			cnt = cnt + 1
 		self.typeCombo.setCurrentIndex(cnt)
 		self.dialogEdit.setText(data.itemData['sentence'])
+		self.attrTable.setData(data.itemData['attr'])
 
 	def onSaveBtn(self):
 
@@ -39,6 +40,11 @@ class StoryAttrEdit(QtGui.QDialog, Ui_storyAttrEditor):
 		typeList = units.getTypelist()
 		index = self.typeCombo.currentIndex()
 		data['type'] = typeList[index]['key']
+
+		data['attr'] = self.attrTable.getData()
+		# attrList = self.attrTable.getData()
+		# for (key, value) in attrList.iteritems():
+		# 	data['attr'][key] = value
 
 		self.mParent.setAttr(data)
 		self.accept()

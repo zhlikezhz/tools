@@ -166,5 +166,5 @@ class StoryView(QtGui.QTreeView):
         if(typeVal == 'story'):
             index = self.selectionModel().currentIndex()
             item = index.internalPointer()
-            data = {'type': 'dialog', 'sentence': 'No data'}
+            data = {'type': 'dialog', 'sentence': 'No data', 'attr':{}}
             item.storyData.append(ChapterItem(data, [], self))

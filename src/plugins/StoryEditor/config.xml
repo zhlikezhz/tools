@@ -1,0 +1,15 @@
+<storyAttr>
+	<attr type="combo" key="人物" value="renwu">
+		<combo key="人物1" value="card_10001"/>
+		<combo key="人物2" value="card_10002"/>
+		<combo key="人物3" value="card_10003"/>
+		<combo key="人物4" value="card_10004"/>
+	</attr>
+	<attr type="combo" key="表情" value="biaoqing">
+		<combo key="笑" value="xiao"/>
+		<combo key="哭" value="ku"/>
+		<combo key="说" value="shuo"/>
+		<combo key="唱" value="chang"/>
+	</attr>
+	<attr type="text" key="声音" value="shenying"/>
+</storyAttr>

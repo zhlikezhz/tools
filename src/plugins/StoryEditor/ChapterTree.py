@@ -59,7 +59,8 @@ class ChapterView(QtGui.QTreeView):
         from StoryAttrEdit import StoryAttrEdit
 
         index = self.selectionModel().currentIndex()
-        item = self.model.getItem(index)
+        # item = self.model.getItem(index)
+        item = index.internalPointer()
 
         edit = StoryAttrEdit(self)
         edit.setData(item)
@@ -68,12 +69,14 @@ class ChapterView(QtGui.QTreeView):
     def setAttr(self, data):
         print("chapter getAttr")
         index = self.selectionModel().currentIndex()
+        item = index.internalPointer()
         parent = index.parent()
         row = index.row()
         child = self.model.index(row, 0, parent)
         self.model.setData(child, QtCore.QVariant(data['type']), QtCore.Qt.EditRole)
         child = self.model.index(row, 1, parent)
         self.model.setData(child, QtCore.QVariant(data['sentence']), QtCore.Qt.EditRole)
+        item.itemData['attr'] = data['attr']
 
     def mousePressEvent(self, evt):
         super(ChapterView, self).mousePressEvent(evt)

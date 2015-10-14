@@ -61,15 +61,15 @@ class Story(object):
 
 		for card in self.story:
 			for story in card.childItems:
-				tmp = ('\t\"%s_%s\" = {\n') % (card.itemData['desc'], story.itemData['desc'])
+				tmp = ('\t%s_%s = {\n') % (card.itemData['desc'], story.itemData['desc'])
 				luaList.append(tmp)
 				cnt = 1
 				for ele in story.storyData:
 					luaList.append('\t\t[%d] = {\n' % cnt)
 					luaList = luaList + self.decodeSaveToLua(ele, 3)
-					luaList.append('\t\t}\n')
+					luaList.append('\t\t},\n')
 					cnt = cnt + 1
-				luaList.append("\t}\n")
+				luaList.append("\t},\n")
 		luaList.append("}\n")
 		luaStr = ''.join(luaList)
 		# print(luaStr)
@@ -79,30 +79,35 @@ class Story(object):
 	def decodeSaveToLua(self, ele, cntTab):
 		types = ele.itemData['type']
 		sentence = ele.itemData['sentence']
+		attrList = ele.itemData['attr']
 
 		luaList = []
 		if(ele.itemData['type'] == 'choose'):
 			luaList.append(cntTab * '\t')
-			luaList.append('\"type\" = \"%s\"\n' % types)
+			luaList.append('type = \"%s\",\n' % types)
 			luaList.append(cntTab * '\t')
-			luaList.append('\"sentence\" = \"%s\"\n' % sentence)
+			luaList.append('sentence = \"%s\",\n' % sentence)
 			luaList.append(cntTab * '\t')
-			luaList.append('\"branch\" = {\n')
+			luaList.append('branch = {\n')
 			cnt = 1
 			for val in ele.childItems:
 				luaList.append(cntTab * '\t' + '\t')
 				luaList.append('[%d] = {\n' % cnt)
 				luaList = luaList + self.decodeSaveToLua(val, cntTab + 2)
 				luaList.append(cntTab * '\t' + '\t')
-				luaList.append('}\n')
+				luaList.append('},\n')
 				cnt = cnt + 1
 			luaList.append(cntTab * '\t')
-			luaList.append('}\n')
+			luaList.append('},\n')
 		else:
 			luaList.append(cntTab * '\t')
-			luaList.append('\"type\" = \"%s\"\n' % types)
+			luaList.append('type = \"%s\",\n' % types)
 			luaList.append(cntTab * '\t')
-			luaList.append('\"sentence\" = \"%s\"\n' % sentence)
+			luaList.append('sentence = \"%s\",\n' % sentence)
+
+		for(key, val) in attrList.iteritems():
+			luaList.append(cntTab * '\t')
+			luaList.append('%s = \"%s\",\n' % (key, val))
 
 		return luaList
 
@@ -132,6 +137,15 @@ class Story(object):
 		if(ele.itemData['type'] == 'choose'):
 			for val in ele.childItems:
 				self.decodeElement(cardNode, val)
+
+		for (key, value) in ele.itemData['attr'].iteritems():
+			attrNode = xml.SubElement(cardNode, 'attr')
+			attrNode.attrib = {'key': key, 'value': value}
+
+		# for attr in eleXml.findall('attr'):
+		# 	key = attr.attrib['key']
+		# 	value = attr.attrib['value']
+		# 	data['attr'][key] = value
 
 		cardNode.attrib = dic
 		return cardNode
@@ -175,6 +189,12 @@ class Story(object):
 			for eXml in eleXml.findall('element'):
 				branch.append(self.encodeElement(eXml, parentItem))
 
+		data['attr'] = {}
+		for attr in eleXml.findall('attr'):
+			key = attr.attrib['key']
+			value = attr.attrib['value']
+			data['attr'][key] = value
+
 		return parentItem
 
 	def getStory(self, card, story):
@@ -192,7 +212,7 @@ class Story(object):
 		else:
 			branch = self.story[card].childItems[story].storyData
 
-		data = {'type': '类型', 'sentence': '语句'}
+		data = {'type': '类型', 'sentence': '语句', 'attr': {}}
 		if(branch == None):
 			parentItem = ChapterItem(data, [])
 		else:

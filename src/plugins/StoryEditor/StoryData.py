@@ -79,6 +79,10 @@ class ChapterItem(TreeItem):
         self.parentItem = parent
         self.itemData = itemData
         self.childItems = children
+        # if(self.itemData['attr']):
+        #     pass 
+        # else:
+        #     self.itemData['attr'] = {}
 
     def data(self, column):
         val = None
@@ -104,7 +108,7 @@ class ChapterItem(TreeItem):
             return False
 
         for row in range(count):
-            data = {'type': 'dialog', 'sentence': 'No data'}
+            data = {'type': 'dialog', 'sentence': 'No data', 'attr': {}}
             item = ChapterItem(data, [], self)
             self.childItems.insert(position, item)
 
