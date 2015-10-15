@@ -89,6 +89,10 @@ class CheckRule(object):
 		checkList = self.formatCheckList(self.mRule.mRule)
 		for src in srcData:
 			cnt = cnt + 1
+
+			if(len(src) < 1):
+				continue
+
 			formatList = self.formatString(src)
 			for idx in checkList:
 				exist = False
@@ -175,6 +179,9 @@ class CheckRule(object):
 		checkList = self.formatCheckList(self.mRule.mRule)
 		for src in srcData:
 			cnt = cnt + 1
+			if(len(src) < 1):
+				continue
+				
 			formatList = self.formatString(src)
 			cntt = 0
 			for idx in checkList:
