@@ -105,15 +105,33 @@ class CheckRule(object):
 			self.printError("[%s] not exist!!" % (self.mRule.mSrcTitle))
 			return -1
 
-		baseString = ''.join(re.findall("[#$@&,.;:]", self.mRule.mRule))
+		# baseString = ''.join(re.findall("[#$@&,.;:]", self.mRule.mRule))
+		baseString = re.split('[^#$@&,.;:]', self.mRule.mRule)
+		baseLen = len(baseString)
 
 		accept = True
 		cnt = 0
 		for data in srcData:
 			cnt = cnt + 1
-			formatString = ''.join(re.findall("[#$@&,.;:]", data))
-			if(baseString != formatString):
-				self.printError('format error: %d\n' % (cnt))
+			# formatString = ''.join(re.findall("[#$@&,.;:]", data))
+			if(len(data) < 1):
+				continue
+
+			formatString = re.split('[^#$@&,.;:]', data)
+			formatLen = len(formatString)
+			if(baseLen == formatLen):
+				for idx in range(0, baseLen):
+					base = baseString[idx]
+					formats = formatString[idx]
+					if(formats != base):
+						self.printError('format error row: %d\n' % (cnt))
+						self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
+						self.printError('base:\n%s\n' % (self.mRule.mRule))
+						self.printError('error:\n%s\n\n' % (data))
+						accept = False
+						break
+			else:
+				self.printError('format error row: %d\n' % (cnt))
 				self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
 				self.printError('base:\n%s\n' % (self.mRule.mRule))
 				self.printError('error:\n%s\n\n' % (data))
