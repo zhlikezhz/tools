@@ -46,6 +46,20 @@ class CheckRule(object):
 				formatList.append(val)
 		return formatList
 
+	def handerString(self, string):
+		lists = []
+		for i in re.finditer(r'\d+', string):
+			lists.append(i.span())
+
+		begin = 0
+		formatString = ''
+		for i in range(0, len(lists) - 1):
+			end = lists[i][0]
+			formatString = formatString + string[begin: end] + '|'
+			begin = lists[i][1]
+
+		return formatString
+
 	def formatCheckList(self, data):
 		checkList = []
 		formatList = self.formatString(str(data))
@@ -105,32 +119,17 @@ class CheckRule(object):
 			self.printError("[%s] not exist!!" % (self.mRule.mSrcTitle))
 			return -1
 
-		# baseString = ''.join(re.findall("[#$@&,.;:]", self.mRule.mRule))
-		baseString = re.split('[^#$@&,.;:]', self.mRule.mRule)
-		baseLen = len(baseString)
+		baseString = self.handerString(self.mRule.mRule)
 
-		accept = True
 		cnt = 0
+		accept = True
 		for data in srcData:
 			cnt = cnt + 1
-			# formatString = ''.join(re.findall("[#$@&,.;:]", data))
 			if(len(data) < 1):
 				continue
 
-			formatString = re.split('[^#$@&,.;:]', data)
-			formatLen = len(formatString)
-			if(baseLen == formatLen):
-				for idx in range(0, baseLen):
-					base = baseString[idx]
-					formats = formatString[idx]
-					if(formats != base):
-						self.printError('format error row: %d\n' % (cnt))
-						self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
-						self.printError('base:\n%s\n' % (self.mRule.mRule))
-						self.printError('error:\n%s\n\n' % (data))
-						accept = False
-						break
-			else:
+			formatString = self.handerString(data)
+			if(formatString != baseString):
 				self.printError('format error row: %d\n' % (cnt))
 				self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
 				self.printError('base:\n%s\n' % (self.mRule.mRule))
