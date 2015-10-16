@@ -2,6 +2,7 @@
 import os
 import sys
 import units
+import res.res
 from PyQt4 import QtGui, QtCore
 from StoryData import StoryItem, StoryModel, ChapterItem
 
@@ -9,6 +10,9 @@ class StoryView(QtGui.QTreeView):
     def __init__(self, parent = None):
         super(StoryView, self).__init__(parent)
         self.clickStory = QtCore.pyqtSignal(int, int)
+        self.setAcceptDrops(True)
+        self.starPos = -10
+        self.isDrap = False
 
     def setData(self, story):
         self.reset()
@@ -73,7 +77,88 @@ class StoryView(QtGui.QTreeView):
         if(evt.button() == QtCore.Qt.RightButton):
             self.menuRequested()
         elif(evt.button() == QtCore.Qt.LeftButton):
-        	self.clickRow()
+            self.isDrap = False
+            self.startPos = evt.pos()
+        	# self.clickRow()
+
+    def mouseMoveEvent(self, evt):
+        super(StoryView, self).mouseMoveEvent(evt)
+        if(evt.buttons() & QtCore.Qt.LeftButton):
+            distance = (evt.pos() - self.startPos).manhattanLength()
+            if(distance >= QtGui.QApplication.startDragDistance()):
+                if(self.isDrap == False):
+                    self.drapStory()
+                self.isDrap == True
+
+    def mouseReleaseEvent(self, evt):
+        super(StoryView, self).mouseReleaseEvent(evt)
+        if(self.isDrap == False and evt.button() == QtCore.Qt.LeftButton):
+            self.clickRow()
+
+    def drapStory(self):
+        item = self.currentIndex()
+        if(item):
+            mimeData = QtCore.QMimeData()
+            mimeData.setText('1')
+
+            drag = QtGui.QDrag(self)
+            drag.setMimeData(mimeData)
+            # drag.setPixmap(QtGui.QPixmap(units._fromUtf8(":/menu/open.png")))
+            # drag.setHotSpot(QtCore.QPoint(drag.pixmap().width() / 2, drag.pixmap().height() / 2))
+            if(drag.exec_(QtCore.Qt.MoveAction) == QtCore.Qt.MoveAction):
+                pass
+
+    def dragEnterEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            evt.setDropAction(QtCore.Qt.MoveAction)
+            evt.accept()
+
+    def dragMoveEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            evt.setDropAction(QtCore.Qt.MoveAction)
+            evt.accept()
+
+    def dropEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            evt.setDropAction(QtCore.Qt.MoveAction)
+            evt.accept()
+
+            currIndex = self.indexAt(evt.pos())
+            dragIndex = self.selectionModel().currentIndex()
+
+            if(currIndex and dragIndex):
+                row = currIndex.row() + 1
+                currItem = currIndex.internalPointer()
+                dragItem = dragIndex.internalPointer()
+
+                currType = currItem.itemData['type']
+                dragType = dragItem.itemData['type']
+
+                if(currType == dragType):
+                    parentRow = self.model.rowCount(currIndex.parant())
+                    if not self.model.insertRow(row, currIndex.parent()):
+                        return
+
+
+            row = index.row() + 1
+            parentRow = self.model.rowCount(index.parent())
+            typeVal = index.internalPointer().itemData['type']
+
+            if not self.model.insertRow(row, index.parent()):
+                return
+
+            self.updateActions()
+
+            for column in range(self.model.columnCount(index.parent())):
+                child = self.model.index(row, 0, index.parent())
+                self.model.setData(child, QtCore.QVariant(('%s_%d') % (typeVal, parentRow)), QtCore.Qt.EditRole)
+                if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
+                    self.model.setHeaderData(column, QtCore.Qt.Horizontal,
+                        "[No header]", QtCore.Qt.EditRole)
+
+            self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()), QtGui.QItemSelectionModel.ClearAndSelect)
+
+            self.addDialog(typeVal)
 
     def insertRow(self):
         print('insertRow')
@@ -168,3 +253,9 @@ class StoryView(QtGui.QTreeView):
             item = index.internalPointer()
             data = {'type': 'dialog', 'sentence': 'No data', 'attr':{}}
             item.storyData.append(ChapterItem(data, [], self))
+
+    def dropEvent(self, evt):
+        print '111111111111111111111'
+
+    def drapEnterEvent(self, evt):
+        print '222222222222222222222'
