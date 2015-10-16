@@ -51,9 +51,12 @@ class ChapterView(QtGui.QTreeView):
             self.insertRow()
 
     def deleteItem(self):
-        if self.hasFocus():
-            self.removeRow()
-
+        ret = QtGui.QMessageBox.warning(self, units._fromUtf8('删除'),
+                                        units._fromUtf8('是否删除？'),
+                                        QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
+        if(ret == QtGui.QMessageBox.Yes):
+            if self.hasFocus():
+                self.removeRow()
 
     def editRow(self):
         from StoryAttrEdit import StoryAttrEdit
