@@ -11,7 +11,7 @@ except AttributeError:
 		return s
 
 def buildImage(string, pngName):
-	size = QtCore.QSize(300, 300)
+	size = QtCore.QSize(3072, 4096)
 	image = QtGui.QImage(size, QtGui.QImage.Format_ARGB32)
 	image.fill(QtGui.QColor(0, 0, 0, 100))
 
@@ -22,7 +22,7 @@ def buildImage(string, pngName):
 	pen.setColor(QtCore.Qt.red)
 	font = painter.font()
 	font.setBold(True)
-	font.setPixelSize(20)
+	font.setPixelSize(200)
 
 	painter.setPen(pen)
 	painter.setFont(font)

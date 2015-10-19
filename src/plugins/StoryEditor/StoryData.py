@@ -79,10 +79,6 @@ class ChapterItem(TreeItem):
         self.parentItem = parent
         self.itemData = itemData
         self.childItems = children
-        # if(self.itemData['attr']):
-        #     pass 
-        # else:
-        #     self.itemData['attr'] = {}
 
     def data(self, column):
         val = None
@@ -297,6 +293,7 @@ class TreeModel(QtCore.QAbstractItemModel):
 class ChapterModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(ChapterModel, self).__init__(rootItem, parent)
+        self.dragIndex = None
 
     def flags(self, index):
         if not index.isValid():
@@ -307,6 +304,68 @@ class ChapterModel(TreeModel):
 class StoryModel(TreeModel):
     def __init__(self, rootItem, parent=None):
         super(StoryModel, self).__init__(rootItem, parent)
+        self.mparent = parent
+
+    # def flags(self, index):
+    #     if index.isValid():
+    #         return QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsDragEnabled | QtCore.Qt.ItemIsDropEnabled
+    #     else:
+    #         return QtCore.Qt.ItemIsDropEnabled
+
+
+    # def mimeData(self, indexes):
+    #     mimeData = QtCore.QMimeData()
+    #     encodedData = QtCore.QByteArray()
+
+    #     if(indexes[0].isValid()):
+    #         self.currIndex = indexes[0]
+    #     else:
+    #         self.currIndex = None
+
+    #     mimeData.setData('text/plain', encodedData)
+    #     return mimeData
+
+    # def mimeTypes(self): 
+    #     return ['text/plain']
+
+    # def supportedDropActions(self):
+    #     return QtCore.Qt.MoveAction
+
+    # def dropMimeData(self, data, action, row, column, parent):
+    #     if(self.currIndex):
+    #         print "++++++++++++++++++++++"
+
+    #     return True
+
+    # def supportedDropActions(self):
+    #     parent = self.mparent 
+    #     currIndex = parent.indexAt(QtGui.QCursor.pos()) 
+    #     dragIndex = parent.selectionModel().currentIndex()
+
+    #     if(currIndex and dragIndex and currIndex != dragIndex):
+    #         currItem = currIndex.internalPointer()
+    #         dragItem = dragIndex.internalPointer()
+
+    #         if(currItem and dragItem):
+    #             currType = currItem.itemData['type']
+    #             dragType = dragItem.itemData['type']
+
+    #             if(currType == dragType and currIndex.parent() == dragIndex.parent()):
+    #                 return QtCore.Qt.MoveAction
+    #             # evt.setDropAction(QtCore.Qt.MoveAction)
+    #             # evt.accept()
+    #             else:
+    #                 return QtCore.Qt.CopyAction
+    #             # evt.ignore()
+    #         else:
+    #             return QtCore.Qt.CopyAction
+    #     else:
+    #         return QtCore.Qt.CopyAction
+    #         # evt.ignore()
+
+    # def dragMoveEvent(self, evt):
+    #     super(StoryModel, self).__init__(evt)
+    #     print evt.pos()
 
 
 ######################################################################################################################
