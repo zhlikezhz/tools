@@ -7,6 +7,7 @@ CheckType = [
 	'关联',
 	'格式匹配',
 	'数据范围',
+	'多格式匹配'
 ]
 
 
@@ -36,6 +37,8 @@ class CheckRule(object):
 			return self.checkFormat()
 		elif(rule.mType == CheckType[2]):
 			return self.checkRange()
+		elif(rule.mType == CheckType[3]):
+			return self.checkMultFormat()
 		return 0
 
 	def formatString(self, data):
@@ -56,6 +59,20 @@ class CheckRule(object):
 		for i in range(0, len(lists) - 1):
 			end = lists[i][0]
 			formatString = formatString + string[begin: end] + '|'
+			begin = lists[i][1]
+
+		return formatString
+
+	def handerString1(self, string):
+		lists = []
+		for i in re.finditer(r'\d+', string):
+			lists.append(i.span())
+
+		begin = 0
+		formatString = ''
+		for i in range(0, len(lists) - 1):
+			end = lists[i][0]
+			formatString = formatString + string[begin: end] + '|' * (lists[i][1] - lists[i][0])
 			begin = lists[i][1]
 
 		return formatString
@@ -125,7 +142,7 @@ class CheckRule(object):
 
 		baseString = self.handerString(self.mRule.mRule)
 
-		cnt = 0
+		cnt = 1
 		accept = True
 		for data in srcData:
 			cnt = cnt + 1
@@ -134,6 +151,56 @@ class CheckRule(object):
 
 			formatString = self.handerString(data)
 			if(formatString != baseString):
+				self.printError('format error row: %d\n' % (cnt))
+				self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
+				self.printError('base:\n%s\n' % (self.mRule.mRule))
+				self.printError('error:\n%s\n\n' % (data))
+				accept = False
+
+		if(accept == False):
+			return -1
+		return 0
+
+	def checkMultFormat(self):
+		srcFullPath = os.path.join(self.mDirPath, self.mRule.mSrcName)
+
+		srcExcel = ExcelMgr.loadExcel(srcFullPath)
+		if(srcExcel == None):
+			self.printError("[%s] not exist!!" % (srcFullPath))
+			return -1
+
+		srcData = ExcelMgr.getExcelRowData(srcFullPath, self.mRule.mSrcSheet, self.mRule.mSrcTitle)
+		if(srcData == None):
+			self.printError("[%s] not exist!!" % (self.mRule.mSrcTitle))
+			return -1
+
+		begin = 0
+		length = len(self.mRule.mRule)
+		baseStringList = []
+		while(begin < length):
+			bPos = self.mRule.mRule.find('(', begin, length) + 1
+			ePos = self.mRule.mRule.find(')', begin, length)
+			if(bPos == -1 or ePos == -1):
+				break
+			sub = self.mRule.mRule[bPos: ePos]
+			baseString = self.handerString1(sub)
+			baseStringList.append(baseString)
+			print baseString
+			begin = ePos + 1
+
+		cnt = 1
+		accept = True
+		for data in srcData:
+			cnt = cnt + 1
+
+			multformat = False
+			formatString = self.handerString1(data)
+			for baseString in baseStringList:
+				if(formatString == baseString):
+					multformat = True
+					break
+
+			if(multformat == False):
 				self.printError('format error row: %d\n' % (cnt))
 				self.printError('[%s]  [%s]  [%s]\n' % (self.mRule.mSrcName, self.mRule.mSrcSheet, self.mRule.mSrcTitle))
 				self.printError('base:\n%s\n' % (self.mRule.mRule))
