@@ -9,6 +9,10 @@ class ChapterView(QtGui.QTreeView):
     def __init__(self, parent = None):
         self.model = None
         super(ChapterView, self).__init__(parent)
+        self.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.setDropIndicatorShown(True)
+        self.setAcceptDrops(True)
+
 
     def setData(self, story):
         self.reset()
@@ -85,6 +89,18 @@ class ChapterView(QtGui.QTreeView):
         super(ChapterView, self).mousePressEvent(evt)
         if(evt.button() == QtCore.Qt.RightButton):
             self.menuRequested()
+        elif(evt.button() == QtCore.Qt.LeftButton):
+            self.isDrap = False
+            self.startPos = evt.pos()
+
+    def mouseMoveEvent(self, evt):
+        super(ChapterView, self).mouseMoveEvent(evt)
+        if(evt.buttons() & QtCore.Qt.LeftButton):
+            distance = (evt.pos() - self.startPos).manhattanLength()
+            if(distance >= QtGui.QApplication.startDragDistance()):
+                if(self.isDrap == False):
+                    self.drapStory()
+                self.isDrap == True
 
     def mouseDoubleClickEvent(self, evt):
         super(ChapterView, self).mouseDoubleClickEvent(evt)
@@ -178,3 +194,80 @@ class ChapterView(QtGui.QTreeView):
     def updateActions(self):
         if self.selectionModel().currentIndex().isValid():
             self.closePersistentEditor(self.selectionModel().currentIndex())
+
+    def drapStory(self):
+        item = self.currentIndex()
+        if(item):
+            mimeData = QtCore.QMimeData()
+            mimeData.setText('1')
+
+            drag = QtGui.QDrag(self)
+            drag.setMimeData(mimeData)
+            self.model.setSupportedDragActions(QtCore.Qt.MoveAction)
+            if(drag.exec_(QtCore.Qt.MoveAction) == QtCore.Qt.MoveAction):
+                pass
+
+    def dragEnterEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            evt.setDropAction(QtCore.Qt.MoveAction)
+            evt.accept()
+
+    def dragMoveEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            currIndex = self.indexAt(evt.pos())
+            dragIndex = self.selectionModel().currentIndex()
+            if(currIndex and dragIndex and currIndex != dragIndex):
+                currItem = currIndex.internalPointer()
+                dragItem = dragIndex.internalPointer()
+                currType = currItem.itemData['type']
+                dragType = dragItem.itemData['type']
+
+                parentIndex = currIndex.parent()
+                parentItem = parentIndex.internalPointer()
+                parentType = 'dialog'
+                if(parentItem):
+                    parentType = parentItem.itemData['type']
+
+                if(dragType == 'branch' and parentType != 'choose'):
+                    evt.ignore()
+                elif(parentType == 'choose' and dragType != 'branch'):
+                    evt.ignore()
+                else:
+                    evt.setDropAction(QtCore.Qt.MoveAction)
+                    evt.accept()
+            else:
+                evt.ignore()
+
+    def dropEvent(self, evt):
+        if(evt.source() and evt.source() == self):
+            evt.setDropAction(QtCore.Qt.MoveAction)
+            evt.accept()
+
+            currIndex = self.indexAt(evt.pos())
+            dragIndex = self.selectionModel().currentIndex()
+
+            if(currIndex and dragIndex and currIndex != dragIndex):
+                row = currIndex.row() + 1
+                currItem = currIndex.internalPointer()
+                dragItem = dragIndex.internalPointer()
+
+                parentIndex = currIndex.parent()
+                parentRow = self.model.rowCount(parentIndex)
+                if not self.model.insertRow(row, parentIndex):
+                    return
+
+                newItem = self.model.index(row, 0, parentIndex).internalPointer()
+                newItem.itemData = dragItem.itemData
+                newItem.childItems = dragItem.childItems
+
+                for item in newItem.childItems:
+                    item.setParent(newItem)
+
+                self.selectionModel().setCurrentIndex(self.model.index(row, 0, parentIndex), QtGui.QItemSelectionModel.ClearAndSelect)
+
+                if(row <= dragIndex.row() and parentIndex == dragIndex.parent()):
+                    self.model.removeRow(dragIndex.row() + 1, dragIndex.parent())
+                else:
+                    self.model.removeRow(dragIndex.row(), dragIndex.parent())
+
+                self.updateActions()

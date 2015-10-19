@@ -82,28 +82,28 @@ class Story(object):
 		attrList = ele.itemData['attr']
 
 		luaList = []
-		if(ele.itemData['type'] == 'choose'):
-			luaList.append(cntTab * '\t')
-			luaList.append('type = \"%s\",\n' % types)
-			luaList.append(cntTab * '\t')
-			luaList.append('sentence = \"%s\",\n' % sentence)
-			luaList.append(cntTab * '\t')
-			luaList.append('branch = {\n')
-			cnt = 1
-			for val in ele.childItems:
-				luaList.append(cntTab * '\t' + '\t')
-				luaList.append('[%d] = {\n' % cnt)
-				luaList = luaList + self.decodeSaveToLua(val, cntTab + 2)
-				luaList.append(cntTab * '\t' + '\t')
-				luaList.append('},\n')
-				cnt = cnt + 1
-			luaList.append(cntTab * '\t')
+		# if(ele.itemData['type'] == 'choose'):
+		luaList.append(cntTab * '\t')
+		luaList.append('type = \"%s\",\n' % types)
+		luaList.append(cntTab * '\t')
+		luaList.append('sentence = \"%s\",\n' % sentence)
+		luaList.append(cntTab * '\t')
+		luaList.append('branch = {\n')
+		cnt = 1
+		for val in ele.childItems:
+			luaList.append(cntTab * '\t' + '\t')
+			luaList.append('[%d] = {\n' % cnt)
+			luaList = luaList + self.decodeSaveToLua(val, cntTab + 2)
+			luaList.append(cntTab * '\t' + '\t')
 			luaList.append('},\n')
-		else:
-			luaList.append(cntTab * '\t')
-			luaList.append('type = \"%s\",\n' % types)
-			luaList.append(cntTab * '\t')
-			luaList.append('sentence = \"%s\",\n' % sentence)
+			cnt = cnt + 1
+		luaList.append(cntTab * '\t')
+		luaList.append('},\n')
+		# else:
+		# 	luaList.append(cntTab * '\t')
+		# 	luaList.append('type = \"%s\",\n' % types)
+		# 	luaList.append(cntTab * '\t')
+		# 	luaList.append('sentence = \"%s\",\n' % sentence)
 
 		for(key, val) in attrList.iteritems():
 			luaList.append(cntTab * '\t')
@@ -134,9 +134,9 @@ class Story(object):
 		dic = {}
 		dic['type'] = ele.itemData['type']
 		dic['sentence'] = ele.itemData['sentence']
-		if(ele.itemData['type'] == 'choose'):
-			for val in ele.childItems:
-				self.decodeElement(cardNode, val)
+		# if(ele.itemData['type'] == 'choose' or ele.itemData['type'] == 'branch'):
+		for val in ele.childItems:
+			self.decodeElement(cardNode, val)
 
 		for (key, value) in ele.itemData['attr'].iteritems():
 			attrNode = xml.SubElement(cardNode, 'attr')
@@ -185,9 +185,8 @@ class Story(object):
 
 		data['type'] = eleXml.attrib['type']
 		data['sentence'] = eleXml.attrib['sentence']
-		if(data['type'] == 'choose'):
-			for eXml in eleXml.findall('element'):
-				branch.append(self.encodeElement(eXml, parentItem))
+		for eXml in eleXml.findall('element'):
+			branch.append(self.encodeElement(eXml, parentItem))
 
 		data['attr'] = {}
 		for attr in eleXml.findall('attr'):

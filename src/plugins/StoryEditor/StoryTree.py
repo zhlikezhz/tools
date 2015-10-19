@@ -10,14 +10,17 @@ class StoryView(QtGui.QTreeView):
     def __init__(self, parent = None):
         super(StoryView, self).__init__(parent)
         self.clickStory = QtCore.pyqtSignal(int, int)
+        self.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.setDropIndicatorShown(True)
         self.setAcceptDrops(True)
+
         self.starPos = -10
         self.isDrap = False
 
     def setData(self, story):
         self.reset()
         self.rootItem = story
-        self.model = StoryModel(story)
+        self.model = StoryModel(story, self)
         super(StoryView, self).setModel(self.model)
         self.clickRow()
 
@@ -103,8 +106,7 @@ class StoryView(QtGui.QTreeView):
 
             drag = QtGui.QDrag(self)
             drag.setMimeData(mimeData)
-            # drag.setPixmap(QtGui.QPixmap(units._fromUtf8(":/menu/open.png")))
-            # drag.setHotSpot(QtCore.QPoint(drag.pixmap().width() / 2, drag.pixmap().height() / 2))
+            self.model.setSupportedDragActions(QtCore.Qt.MoveAction)
             if(drag.exec_(QtCore.Qt.MoveAction) == QtCore.Qt.MoveAction):
                 pass
 
@@ -115,8 +117,21 @@ class StoryView(QtGui.QTreeView):
 
     def dragMoveEvent(self, evt):
         if(evt.source() and evt.source() == self):
-            evt.setDropAction(QtCore.Qt.MoveAction)
-            evt.accept()
+            currIndex = self.indexAt(evt.pos())
+            dragIndex = self.selectionModel().currentIndex()
+            if(currIndex and dragIndex and currIndex != dragIndex):
+                currItem = currIndex.internalPointer()
+                dragItem = dragIndex.internalPointer()
+                currType = currItem.itemData['type']
+                dragType = dragItem.itemData['type']
+
+                if(currType == dragType and currIndex.parent() == dragIndex.parent()):
+                    evt.setDropAction(QtCore.Qt.MoveAction)
+                    evt.accept()
+                else:
+                    evt.ignore()
+            else:
+                evt.ignore()
 
     def dropEvent(self, evt):
         if(evt.source() and evt.source() == self):
@@ -126,7 +141,7 @@ class StoryView(QtGui.QTreeView):
             currIndex = self.indexAt(evt.pos())
             dragIndex = self.selectionModel().currentIndex()
 
-            if(currIndex and dragIndex):
+            if(currIndex and dragIndex and currIndex != dragIndex):
                 row = currIndex.row() + 1
                 currItem = currIndex.internalPointer()
                 dragItem = dragIndex.internalPointer()
@@ -134,31 +149,29 @@ class StoryView(QtGui.QTreeView):
                 currType = currItem.itemData['type']
                 dragType = dragItem.itemData['type']
 
-                if(currType == dragType):
-                    parentRow = self.model.rowCount(currIndex.parant())
-                    if not self.model.insertRow(row, currIndex.parent()):
-                        return
+                parentIndex = currIndex.parent()
+                parentRow = self.model.rowCount(parentIndex)
+                if not self.model.insertRow(row, parentIndex):
+                    return
 
+                newItem = self.model.index(row, 0, parentIndex).internalPointer()
+                newItem.itemData = dragItem.itemData
+                newItem.childItems = dragItem.childItems
+                newItem.storyData = dragItem.storyData
 
-            row = index.row() + 1
-            parentRow = self.model.rowCount(index.parent())
-            typeVal = index.internalPointer().itemData['type']
+                for item in newItem.childItems:
+                    item.setParent(newItem)
 
-            if not self.model.insertRow(row, index.parent()):
-                return
+                self.selectionModel().setCurrentIndex(self.model.index(row, 0, parentIndex), QtGui.QItemSelectionModel.ClearAndSelect)
+                self.updateActions()
 
-            self.updateActions()
+                if(row <= dragIndex.row()):
+                    self.model.removeRow(dragIndex.row() + 1, dragIndex.parent())
+                else:
+                    self.model.removeRow(dragIndex.row(), dragIndex.parent())
 
-            for column in range(self.model.columnCount(index.parent())):
-                child = self.model.index(row, 0, index.parent())
-                self.model.setData(child, QtCore.QVariant(('%s_%d') % (typeVal, parentRow)), QtCore.Qt.EditRole)
-                if self.model.headerData(column, QtCore.Qt.Horizontal) is None:
-                    self.model.setHeaderData(column, QtCore.Qt.Horizontal,
-                        "[No header]", QtCore.Qt.EditRole)
+                self.updateActions()
 
-            self.selectionModel().setCurrentIndex(self.model.index(row, 0, index.parent()), QtGui.QItemSelectionModel.ClearAndSelect)
-
-            self.addDialog(typeVal)
 
     def insertRow(self):
         print('insertRow')
@@ -256,9 +269,3 @@ class StoryView(QtGui.QTreeView):
             item = index.internalPointer()
             data = {'type': 'dialog', 'sentence': 'No data', 'attr':{}}
             item.storyData.append(ChapterItem(data, [], self))
-
-    def dropEvent(self, evt):
-        print '111111111111111111111'
-
-    def drapEnterEvent(self, evt):
-        print '222222222222222222222'
