@@ -5,8 +5,6 @@ import units
 import xml.etree.ElementTree as xml
 from PyQt4 import QtGui, QtCore
 
-
-
 class Attrib(object):
 	def __init__(self):
 		self.key = ''
@@ -14,16 +12,16 @@ class Attrib(object):
 		self.value = ''
 		self.comboList = []
 
-
 class StoryAttrTable(QtGui.QTableWidget):
 	def __init__(self, parent = None):
 		super(StoryAttrTable, self).__init__(parent)
+		self.mparent = None
 		self.mColCnt = 1
-		self.mRowCnt = 3
+		self.mRowCnt = 0
 		self.attribList = []
 		self.configFileName = 'config.xml'
 		self.data = {}
-		self.clear()
+		# self.clear()
 
 	def clear(self):
 		self.setRowCount(0)
@@ -43,6 +41,7 @@ class StoryAttrTable(QtGui.QTableWidget):
 
 				if(row.type == 'combo'):
 					combo = QtGui.QComboBox()
+					QtCore.QObject.connect(combo, QtCore.SIGNAL(units._fromUtf8("currentIndexChanged(int)")), self.mparent.cellChanged)
 					self.setCellWidget(cnt, 0, combo)
 					for info in row.comboList:
 						combo.addItem(units._fromUtf8(info.key))
@@ -59,6 +58,9 @@ class StoryAttrTable(QtGui.QTableWidget):
 			cnt = cnt + 1
 
 			self.setCurrentCell(0, 0)
+
+	def setParent(self, parent):
+		self.mparent = parent
 
 	def getData(self):
 		data = {}
@@ -87,7 +89,7 @@ class StoryAttrTable(QtGui.QTableWidget):
 			return 
 
 		for (key, val) in data.iteritems():
-			print("key = %s value = %s" % (key, val))
+			# print("key = %s value = %s" % (key, val))
 			row = 0
 			for attrib in self.attribList:
 				if(attrib.value == key):

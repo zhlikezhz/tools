@@ -2,15 +2,27 @@
 
 import os
 import sys
-from units import Story
+# from units import Story
+import units
 import StoryEditorView
 from PyQt4 import QtGui, QtCore
 
 class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 
 	def __init__(self, parent = None):
+		self.isOpen = False
 		super(storyWindow, self).__init__(parent)
 		super(storyWindow, self).setupUi(self)
+
+		cnt = 0
+		typeList = units.getTypelist()
+		for val in typeList:
+			tmp = QtCore.QString.fromUtf8(val['val'])
+			self.typeCombo.insertItem(cnt, tmp)
+			cnt = cnt + 1
+
+		self.attrTable.setParent(self)
+		self.attrTable.clear()
 
 	def newCard(self):
 		self.scriptTree.appendRow()
@@ -45,14 +57,14 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 			self.loadStoryFile(filename)
 
 	def loadStoryFile(self, filename):
-		self.story = Story()
+		self.story = units.Story()
 		self.statusBar.showMessage("loading " + filename, 2000)
 		self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 		self.statusBar.showMessage("file load success", 2000)
 		self.scriptTree.setData(self.story.getStoryData())
 
 	def newStoryFile(self, filename):
-		self.story = Story()
+		self.story = units.Story()
 		self.statusBar.showMessage("loading " + filename, 2000)
 		# self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 		self.story.newStory(filename)
@@ -61,6 +73,36 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 
 	def clickStory(self, card, story):
 		self.chapterView.setData(self.story.getCardStoryData(card, story))
+
+	def setData(self, data):
+		self.isOpen = False
+		typeList = units.getTypelist()
+		cnt = 0
+		for val in typeList:
+			if(data.itemData['type'] == val['key']):
+				break
+			cnt = cnt + 1
+		self.typeCombo.setCurrentIndex(cnt)
+		self.dialogEdit.setText(data.itemData['sentence'])
+		self.attrTable.setData(data.itemData['attr'])
+		self.isOpen = True
+
+	def cellChanged(self):
+		print('------------2')
+		if(self.isOpen):
+			self.getData()
+
+	def getData(self):
+		data = {}
+
+		dialogVal = self.dialogEdit.toPlainText()
+		data['sentence'] = unicode(dialogVal.toUtf8(), 'utf-8', 'ignore')
+
+		typeList = units.getTypelist()
+		index = self.typeCombo.currentIndex()
+		data['type'] = typeList[index]['key']
+		data['attr'] = self.attrTable.getData()
+		self.chapterView.setAttr(data)
 
 if __name__ == "__main__":
 	reload(sys)

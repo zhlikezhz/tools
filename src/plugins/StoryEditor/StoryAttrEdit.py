@@ -40,11 +40,7 @@ class StoryAttrEdit(QtGui.QDialog, Ui_storyAttrEditor):
 		typeList = units.getTypelist()
 		index = self.typeCombo.currentIndex()
 		data['type'] = typeList[index]['key']
-
 		data['attr'] = self.attrTable.getData()
-		# attrList = self.attrTable.getData()
-		# for (key, value) in attrList.iteritems():
-		# 	data['attr'][key] = value
 
 		self.mParent.setAttr(data)
 		self.accept()
@@ -55,11 +51,11 @@ class StoryAttrEdit(QtGui.QDialog, Ui_storyAttrEditor):
 
 
 
-if __name__ == '__main__':
-	reload(sys)
-	sys.setdefaultencoding("utf-8")
-	app = QtGui.QApplication(sys.argv)
-	storyWindow = StoryAttrEdit()
-	storyWindow.show()
-	sys.exit(app.exec_())
+# if __name__ == '__main__':
+# 	reload(sys)
+# 	sys.setdefaultencoding("utf-8")
+# 	app = QtGui.QApplication(sys.argv)
+# 	storyWindow = StoryAttrEdit()
+# 	storyWindow.show()
+# 	sys.exit(app.exec_())
 

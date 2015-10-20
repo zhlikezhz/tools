@@ -58,7 +58,11 @@ class StoryView(QtGui.QTreeView):
 
     def deleteItem(self):
         if self.hasFocus():
-            self.removeRow()
+            ret = QtGui.QMessageBox.warning(self, units._fromUtf8('删除'),
+                                        units._fromUtf8('是否删除？'),
+                                        QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
+            if(ret == QtGui.QMessageBox.Yes):
+                self.removeRow()
 
     def clickRow(self):
         model = self.selectionModel()
@@ -199,13 +203,9 @@ class StoryView(QtGui.QTreeView):
 
 
     def removeRow(self):
-        ret = QtGui.QMessageBox.warning(self, units._fromUtf8('删除'),
-                                        units._fromUtf8('是否删除？'),
-                                        QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
-        if(ret == QtGui.QMessageBox.Yes):
-            index = self.selectionModel().currentIndex()
-            if (self.model.removeRow(index.row(), index.parent())):
-                self.updateActions()
+        index = self.selectionModel().currentIndex()
+        if (self.model.removeRow(index.row(), index.parent())):
+            self.updateActions()
 
     def updateActions(self):
         if self.selectionModel().currentIndex().isValid():

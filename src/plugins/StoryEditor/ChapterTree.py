@@ -12,6 +12,7 @@ class ChapterView(QtGui.QTreeView):
         self.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         self.setDropIndicatorShown(True)
         self.setAcceptDrops(True)
+        self.mparent = parent
 
 
     def setData(self, story):
@@ -55,11 +56,11 @@ class ChapterView(QtGui.QTreeView):
             self.insertRow()
 
     def deleteItem(self):
-        ret = QtGui.QMessageBox.warning(self, units._fromUtf8('删除'),
+        if self.hasFocus():
+            ret = QtGui.QMessageBox.warning(self, units._fromUtf8('删除'),
                                         units._fromUtf8('是否删除？'),
                                         QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
-        if(ret == QtGui.QMessageBox.Yes):
-            if self.hasFocus():
+            if(ret == QtGui.QMessageBox.Yes):
                 self.removeRow()
 
     def editRow(self):
@@ -70,8 +71,9 @@ class ChapterView(QtGui.QTreeView):
         item = index.internalPointer()
 
         edit = StoryAttrEdit(self)
-        edit.setData(item)
-        edit.exec_()
+        self.mparent.setData(item)
+        # edit.setData(item)
+        # edit.exec_()
 
     def setAttr(self, data):
         print("chapter getAttr")
@@ -102,10 +104,15 @@ class ChapterView(QtGui.QTreeView):
                     self.drapStory()
                 self.isDrap == True
 
-    def mouseDoubleClickEvent(self, evt):
-        super(ChapterView, self).mouseDoubleClickEvent(evt)
+    def mouseReleaseEvent(self, evt):
+        super(ChapterView, self).mouseReleaseEvent(evt)
         if(evt.button() == QtCore.Qt.LeftButton):
             self.editRow()
+
+    # def mouseDoubleClickEvent(self, evt):
+    #     super(ChapterView, self).mouseDoubleClickEvent(evt)
+    #     if(evt.button() == QtCore.Qt.LeftButton):
+    #         self.editRow()
 
     def insertChild(self):
         if(self.model == None):

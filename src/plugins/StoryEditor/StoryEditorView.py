@@ -4,6 +4,7 @@ import res.res
 from PyQt4 import QtCore, QtGui
 from StoryTree import StoryView
 from ChapterTree import ChapterView
+from StoryAttrTable import StoryAttrTable
 
 try:
 	_fromUtf8 = QtCore.QString.fromUtf8
@@ -18,10 +19,11 @@ except AttributeError:
 	def _translate(context, text, disambig):
 		return QtGui.QApplication.translate(context, text, disambig)
 
+
 class Ui_storyWindow(object):
     def setupUi(self, storyWindow):
         storyWindow.setObjectName(_fromUtf8("storyWindow"))
-        storyWindow.resize(1046, 759)
+        storyWindow.resize(1096, 809)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(10)
         sizePolicy.setVerticalStretch(0)
@@ -30,8 +32,10 @@ class Ui_storyWindow(object):
         storyWindow.setMinimumSize(QtCore.QSize(90, 0))
         self.centralWidget = QtGui.QWidget(storyWindow)
         self.centralWidget.setObjectName(_fromUtf8("centralWidget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.centralWidget)
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.horizontalLayout_3 = QtGui.QHBoxLayout(self.centralWidget)
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.scriptTree = StoryView(self.centralWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -41,13 +45,41 @@ class Ui_storyWindow(object):
         self.scriptTree.setDragEnabled(True)
         self.scriptTree.setDragDropMode(QtGui.QAbstractItemView.DragDrop)
         self.scriptTree.setObjectName(_fromUtf8("scriptTree"))
-        self.horizontalLayout.addWidget(self.scriptTree)
-        self.chapterView = ChapterView(self.centralWidget)
+        self.horizontalLayout_2.addWidget(self.scriptTree)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.chapterView = ChapterView(self)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.chapterView.sizePolicy().hasHeightForWidth())
+        self.chapterView.setSizePolicy(sizePolicy)
+        self.chapterView.setMinimumSize(QtCore.QSize(0, 500))
         self.chapterView.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.chapterView.setEditTriggers(QtGui.QAbstractItemView.DoubleClicked|QtGui.QAbstractItemView.EditKeyPressed|QtGui.QAbstractItemView.SelectedClicked)
         self.chapterView.setDragEnabled(True)
-        self.chapterView.setDragDropMode(QtGui.QAbstractItemView.DragDrop)
+        self.chapterView.setDragDropMode(QtGui.QAbstractItemView.InternalMove)
         self.chapterView.setObjectName(_fromUtf8("chapterView"))
-        self.horizontalLayout.addWidget(self.chapterView)
+        self.verticalLayout_2.addWidget(self.chapterView)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.typeCombo = QtGui.QComboBox(self.centralWidget)
+        self.typeCombo.setObjectName(_fromUtf8("typeCombo"))
+        self.verticalLayout.addWidget(self.typeCombo)
+        self.dialogEdit = QtGui.QTextEdit(self.centralWidget)
+        self.dialogEdit.setObjectName(_fromUtf8("dialogEdit"))
+        self.verticalLayout.addWidget(self.dialogEdit)
+        self.horizontalLayout.addLayout(self.verticalLayout)
+        self.attrTable = StoryAttrTable(self.centralWidget)
+        self.attrTable.setObjectName(_fromUtf8("attrTable"))
+        self.attrTable.setColumnCount(0)
+        self.attrTable.setRowCount(0)
+        self.horizontalLayout.addWidget(self.attrTable)
+        self.verticalLayout_2.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2.addLayout(self.verticalLayout_2)
+        self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
         storyWindow.setCentralWidget(self.centralWidget)
         self.toolBar = QtGui.QToolBar(storyWindow)
         self.toolBar.setObjectName(_fromUtf8("toolBar"))
@@ -56,7 +88,7 @@ class Ui_storyWindow(object):
         self.statusBar.setObjectName(_fromUtf8("statusBar"))
         storyWindow.setStatusBar(self.statusBar)
         self.menuBar = QtGui.QMenuBar(storyWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1046, 23))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1096, 23))
         self.menuBar.setObjectName(_fromUtf8("menuBar"))
         self.menu = QtGui.QMenu(self.menuBar)
         self.menu.setObjectName(_fromUtf8("menu"))
@@ -103,6 +135,9 @@ class Ui_storyWindow(object):
         QtCore.QObject.connect(self.saveLuaAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.saveToLua)
         QtCore.QObject.connect(self.addAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.scriptTree.addItem)
         QtCore.QObject.connect(self.deleteAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.scriptTree.deleteItem)
+        QtCore.QObject.connect(self.attrTable, QtCore.SIGNAL(_fromUtf8("cellChanged(int,int)")), storyWindow.cellChanged)
+        QtCore.QObject.connect(self.typeCombo, QtCore.SIGNAL(_fromUtf8("currentIndexChanged(int)")), storyWindow.cellChanged)
+        QtCore.QObject.connect(self.dialogEdit, QtCore.SIGNAL(_fromUtf8("textChanged()")), storyWindow.cellChanged)
         QtCore.QMetaObject.connectSlotsByName(storyWindow)
 
     def retranslateUi(self, storyWindow):
