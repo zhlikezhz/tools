@@ -87,8 +87,8 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		self.attrTable.setData(data.itemData['attr'])
 		self.isOpen = True
 
-	def cellChanged(self):
-		print('------------2')
+	def cellChanged(self, row, col):
+		# print('------------2')
 		if(self.isOpen):
 			self.getData()
 

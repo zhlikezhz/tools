@@ -5,12 +5,39 @@ import units
 import xml.etree.ElementTree as xml
 from PyQt4 import QtGui, QtCore
 
+class Connect(object):
+	def __init__(self):
+		self.row = 0
+		self.keyList = []
+
 class Attrib(object):
 	def __init__(self):
 		self.key = ''
 		self.type = ''
 		self.value = ''
+		self.connect = ''
+		self.hasConnect = False
+		self.connectList = []
 		self.comboList = []
+
+class MComBoBox(QtGui.QComboBox):
+	def __init__(self, parent = None):
+		super(MComBoBox, self).__init__(parent)
+		self.callbackList = []
+		QtCore.QObject.connect(self, QtCore.SIGNAL(units._fromUtf8("currentIndexChanged(int)")), self.comboChanged)
+
+	def setPosition(self, row, col):
+		self.row = row
+		self.column = col
+
+	def comboChanged(self):
+		for func in self.callbackList:
+			func(self.row, self.column)
+
+	def connectCallback(self, func):
+		if(func):
+			self.callbackList.append(func)
+
 
 class StoryAttrTable(QtGui.QTableWidget):
 	def __init__(self, parent = None):
@@ -21,7 +48,20 @@ class StoryAttrTable(QtGui.QTableWidget):
 		self.attribList = []
 		self.configFileName = 'config.xml'
 		self.data = {}
-		# self.clear()
+
+	def changed(self, row, col):
+		string = unicode(self.cellWidget(row, col).currentText().toUtf8(), 'utf-8', 'ignore')
+
+		for index in self.attribList[row].connectList:
+			print index
+			combo = self.cellWidget(index, 0)
+			if(combo == None):
+				return 
+			attrib = self.attribList[index]
+			combo.clear()
+			for info in attrib.comboList:
+				if(info.connect == string):
+					combo.addItem(units._fromUtf8(info.key))
 
 	def clear(self):
 		self.setRowCount(0)
@@ -31,6 +71,7 @@ class StoryAttrTable(QtGui.QTableWidget):
 			self.mRowCnt = len(self.attribList)
 			self.setRowCount(self.mRowCnt)
 			self.setColumnCount(self.mColCnt)
+			self.parseConfig(self.attribList)
 
 			cnt = 0
 			for row in self.attribList:
@@ -40,9 +81,11 @@ class StoryAttrTable(QtGui.QTableWidget):
 				self.setVerticalHeaderItem(cnt, item)
 
 				if(row.type == 'combo'):
-					combo = QtGui.QComboBox()
-					QtCore.QObject.connect(combo, QtCore.SIGNAL(units._fromUtf8("currentIndexChanged(int)")), self.mparent.cellChanged)
+					combo = MComBoBox()
+					combo.connectCallback(self.changed)
+					combo.connectCallback(self.mparent.cellChanged)
 					self.setCellWidget(cnt, 0, combo)
+					combo.setPosition(cnt, 0)
 					for info in row.comboList:
 						combo.addItem(units._fromUtf8(info.key))
 				elif(row.type == 'text'):
@@ -56,6 +99,8 @@ class StoryAttrTable(QtGui.QTableWidget):
 				item.setText(units._fromUtf8(string))
 				self.setHorizontalHeaderItem(cnt, item)
 			cnt = cnt + 1
+			self.resizeRowsToContents()
+			self.resizeColumnsToContents()
 
 			self.setCurrentCell(0, 0)
 
@@ -104,6 +149,8 @@ class StoryAttrTable(QtGui.QTableWidget):
 						item = self.item(row, 0)
 						item.setText(units._fromUtf8(val))
 				row = row + 1
+		self.resizeRowsToContents()
+		self.resizeColumnsToContents()
 
 
 	def loadConfig(self):
@@ -118,13 +165,31 @@ class StoryAttrTable(QtGui.QTableWidget):
 			attrib.key = attr.attrib['key']
 			attrib.value = attr.attrib['value']
 			if(attrib.type == 'combo'):
+				if(attr.attrib.has_key('connect') == True):
+					attrib.connect = attr.attrib['connect']
 				for combo in attr.findall('combo'):
 					comboAttr = Attrib()
 					comboAttr.key = combo.attrib['key']
 					comboAttr.value = combo.attrib['value']
+					if(combo.attrib.has_key('connect') == True):
+						comboAttr.connect = combo.attrib['connect']
 					attrib.comboList.append(comboAttr)
 			self.attribList.append(attrib)
 		return True
+
+	def parseConfig(self, attrList):
+		row = 0
+		for attrib in attrList:
+			if(attrib.type == 'combo' and len(attrib.connect) > 0):
+				for connectAttrib in attrList:
+					if(connectAttrib.key == attrib.connect and connectAttrib.type == 'combo'):
+						connectAttrib.connectList.append(row)
+						print row
+			row = row + 1
+
+
+
+
 
 
 # def main():
