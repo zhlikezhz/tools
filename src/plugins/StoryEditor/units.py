@@ -233,3 +233,28 @@ class Story(object):
 			item.setParent(parentItem)
 
 		return parentItem
+
+	def calChpaterWords(self, chapter):
+		length = len(chapter.itemData['sentence'])
+		return length
+
+	def calStoryWords(self, story):
+		length = 0
+		for chapter in story.storyData:
+			length = length + self.calChpaterWords(chapter)
+		return length
+
+	def calCardWords(self, card):
+		length = 0
+		for story in card.childItems:
+			length = length + self.calStoryWords(story)
+		return length
+
+	def calTotalWords(self):
+		length = 0
+		for card in self.story:
+			length = length + self.calCardWords(card)
+		return length
+
+
+

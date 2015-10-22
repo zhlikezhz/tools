@@ -21,8 +21,10 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 			self.typeCombo.insertItem(cnt, tmp)
 			cnt = cnt + 1
 
+		self.scriptTree.setParent(self)
 		self.attrTable.setParent(self)
 		self.attrTable.clear()
+
 
 	def newCard(self):
 		self.scriptTree.appendRow()
@@ -74,6 +76,19 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 	def clickStory(self, card, story):
 		self.chapterView.setData(self.story.getCardStoryData(card, story))
 
+	def showWords(self): 
+		totalCnt = self.story.calTotalWords()
+		self.statusBar.showMessage('total: ' + str(totalCnt))
+
+	def showCardWords(self, card):
+		totalCnt = self.story.calCardWords(card)
+		self.statusBar.showMessage('card: ' + str(totalCnt))
+
+	def showStoryWords(self, story):
+		totalCnt = self.story.calStoryWords(story)
+		self.statusBar.showMessage('story: ' + str(totalCnt))
+
+
 	def setData(self, data):
 		self.isOpen = False
 		typeList = units.getTypelist()
@@ -87,8 +102,11 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		self.attrTable.setData(data.itemData['attr'])
 		self.isOpen = True
 
-	def cellChanged(self, row, col):
-		# print('------------2')
+	def cellChanged(self):
+		if(self.isOpen):
+			self.getData()
+
+	def cellChanged1(self, row, col):
 		if(self.isOpen):
 			self.getData()
 

@@ -19,7 +19,6 @@ except AttributeError:
 	def _translate(context, text, disambig):
 		return QtGui.QApplication.translate(context, text, disambig)
 
-
 class Ui_storyWindow(object):
     def setupUi(self, storyWindow):
         storyWindow.setObjectName(_fromUtf8("storyWindow"))
@@ -114,6 +113,8 @@ class Ui_storyWindow(object):
         self.deleteAction.setObjectName(_fromUtf8("deleteAction"))
         self.saveLuaAction = QtGui.QAction(storyWindow)
         self.saveLuaAction.setObjectName(_fromUtf8("saveLuaAction"))
+        self.calWords = QtGui.QAction(storyWindow)
+        self.calWords.setObjectName(_fromUtf8("calWords"))
         self.toolBar.addAction(self.newAction)
         self.toolBar.addAction(self.openAction)
         self.toolBar.addAction(self.saveAction)
@@ -123,6 +124,7 @@ class Ui_storyWindow(object):
         self.menu.addAction(self.addAction)
         self.menu.addAction(self.deleteAction)
         self.menu.addAction(self.saveLuaAction)
+        self.menu.addAction(self.calWords)
         self.menuBar.addAction(self.menu.menuAction())
 
         self.retranslateUi(storyWindow)
@@ -131,13 +133,14 @@ class Ui_storyWindow(object):
         QtCore.QObject.connect(self.saveAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.saveStory)
         QtCore.QObject.connect(self.scriptTree, QtCore.SIGNAL(_fromUtf8("clickStory(int,int)")), storyWindow.clickStory)
         QtCore.QObject.connect(self.addAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.chapterView.addItem)
-        QtCore.QObject.connect(self.deleteAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.chapterView.deleteItem)
         QtCore.QObject.connect(self.saveLuaAction, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.saveToLua)
         QtCore.QObject.connect(self.addAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.scriptTree.addItem)
         QtCore.QObject.connect(self.deleteAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.scriptTree.deleteItem)
         QtCore.QObject.connect(self.attrTable, QtCore.SIGNAL(_fromUtf8("cellChanged(int,int)")), storyWindow.cellChanged)
         QtCore.QObject.connect(self.typeCombo, QtCore.SIGNAL(_fromUtf8("currentIndexChanged(int)")), storyWindow.cellChanged)
         QtCore.QObject.connect(self.dialogEdit, QtCore.SIGNAL(_fromUtf8("textChanged()")), storyWindow.cellChanged)
+        QtCore.QObject.connect(self.deleteAction, QtCore.SIGNAL(_fromUtf8("triggered()")), self.chapterView.deleteItem)
+        QtCore.QObject.connect(self.calWords, QtCore.SIGNAL(_fromUtf8("triggered()")), storyWindow.showWords)
         QtCore.QMetaObject.connectSlotsByName(storyWindow)
 
     def retranslateUi(self, storyWindow):
@@ -156,3 +159,5 @@ class Ui_storyWindow(object):
         self.deleteAction.setShortcut(_translate("storyWindow", "Del", None))
         self.saveLuaAction.setText(_translate("storyWindow", "导出到Lua", None))
         self.saveLuaAction.setShortcut(_translate("storyWindow", "Ctrl+P", None))
+        self.calWords.setText(_translate("storyWindow", "计算字数", None))
+        self.calWords.setShortcut(_translate("storyWindow", "F5", None))

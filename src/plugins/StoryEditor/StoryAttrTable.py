@@ -83,7 +83,7 @@ class StoryAttrTable(QtGui.QTableWidget):
 				if(row.type == 'combo'):
 					combo = MComBoBox()
 					combo.connectCallback(self.changed)
-					combo.connectCallback(self.mparent.cellChanged)
+					combo.connectCallback(self.mparent.cellChanged1)
 					self.setCellWidget(cnt, 0, combo)
 					combo.setPosition(cnt, 0)
 					for info in row.comboList:

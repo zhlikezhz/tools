@@ -64,6 +64,9 @@ class StoryView(QtGui.QTreeView):
             if(ret == QtGui.QMessageBox.Yes):
                 self.removeRow()
 
+    def setParent(self, parent):
+        self.mparent = parent
+
     def clickRow(self):
         model = self.selectionModel()
         if(model == None):
@@ -72,6 +75,19 @@ class StoryView(QtGui.QTreeView):
         childItem = model.currentIndex()
         if(childItem == None):
             return 
+
+        item = childItem.internalPointer()
+
+        if (item == None):
+            return
+
+        if(item.itemData == None):
+            return
+
+        if(item.itemData['type'] == 'card'):
+            self.mparent.showCardWords(item)
+        elif(item.itemData['type'] == 'story'):
+            self.mparent.showStoryWords(item)
 
         fatherItem = self.model.parent(childItem)
         if(fatherItem == None):
