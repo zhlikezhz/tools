@@ -58,7 +58,6 @@ class ExcelMgr(object):
 		if(excel == None):
 			return None
 
-		print sheetName
 		sheet = excel.sheet_by_name(sheetName) 
 		if(sheet.nrows > 0):
 			return sheet.row_values(0)

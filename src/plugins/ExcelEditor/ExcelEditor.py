@@ -55,7 +55,6 @@ class ExcelEditor(QtGui.QMainWindow, UIExcelEditor.Ui_excelCheckWin):
 			self.loadFolder(dirName)
 
 	def loadFolder(self, dirName):
-		print dirName
 		model = ExcelFileModel()
 		model.setDirPath(dirName)
 		self.mFileList = model.fileList
@@ -71,6 +70,7 @@ class ExcelEditor(QtGui.QMainWindow, UIExcelEditor.Ui_excelCheckWin):
 		cnt = 0
 		self.saveRules()
 		rules = self.tableView.getRules()
+		QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 		for rule in rules:
 			cnt = cnt + 1
 			check = CheckRule()
@@ -85,6 +85,7 @@ class ExcelEditor(QtGui.QMainWindow, UIExcelEditor.Ui_excelCheckWin):
 				# p2.setColor(QtGui.QPalette.Text, QtGui.QColor(QtCore.Qt.black))
 				# self.textBrowser.setPalette(p2)
 				self.textBrowser.append('rule %d success.' % (cnt))
+		QtGui.QApplication.restoreOverrideCursor()
 
 
 def main():
