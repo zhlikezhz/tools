@@ -122,6 +122,16 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		data['attr'] = self.attrTable.getData()
 		self.chapterView.setAttr(data)
 
+
+	def closeEvent(self, event): 
+		print('------------------------')
+		ret = QtGui.QMessageBox.warning(self, units._fromUtf8('保存'), 
+			units._fromUtf8('是否保存？'), QtGui.QMessageBox.Yes | QtGui.QMessageBox.No) 
+		if(ret == QtGui.QMessageBox.Yes):
+			self.saveStory()
+		event.accept()
+
+
 if __name__ == "__main__":
 	reload(sys)
 	sys.setdefaultencoding("utf-8")
