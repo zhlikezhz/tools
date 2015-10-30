@@ -58,10 +58,9 @@ class Story(object):
 		luaList.append("module(\"%s\", package.seeall)\n\n" % (name))
 		luaList.append("gdStory = {\n")
 
-
 		for card in self.story:
 			for story in card.childItems:
-				tmp = ('\t%s_%s = {\n') % (card.itemData['desc'], story.itemData['desc'])
+				tmp = ('\t[\"%s_%s\"] = {\n') % (card.itemData['desc'], story.itemData['desc'])
 				luaList.append(tmp)
 				cnt = 1
 				for ele in story.storyData:
@@ -72,9 +71,8 @@ class Story(object):
 				luaList.append("\t},\n")
 		luaList.append("}\n")
 		luaStr = ''.join(luaList)
-		# print(luaStr)
 		fd.write(luaStr)
-		fd.close( )
+		fd.close()
 
 	def decodeSaveToLua(self, ele, cntTab):
 		types = ele.itemData['type']
