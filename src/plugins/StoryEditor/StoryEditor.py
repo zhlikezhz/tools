@@ -2,7 +2,6 @@
 
 import os
 import sys
-# from units import Story
 import units
 import StoryEditorView
 from PyQt4 import QtGui, QtCore
@@ -59,16 +58,15 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 			self.loadStoryFile(filename)
 
 	def loadStoryFile(self, filename):
-		self.story = units.Story()
+		self.story = units.Story(self)
 		self.statusBar.showMessage("loading " + filename, 2000)
 		self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 		self.statusBar.showMessage("file load success", 2000)
 		self.scriptTree.setData(self.story.getStoryData())
 
 	def newStoryFile(self, filename):
-		self.story = units.Story()
+		self.story = units.Story(self)
 		self.statusBar.showMessage("loading " + filename, 2000)
-		# self.story.loadStory(unicode(filename.toUtf8(), 'utf-8', 'ignore'))
 		self.story.newStory(filename)
 		self.scriptTree.setData(self.story.getStoryData())
 
@@ -122,9 +120,7 @@ class storyWindow(QtGui.QMainWindow, StoryEditorView.Ui_storyWindow):
 		data['attr'] = self.attrTable.getData()
 		self.chapterView.setAttr(data)
 
-
 	def closeEvent(self, event): 
-		print('------------------------')
 		ret = QtGui.QMessageBox.warning(self, units._fromUtf8('保存'), 
 			units._fromUtf8('是否保存？'), QtGui.QMessageBox.Yes | QtGui.QMessageBox.No) 
 		if(ret == QtGui.QMessageBox.Yes):

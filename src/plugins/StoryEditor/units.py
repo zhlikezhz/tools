@@ -41,18 +41,89 @@ def typeMapping(types):
 class Story(object):
 	mCurrStoryFileName = ''
 
-	def __init__(self):
+	def __init__(self, app):
+		self.app = app
 		print('init story')
 
 	def getCurrStoryFileName(self):
 		return self.mCurrStoryFileName
 
+	def debugLog(self, log):
+		ret = QtGui.QMessageBox.warning(self.app, _fromUtf8('删除'), _fromUtf8(log),
+										QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
+		# if(ret == QtGui.QMessageBox.Yes):
+		# 	pass
+
 	def saveToLua(self, filename):
+		(path,name)=os.path.split(filename)
+		name = name.split('.')[0]
+
+		storyTable = []
+		storyTotalTable = []
+		storyTotalTable.append("module(\"%s\", package.seeall)\n\n" % (name))
+		storyTotalTable.append("gdStory = {\n")
+
+		words = 0
+		storyCnt = 1
+		for card in self.story:
+			for story in card.childItems:
+				storyFilename = ('story%d.lua') % storyCnt
+
+				storyTable.append(('\t[\"%s_%s\"] = {\n') % (card.itemData['desc'], story.itemData['desc']))
+				cnt = 1
+				for ele in story.storyData:
+					storyTable.append('\t\t[%d] = {\n' % cnt)
+					storyTable = storyTable + self.decodeSaveToLua(ele, 3)
+					storyTable.append('\t\t},\n')
+					cnt = cnt + 1
+				storyTable.append("\t},\n")
+				words = len(storyTable)
+
+				if(words > 3000):
+					tmpTable = []
+					name = ('story%d') % storyCnt
+					tmpTable.append("module(\"%s\", package.seeall)\n\n" % (name))
+					tmpTable.append(("%s = {\n") % name)
+					tmpTable = tmpTable + storyTable
+					tmpTable.append('}\n')
+
+					fullpath = os.path.join(path, storyFilename)
+					print(fullpath)
+					fd = open(fullpath, 'w')
+					luaTable = ''.join(tmpTable)
+					fd.write(luaTable)
+					fd.close()
+
+					storyTable = []
+					storyCnt += 1
+					words = 0
+				storyTotalTable.append(('\t[\"%s_%s\"] = \"%s\",\n') % (card.itemData['desc'], story.itemData['desc'], storyFilename))
+
+		if(words > 0):
+			tmpTable = []
+			name = ('story%d') % storyCnt
+			tmpTable.append("module(\"%s\", package.seeall)\n\n" % (name))
+			tmpTable.append(("%s = {\n") % name)
+			tmpTable = tmpTable + storyTable
+			tmpTable.append('}\n')
+
+			fullpath = os.path.join(path, name + '.lua')
+			fd = open(fullpath, 'w')
+			luaTable = ''.join(tmpTable)
+			fd.write(luaTable)
+			fd.close()
+
+		storyTotalTable.append("}\n")
+		fd = open(filename, 'w')
+		luaTable = ''.join(storyTotalTable)
+		fd.write(luaTable)
+		fd.close()
+
+	def saveToLua1(self, filename):
 		fd = open(filename, 'w')
 
 		(path,name)=os.path.split(filename)
 		name = name.split('.')[0]
-		print name
 
 		luaList = []
 		luaList.append("module(\"%s\", package.seeall)\n\n" % (name))

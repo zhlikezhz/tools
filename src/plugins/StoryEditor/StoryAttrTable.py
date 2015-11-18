@@ -16,6 +16,7 @@ class Attrib(object):
 		self.type = ''
 		self.value = ''
 		self.connect = ''
+		self.connectRow = -1
 		self.hasConnect = False
 		self.connectList = []
 		self.comboList = []
@@ -51,17 +52,8 @@ class StoryAttrTable(QtGui.QTableWidget):
 
 	def changed(self, row, col):
 		string = unicode(self.cellWidget(row, col).currentText().toUtf8(), 'utf-8', 'ignore')
-
-		for index in self.attribList[row].connectList:
-			print index
-			combo = self.cellWidget(index, 0)
-			if(combo == None):
-				return 
-			attrib = self.attribList[index]
-			combo.clear()
-			for info in attrib.comboList:
-				if(info.connect == string):
-					combo.addItem(units._fromUtf8(info.key))
+		self.updateComboValue(self.attribList[row].connectList, string)
+		self.mparent.cellChanged1(row, col)
 
 	def clear(self):
 		self.setRowCount(0)
@@ -83,9 +75,10 @@ class StoryAttrTable(QtGui.QTableWidget):
 				if(row.type == 'combo'):
 					combo = MComBoBox()
 					combo.connectCallback(self.changed)
-					combo.connectCallback(self.mparent.cellChanged1)
+					# combo.connectCallback(self.mparent.cellChanged1)
 					self.setCellWidget(cnt, 0, combo)
 					combo.setPosition(cnt, 0)
+					combo.addItem('')
 					for info in row.comboList:
 						combo.addItem(units._fromUtf8(info.key))
 				elif(row.type == 'text'):
@@ -108,6 +101,7 @@ class StoryAttrTable(QtGui.QTableWidget):
 		self.mparent = parent
 
 	def getData(self):
+
 		data = {}
 		if(os.path.exists(self.configFileName) == False):
 			return self.data
@@ -115,12 +109,18 @@ class StoryAttrTable(QtGui.QTableWidget):
 		for row in range(0, self.mRowCnt):
 			info = self.attribList[row]
 			if(info.type == 'combo'):
+
+				parent = ''
+				if(info.connectRow >= 0):
+					parent = unicode(self.cellWidget(info.connectRow, 0).currentText().toUtf8(), 'utf-8', 'ignore')
+
 				string = unicode(self.cellWidget(row, 0).currentText().toUtf8(), 'utf-8', 'ignore')
 				for combo in info.comboList:
-					if(string == combo.key):
+					if(string == combo.key and (len(parent) == 0 or combo.connect == parent)):
 						string = combo.value
 						break
-				data[info.value] = string
+				if(len(string) > 0):
+					data[info.value] = string
 			elif(info.type == 'text'):
 				string = unicode(self.item(row, 0).text().toUtf8(), 'utf-8', 'ignore')
 				data[info.value] = string
@@ -129,29 +129,77 @@ class StoryAttrTable(QtGui.QTableWidget):
 
 
 	def setData(self, data):
-		self.data = data
-		if(os.path.exists(self.configFileName) == False):
+		if( os.path.exists(self.configFileName) == False):
 			return 
 
+		updateVal = []
+		updateStack = []
 		for (key, val) in data.iteritems():
-			# print("key = %s value = %s" % (key, val))
+			print("key = %s value = %s" % (key, val))
 			row = 0
 			for attrib in self.attribList:
 				if(attrib.value == key):
-					if(attrib.type == 'combo'):
-						for combo in attrib.comboList:
-							if(combo.value == val):
-								comboBox = self.cellWidget(row, 0)
-								idx = comboBox.findText(units._fromUtf8(combo.key))
-								if(idx != -1):
-									comboBox.setCurrentIndex(idx)
-					elif(attrib.type == 'text'):
-						item = self.item(row, 0)
-						item.setText(units._fromUtf8(val))
-				row = row + 1
-		self.resizeRowsToContents()
-		self.resizeColumnsToContents()
+					if(attrib.connectRow >= 0):
+						if attrib.connectRow in updateStack: 
+							index = updateStack.index(attrib.connectRow)
+							updateStack.insert(index, row)
+							updateVal.insert(index, val)
+						else:
+							updateStack.append(row)
+							updateVal.append(val)
+					else:
+						updateStack.append(row)
+						updateVal.append(val)
+				row += 1
 
+
+		for row in range(0, len(self.attribList)):
+			if row in updateStack:
+				pass
+			else:
+				comboBox = self.cellWidget(row, 0)
+				comboBox.setCurrentIndex(0)
+
+		while len(updateStack):
+			val = updateVal.pop()
+			row = updateStack.pop()
+			attrib = self.attribList[row]
+			if(attrib.type == 'combo'):
+
+				parent = ""
+				if(attrib.connectRow >= 0):
+					parent = unicode(self.cellWidget(attrib.connectRow, 0).currentText().toUtf8(), 'utf-8', 'ignore')
+
+				for combo in attrib.comboList:
+					if(combo.value == val and (len(parent) == 0 or combo.connect == parent)):
+						comboBox = self.cellWidget(row, 0)
+						idx = comboBox.findText(units._fromUtf8(combo.key))
+						if(idx != -1):
+							comboBox.setCurrentIndex(idx)
+						else:
+							comboBox.setCurrentIndex(0)
+						val = combo.key
+						break
+
+				self.updateComboValue(attrib.connectList, val)
+
+			elif(attrib.type == 'text'):
+				item = self.item(row, 0)
+				item.setText(units._fromUtf8(val))
+
+	def updateComboValue(self, connectList, parent):
+		for index in connectList:
+			combo = self.cellWidget(index, 0)
+			if(combo == None):
+				return 
+			attrib = self.attribList[index]
+
+			combo.clear()
+			combo.addItem('')
+			for info in attrib.comboList:
+				if(info.connect == parent):
+					combo.addItem(units._fromUtf8(info.key))
+			combo.setCurrentIndex(0)
 
 	def loadConfig(self):
 		if(os.path.exists(self.configFileName) == False):
@@ -181,22 +229,11 @@ class StoryAttrTable(QtGui.QTableWidget):
 		row = 0
 		for attrib in attrList:
 			if(attrib.type == 'combo' and len(attrib.connect) > 0):
+				connectRow = 0
 				for connectAttrib in attrList:
 					if(connectAttrib.key == attrib.connect and connectAttrib.type == 'combo'):
 						connectAttrib.connectList.append(row)
-						print row
+						attrib.connectRow = connectRow
+						break
+					connectRow = connectRow + 1
 			row = row + 1
-
-
-
-
-
-
-# def main():
-# 	app = QtGui.QApplication(sys.argv)
-# 	table = StoryAttrTable()
-# 	table.show()
-# 	sys.exit(app.exec_())
-
-# if __name__ == '__main__':
-# 	main()
