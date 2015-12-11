@@ -1,0 +1,259 @@
+﻿<storyAttr>
+	<attr type="combo" key="人物" value="renwu">
+		<combo key="女主" value="f1"/>
+		<combo key="李泽言" value="m1"/>
+		<combo key="许墨" value="m2"/>
+		<combo key="周棋洛" value="m3"/>
+		<combo key="王志南" value="m4"/>
+		<combo key="无立绘" value="npc"/>
+	</attr>
+	<attr type="combo" key="龙套" value="longtao">
+		<combo key="西餐厅店员" value="10101"/>
+		<combo key="便利店店员" value="10102"/>
+	</attr>
+	<attr type="combo" key="衣服" value="yifu" connect="人物">
+		<combo key="礼服西装" value="m1_body_000" connect="李泽言"/>
+		<combo key="日常西装" value="m1_body_001" connect="李泽言"/>
+		<combo key="乔布斯款" value="m1_body_002" connect="李泽言"/>
+		<combo key="冬季大衣" value="m1_body_003" connect="李泽言"/>
+		<combo key="夏季短袖" value="m1_body_004" connect="李泽言"/>
+		<combo key="春秋毛衣" value="m1_body_005" connect="李泽言"/>
+		<combo key="黑色衬衫" value="m1_body_006" connect="李泽言"/>
+
+		<combo key="礼服西装" value="m2_body_000" connect="许墨"/>
+		<combo key="卷袖衬衫" value="m2_body_01" connect="许墨"/>
+		<combo key="白毛衣" value="m2_body_02" connect="许墨"/>
+		<combo key="冬季大衣" value="m2_body_03" connect="许墨"/>
+		<combo key="夏季短袖" value="m2_body_04" connect="许墨"/>
+		<combo key="红毛衫" value="m2_body_05" connect="许墨"/>
+
+		<combo key="礼服西装" value="m3_body_000" connect="周棋洛"/>
+		<combo key="黑皮夹克" value="m3_body_01" connect="周棋洛"/>
+		<combo key="红白帽衫" value="m3_body_02" connect="周棋洛"/>
+		<combo key="冬季帽衫" value="m3_body_03" connect="周棋洛"/>
+		<combo key="夏季短袖" value="m3_body_04" connect="周棋洛"/>
+		<combo key="宇宙长袖" value="m3_body_05" connect="周棋洛"/>
+
+		<combo key="格子衬衫" value="m4_body_01" connect="王志南"/>
+		<combo key="吃瓜群众" value="m4_body_02" connect="王志南"/>
+		<combo key="棒球衫" value="m4_body_03" connect="王志南"/>
+		<combo key="冬季外套" value="m4_body_04" connect="王志南"/>
+		<combo key="蓝色衬衫" value="m4_body_05" connect="王志南"/>
+	</attr>
+	<attr type="combo" key="表情" value="biaoqing" connect="人物">
+		<combo key="总裁_通常待机1L" value="m1_n_01,m1_n_02,m1_n_03" connect="李泽言"/>
+		<combo key="总裁_通常待机2L" value="m1_n_02,m1_n_01,m1_n_03" connect="李泽言"/>
+		<combo key="总裁_通常-高兴" value="m1_n_to_h" connect="李泽言"/>
+		<combo key="总裁_通常-生气" value="m1_n_to_a" connect="李泽言"/>
+		<combo key="总裁_通常-伤心" value="m1_n_to_s" connect="李泽言"/>
+		<combo key="总裁_通常-吃惊1" value="m1_n_to_su" connect="李泽言"/>
+		<combo key="总裁_通常-吃惊2" value="m1_n_to_su_02" connect="李泽言"/>
+
+		<combo key="总裁_高兴-通常" value="m1_h_to_n" connect="李泽言"/>
+		<combo key="总裁_生气-通常" value="m1_a_to_n" connect="李泽言"/>
+		<combo key="总裁_伤心-通常" value="m1_s_to_n" connect="李泽言"/>
+		<combo key="总裁_吃惊-通常" value="m1_su_to_n" connect="李泽言"/>
+		<combo key="总裁_高兴待机1L" value="m1_h_wt_01,m1_h_wt_02,m1_h_wt_03" connect="李泽言"/>
+		<combo key="总裁_高兴待机2L" value="m1_h_wt_02,m1_h_wt_01,m1_h_wt_03" connect="李泽言"/>
+		<combo key="总裁_开口大笑" value="m1_h_ac_02,m1_h_ac_03" connect="李泽言"/>
+		<combo key="总裁_温柔微笑" value="m1_h_ac_01" connect="李泽言"/>
+		<combo key="总裁_生气待机1L" value="m1_a_wt_01,m1_a_wt_02,m1_a_wt_03" connect="李泽言"/>
+		<combo key="总裁_生气待机2L" value="m1_a_wt_02,m1_a_wt_01,m1_a_wt_03" connect="李泽言"/>
+		<combo key="总裁_生气低头" value="m1_a_ac_01,m1_a_ac_03" connect="李泽言"/>
+		<combo key="总裁_生气斜视" value="m1_a_ac_02,m1_a_ac_03" connect="李泽言"/>
+		<combo key="总裁_伤心待机1L" value="m1_s_wt_01,m1_s_wt_02,m1_s_wt_03" connect="李泽言"/>
+		<combo key="总裁_伤心待机2L" value="m1_s_wt_02,m1_s_wt_01,m1_s_wt_03" connect="李泽言"/>
+		<combo key="总裁_淡淡忧伤" value="m1_s_ac_01,m1_s_ac_03" connect="李泽言"/>
+		<combo key="总裁_心如刀割" value="m1_s_ac_02,m1_s_ac_03" connect="李泽言"/>
+		<combo key="总裁_吃惊待机1L" value="m1_su_wt_01,m1_su_wt_02,m1_su_wt_03" connect="李泽言"/>
+		<combo key="总裁_吃惊待机2L" value="m1_su_wt_02,m1_su_wt_01,m1_su_wt_03" connect="李泽言"/>
+		<combo key="总裁_吓死本总裁了" value="m1_su_ac_01" connect="李泽言"/>
+		<combo key="总裁_脸红害羞（占位）" value="m1_su_ac_99" connect="李泽言"/>
+		<combo key="总裁_看傻逼般（占位）" value="m1_su_ac_98" connect="李泽言"/>
+
+		<combo key="教授_通常待机1L" value="m2_n_01,m2_n_02,m2_n_03" connect="许墨"/>
+		<combo key="教授_通常待机2L" value="m2_n_02,m2_n_01,m2_n_03" connect="许墨"/>
+		<combo key="教授_通常-高兴" value="m2_n_to_h" connect="许墨"/>
+		<combo key="教授_通常-生气" value="m2_n_to_a" connect="许墨"/>
+		<combo key="教授_通常-伤心" value="m2_n_to_s" connect="许墨"/>
+		<combo key="教授_通常-吃惊1" value="m2_n_to_su" connect="许墨"/>
+		<combo key="教授_通常-吃惊2" value="m2_n_to_su_02" connect="许墨"/>
+
+		<combo key="教授_高兴-通常" value="m2_h_to_n" connect="许墨"/>
+		<combo key="教授_生气-通常" value="m2_a_to_n" connect="许墨"/>
+		<combo key="教授_伤心-通常" value="m2_s_to_n" connect="许墨"/>
+		<combo key="教授_吃惊-通常" value="m2_su_to_n" connect="许墨"/>
+		<combo key="教授_高兴待机1L" value="m2_h_wt_01,m2_h_wt_02,m2_h_wt_03" connect="许墨"/>
+		<combo key="教授_高兴待机2L" value="m2_h_wt_02,m2_h_wt_01,m2_h_wt_03" connect="许墨"/>
+		<combo key="教授_开口大笑" value="m2_h_ac_02,m2_h_ac_03" connect="许墨"/>
+		<combo key="教授_温柔微笑" value="m2_h_ac_01" connect="许墨"/>
+		<combo key="教授_生气待机1L" value="m2_a_wt_01,m2_a_wt_02,m2_a_wt_03" connect="许墨"/>
+		<combo key="教授_生气待机2L" value="m2_a_wt_02,m2_a_wt_01,m2_a_wt_03" connect="许墨"/>
+		<combo key="教授_生气低头" value="m2_a_ac_01,m2_a_ac_03" connect="许墨"/>
+		<combo key="教授_生气斜视" value="m2_a_ac_02,m2_a_ac_03" connect="许墨"/>
+		<combo key="教授_伤心待机1L" value="m2_s_wt_01,m2_s_wt_02,m2_s_wt_03" connect="许墨"/>
+		<combo key="教授_伤心待机2L" value="m2_s_wt_02,m2_s_wt_01,m2_s_wt_03" connect="许墨"/>
+		<combo key="教授_淡淡忧伤" value="m2_s_ac_01,m2_s_ac_03" connect="许墨"/>
+		<combo key="教授_心如刀割" value="m2_s_ac_02,m2_s_ac_03" connect="许墨"/>
+		<combo key="教授_吃惊待机1L" value="m2_su_wt_01,m2_su_wt_02,m2_su_wt_03" connect="许墨"/>
+		<combo key="教授_吃惊待机2L" value="m2_su_wt_02,m2_su_wt_01,m2_su_wt_03" connect="许墨"/>
+		<combo key="教授_吓死本教授了" value="m2_su_ac_01" connect="许墨"/>
+		<combo key="教授_脸红害羞（占位）" value="m2_su_ac_99" connect="许墨"/>
+		<combo key="教授_无奈苦笑（占位）" value="m2_su_ac_98" connect="许墨"/>
+
+		<combo key="爱豆_通常待机1L" value="m3_n_01,m3_n_02,m3_n_03" connect="周棋洛"/>
+		<combo key="爱豆_通常待机2L" value="m3_n_02,m3_n_01,m3_n_03" connect="周棋洛"/>
+		<combo key="爱豆_通常-高兴" value="m3_n_to_h" connect="周棋洛"/>
+		<combo key="爱豆_通常-生气" value="m3_n_to_a" connect="周棋洛"/>
+		<combo key="爱豆_通常-伤心" value="m3_n_to_s" connect="周棋洛"/>
+		<combo key="爱豆_通常-吃惊1" value="m3_n_to_su" connect="周棋洛"/>
+		<combo key="爱豆_通常-吃惊2" value="m3_n_to_su_02" connect="周棋洛"/>
+
+		<combo key="爱豆_高兴-通常" value="m3_h_to_n" connect="周棋洛"/>
+		<combo key="爱豆_生气-通常" value="m3_a_to_n" connect="周棋洛"/>
+		<combo key="爱豆_伤心-通常" value="m3_s_to_n" connect="周棋洛"/>
+		<combo key="爱豆_吃惊-通常" value="m3_su_to_n" connect="周棋洛"/>
+		<combo key="爱豆_高兴待机1L" value="m3_h_wt_01,m3_h_wt_02,m3_h_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_高兴待机2L" value="m3_h_wt_02,m3_h_wt_01,m3_h_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_开口大笑" value="m3_h_ac_02,m3_h_ac_03" connect="周棋洛"/>
+		<combo key="爱豆_坏坏地笑" value="m3_h_ac_01" connect="周棋洛"/>
+		<combo key="爱豆_生气待机1L" value="m3_a_wt_01,m3_a_wt_02,m3_a_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_生气待机2L" value="m3_a_wt_02,m3_a_wt_01,m3_a_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_生气低头" value="m3_a_ac_01,m3_a_ac_03" connect="周棋洛"/>
+		<combo key="爱豆_生气斜视" value="m3_a_ac_02,m3_a_ac_03" connect="周棋洛"/>
+		<combo key="爱豆_伤心待机1L" value="m3_s_wt_01,m3_s_wt_02,m3_s_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_伤心待机2L" value="m3_s_wt_02,m3_s_wt_01,m3_s_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_淡淡忧伤" value="m3_s_ac_01,m3_s_ac_03" connect="周棋洛"/>
+		<combo key="爱豆_心如刀割" value="m3_s_ac_02,m3_s_ac_03" connect="周棋洛"/>
+		<combo key="爱豆_吃惊待机1L" value="m3_su_wt_01,m3_su_wt_02,m3_su_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_吃惊待机2L" value="m3_su_wt_02,m3_su_wt_01,m3_su_wt_03" connect="周棋洛"/>
+		<combo key="爱豆_吓死本宝宝了" value="m3_su_ac_01" connect="周棋洛"/>
+		<combo key="爱豆_脸红害羞（占位）" value="m3_su_ac_99" connect="周棋洛"/>
+		<combo key="爱豆_紧张尴尬（占位）" value="m3_su_ac_98" connect="周棋洛"/>
+
+		<combo key="志南_通常待机1L" value="m4_n_01,m4_n_02,m4_n_03" connect="王志南"/>
+		<combo key="志南_通常待机2L" value="m4_n_02,m4_n_01,m4_n_03" connect="王志南"/>
+		<combo key="志南_通常-高兴" value="m4_n_to_h" connect="王志南"/>
+		<combo key="志南_通常-生气" value="m4_n_to_a" connect="王志南"/>
+		<combo key="志南_通常-伤心" value="m4_n_to_s" connect="王志南"/>
+		<combo key="志南_通常-吃惊1" value="m4_n_to_su" connect="王志南"/>
+		<combo key="志南_通常-吃惊2" value="m4_n_to_su_02" connect="王志南"/>
+
+		<combo key="志南_高兴-通常" value="m4_h_to_n" connect="王志南"/>
+		<combo key="志南_生气-通常" value="m4_a_to_n" connect="王志南"/>
+		<combo key="志南_伤心-通常" value="m4_s_to_n" connect="王志南"/>
+		<combo key="志南_吃惊-通常" value="m4_su_to_n" connect="王志南"/>
+		<combo key="志南_高兴待机1L" value="m4_h_wt_01,m4_h_wt_02,m4_h_wt_03" connect="王志南"/>
+		<combo key="志南_高兴待机2L" value="m4_h_wt_02,m4_h_wt_01,m4_h_wt_03" connect="王志南"/>
+		<combo key="志南_开口大笑" value="m4_h_ac_02,m4_h_ac_03" connect="王志南"/>
+		<combo key="志南_温柔微笑" value="m4_h_ac_01" connect="王志南"/>
+		<combo key="志南_生气待机1L" value="m4_a_wt_01,m4_a_wt_02,m4_a_wt_03" connect="王志南"/>
+		<combo key="志南_生气待机2L" value="m4_a_wt_02,m4_a_wt_01,m4_a_wt_03" connect="王志南"/>
+		<combo key="志南_生气低头" value="m4_a_ac_01,m4_a_ac_03" connect="王志南"/>
+		<combo key="志南_生气斜视" value="m4_a_ac_02,m4_a_ac_03" connect="王志南"/>
+		<combo key="志南_伤心待机1L" value="m4_s_wt_01,m4_s_wt_02,m4_s_wt_03" connect="王志南"/>
+		<combo key="志南_伤心待机2L" value="m4_s_wt_02,m4_s_wt_01,m4_s_wt_03" connect="王志南"/>
+		<combo key="志南_淡淡忧伤" value="m4_s_ac_01,m4_s_ac_03" connect="王志南"/>
+		<combo key="志南_心如刀割" value="m4_s_ac_02,m4_s_ac_03" connect="王志南"/>
+		<combo key="志南_吃惊待机1L" value="m4_su_wt_01,m4_su_wt_02,m4_su_wt_03" connect="王志南"/>
+		<combo key="志南_吃惊待机2L" value="m4_su_wt_02,m4_su_wt_01,m4_su_wt_03" connect="王志南"/>
+		<combo key="志南_吓死本屌丝了" value="m4_su_ac_01" connect="王志南"/>
+		<combo key="志南_脸红害羞（占位）" value="m4_su_ac_99" connect="王志南"/>
+		<combo key="志南_懵逼（占位）" value="m4_su_ac_98" connect="王志南"/>
+
+		<combo key="女主_隐形" value="hide" connect="女主"/>
+		<combo key="女主_通常待机1L" value="f1_n_01,f1_n_02,f1_n_03" connect="女主"/>
+		<combo key="女主_通常待机2L" value="f1_n_02,f1_n_01,f1_n_03" connect="女主"/>
+		<combo key="女主_通常-高兴" value="f1_n_to_h" connect="女主"/>
+		<combo key="女主_通常-生气" value="f1_n_to_a" connect="女主"/>
+		<combo key="女主_通常-伤心" value="f1_n_to_s" connect="女主"/>
+		<combo key="女主_通常-吃惊-通常" value="f1_n_to_su_to_n" connect="女主"/>
+
+		<combo key="女主_高兴-通常" value="f1_h_to_n" connect="女主"/>
+		<combo key="女主_生气-通常" value="f1_a_to_n" connect="女主"/>
+		<combo key="女主_伤心-通常" value="f1_s_to_n" connect="女主"/>
+		<combo key="女主_高兴待机1L" value="f1_h_wt_01,f1_h_wt_02,f1_h_wt_03" connect="女主"/>
+		<combo key="女主_高兴待机2L" value="f1_h_wt_02,f1_h_wt_01,f1_h_wt_03" connect="女主"/>
+		<combo key="女主_开口大笑" value="f1_h_ac_01" connect="女主"/>
+		<combo key="女主_温柔微笑" value="f1_h_ac_02" connect="女主"/>
+		<combo key="女主_生气待机1L" value="f1_a_wt_01,f1_a_wt_02,f1_a_wt_03" connect="女主"/>
+		<combo key="女主_生气待机2L" value="f1_a_wt_02,f1_a_wt_01,f1_a_wt_03" connect="女主"/>
+		<combo key="女主_生气低头" value="f1_a_ac_01" connect="女主"/>
+		<combo key="女主_生气斜视" value="f1_a_ac_02" connect="女主"/>
+		<combo key="女主_伤心待机1L" value="f1_s_wt_01,f1_s_wt_02,f1_s_wt_03" connect="女主"/>
+		<combo key="女主_伤心待机2L" value="f1_s_wt_02,f1_s_wt_01,f1_s_wt_03" connect="女主"/>
+		<combo key="女主_淡淡忧伤" value="f1_s_ac_01" connect="女主"/>
+		<combo key="女主_心如刀割" value="f1_s_ac_02" connect="女主"/>
+		<combo key="女主_脸红害羞" value="m1_su_ac_99" connect="女主"/>
+	</attr>
+	<attr type="combo" key="入场" value="ruchang">
+		<combo key="保持不变" value="0"/>
+		<combo key="上方登场" value="1"/>
+		<combo key="下方登场" value="2"/>
+		<combo key="左方登场" value="3"/>
+		<combo key="右方登场" value="4"/>
+		<combo key="上方离场" value="5"/>
+		<combo key="下方离场" value="6"/>
+		<combo key="左方离场" value="7"/>
+		<combo key="右方离场" value="8"/>
+	</attr>
+
+	<attr type="combo" key="人名" value="renming" connect="人物">
+		<combo key="女主" value="%s" connect="女主"/>
+		<combo key="李泽言" value="李泽言" connect="李泽言"/>
+		<combo key="许墨" value="许墨" connect="许墨"/>
+		<combo key="周棋洛" value="周棋洛" connect="周棋洛"/>
+		<combo key="王志南" value="王志南" connect="王志南"/>
+		<combo key="吃瓜土狗" value="吃瓜土狗" connect="无立绘"/>
+		<combo key="围观群众" value="围观群众" connect="无立绘"/>
+		<combo key="小偷" value="小偷" connect="无立绘"/>
+		<combo key="旁白" value=" " connect="无立绘"/>
+		<combo key="棺材盖" value="棺材盖" connect="无立绘"/>
+		<combo key="木乃伊" value="木乃伊" connect="无立绘"/>
+		<combo key="吸血鬼" value="吸血鬼" connect="无立绘"/>
+		<combo key="丧尸" value="丧尸" connect="无立绘"/>
+		<combo key="无头鬼" value="无头鬼" connect="无立绘"/>
+	</attr>
+	<attr type="combo" key="背景" value="beijing">
+		<combo key="女主厨房餐厅（日）" value="101"/>
+		<combo key="女主厨房餐厅（夜）" value="102"/>
+		<combo key="女主办公室" value="103"/>
+		<combo key="电梯内" value="104"/>
+		<combo key="音乐室（日）" value="105"/>
+		<combo key="音乐室（夜）" value="106"/>
+		<combo key="总裁办公室" value="107"/>
+		<combo key="公司大门口（日）" value="108"/>
+		<combo key="地铁站" value="109"/>
+		<combo key="会议室" value="110"/>
+		<combo key="街道（日夏）" value="111"/>
+		<combo key="街道（夕）" value="112"/>
+		<combo key="街道（夜夏）" value="113"/>
+		<combo key="陆家嘴（日）" value="114"/>
+		<combo key="陆家嘴（夜）" value="115"/>
+		<combo key="外滩（日）" value="116"/>
+		<combo key="外滩（夜）" value="117"/>
+		<combo key="街道2（夕）" value="118"/>
+		<combo key="街道2（日）" value="119"/>
+		<combo key="商场内" value="120"/>
+		<combo key="明星化妆间" value="121"/>
+		<combo key="大教室" value="122"/>
+		<combo key="公园（日）" value="123"/>
+		<combo key="公园（夜晚）" value="124"/>
+		<combo key="咖啡厅" value="125"/>
+		<combo key="动物园" value="126"/>
+		<combo key="病房" value="127"/>
+		<combo key="超市蔬菜区" value="128"/>
+		<combo key="茶餐厅" value="129"/>
+		<combo key="中式餐厅" value="130"/>
+		<combo key="运动场" value="131"/>
+		<combo key="游泳馆" value="132"/>
+		<combo key="游乐园" value="133"/>
+		<combo key="花田湖" value="134"/>
+		<combo key="海边" value="135"/>
+		<combo key="警察局" value="136"/>
+		<combo key="漆黑的小巷" value="137"/>
+		<combo key="摄影棚" value="138"/>
+		<combo key="宴会大厅" value="139"/>
+		<combo key="鬼屋" value="140"/>
+	</attr>
+</storyAttr>
