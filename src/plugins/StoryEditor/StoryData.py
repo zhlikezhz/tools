@@ -1,371 +1,167 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import time
-import units
-from PyQt4 import QtGui, QtCore
-
-class TreeItem(object):
-    def __init__(self):
-        pass
-
-    def setParent(self, parent):
-        self.parentItem = parent
-
-    def getParent(self):
-        return self.parentItem
-
-    def child(self, row):
-        if(row >= len(self.childItems)):
-            return None
-        return self.childItems[row]
-
-    def childCount(self):
-        return len(self.childItems)
-
-    def childNumber(self):
-        if self.parentItem != None:
-            return self.parentItem.childItems.index(self)
-        return 0
-
-    def row(self):
-        if self.parentItem != None:
-            return self.parentItem.childItems.index(self)
-        return 0
-
-    def columnCount(self):
-        return len(self.itemData)
-
-    def data(self, column):
-        return self.itemData[column]
-
-    def appendChild(self, child):
-        self.childItems.append(child)
-
-    def insertChildren(self, position, count, columns):
-        if position < 0 or position > len(self.childItems):
-            return False
-
-        for row in range(count):
-            data = [None for v in range(columns)]
-            item = TreeItem(data, self)
-            self.childItems.insert(position, item)
-
-        return True
-
-    def parent(self):
-        return self.parentItem
-
-    def removeChildren(self, position, count):
-        if position < 0 or position + count > len(self.childItems):
-            return False
-
-        for row in range(count):
-            self.childItems.pop(position)
-
-        return True
-
-    def setData(self, column, value):
-        if column < 0 or column >= len(self.itemData):
-            return False
-
-        self.itemData[column] = value
-
-        return True
-
-class ChapterItem(TreeItem):
-    def __init__(self, itemData, children, parent = None):
-        super(ChapterItem, self).__init__()
-        self.parentItem = parent
-        self.itemData = itemData
-        self.childItems = children
-
-    def data(self, column):
-        val = None
-        if(column == 0):
-            val = QtCore.QString.fromUtf8(units.typeMapping(self.itemData['type']))
-        elif(column == 1):
-            val = QtCore.QString.fromUtf8(self.itemData['sentence'])
-        return val 
-
-    def setData(self, column, value):
-        if column < 0 or column >= len(self.itemData):
-            return False
-
-        if(column == 0):
-            self.itemData['type'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
-        elif(column == 1):
-            self.itemData['sentence'] = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
-
-        return True
-
-    def insertChildren(self, position, count, columns):
-        if position < 0 or position > len(self.childItems):
-            return False
-
-        for row in range(count):
-            data = {'type': 'dialog', 'sentence': 'No data', 'attr': {}}
-            item = ChapterItem(data, [], self)
-            self.childItems.insert(position, item)
-
-        return True
-
-    def columnCount(self):
-        return 2
-
-class StoryItem(TreeItem):
-
-    def __init__(self, itemData, children, parent = None):
-        super(StoryItem, self).__init__()
-        self.parentItem = parent
-        self.itemData = itemData
-        self.childItems = children
-        self.storyData = []
-
-    def data(self, column):
-        val = None
-        if(column == 0):
-            val = QtCore.QString.fromUtf8(self.itemData['desc'])
-        return val
-
-    def setData(self, column, value):
-        if column < 0 or column >= len(self.itemData):
-            return False
-
-        if(column == 0):
-            desc = unicode(value.toString().toUtf8(), 'utf-8', 'ignore')
-            self.itemData['desc'] = desc
-            if(desc[0] == 'c'):
-                print('card')
-                print(desc)
-                self.itemData['type'] = 'card'
-            elif(desc[0] == 's'):
-                print('story')
-                print(desc)
-                self.itemData['type'] = 'story'
-
-        return True
-
-    def insertChildren(self, position, count, columns):
-        if position < 0 or position > len(self.childItems):
-            return False
-
-        for row in range(count):
-            string = ('%d') % time.time()
-            data = {'type': string, 'desc': string}
-            item = StoryItem(data, [], self)
-            self.childItems.insert(position, item)
-
-        return True
-
-    def columnCount(self):
-        return 1
-
-######################################################################################################################
-
-
-
-class TreeModel(QtCore.QAbstractItemModel):
-    def __init__(self, rootItem, parent=None):
-        super(TreeModel, self).__init__(parent)
-        self.rootItem = rootItem
-        # self.rootItem = []
-        # self.setModelData(data, self.rootItem)
-
-    def columnCount(self, parent=QtCore.QModelIndex()):
-        return self.rootItem.columnCount()
-
-    def data(self, index, role):
-        if not index.isValid():
-            return None
-
-        if role != QtCore.Qt.DisplayRole and role != QtCore.Qt.EditRole:
-            return None
-
-        item = self.getItem(index)
-        return item.data(index.column())
-
-    def flags(self, index):
-        if not index.isValid():
-            return 0
-
-        return QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable
-
-    def getItem(self, index):
-        if index.isValid():
-            item = index.internalPointer()
-            if item:
-                return item
-
-        return self.rootItem
-
-    def headerData(self, section, orientation, role=QtCore.Qt.DisplayRole):
-        if orientation == QtCore.Qt.Horizontal and role == QtCore.Qt.DisplayRole:
-            return self.rootItem.data(section)
-
-        return None
-
-    def index(self, row, column, parent=QtCore.QModelIndex()):
-        if parent.isValid() and parent.column() != 0:
-            return QtCore.QModelIndex()
-
-        parentItem = self.getItem(parent)
-        childItem = parentItem.child(row)
-        if childItem:
-            return self.createIndex(row, column, childItem)
-        else:
-            return QtCore.QModelIndex()
-
-    def insertColumns(self, position, columns, parent=QtCore.QModelIndex()):
-        self.beginInsertColumns(parent, position, position + columns - 1)
-        success = self.rootItem.insertColumns(position, columns)
-        self.endInsertColumns()
-
-        return success
-
-    def insertRows(self, position, rows, parent=QtCore.QModelIndex()):
-        parentItem = self.getItem(parent)
-        self.beginInsertRows(parent, position, position + rows - 1)
-        success = parentItem.insertChildren(position, rows,
-                self.rootItem.columnCount())
-        self.endInsertRows()
-
-        return success
-
-    def parent(self, index):
-        if not index.isValid():
-            return QtCore.QModelIndex()
-
-        childItem = self.getItem(index)
-        parentItem = childItem.parent()
-
-        if parentItem == self.rootItem:
-            return QtCore.QModelIndex()
-
-        return self.createIndex(parentItem.childNumber(), 0, parentItem)
-
-    def removeColumns(self, position, columns, parent=QtCore.QModelIndex()):
-        self.beginRemoveColumns(parent, position, position + columns - 1)
-        success = self.rootItem.removeColumns(position, columns)
-        self.endRemoveColumns()
-
-        if self.rootItem.columnCount() == 0:
-            self.removeRows(0, self.rowCount())
-
-        return success
-
-    def removeRows(self, position, rows, parent=QtCore.QModelIndex()):
-        parentItem = self.getItem(parent)
-
-        self.beginRemoveRows(parent, position, position + rows - 1)
-        success = parentItem.removeChildren(position, rows)
-        self.endRemoveRows()
-
-        return success
-
-    def rowCount(self, parent=QtCore.QModelIndex()):
-        parentItem = self.getItem(parent)
-
-        return parentItem.childCount()
-
-    def setData(self, index, value, role=QtCore.Qt.EditRole):
-        if role != QtCore.Qt.EditRole:
-            return False
-
-        item = self.getItem(index)
-        result = item.setData(index.column(), value)
-
-        if result:
-            self.dataChanged.emit(index, index)
-
-        return result
-
-    def setHeaderData(self, section, orientation, value, role=QtCore.Qt.EditRole):
-        if role != QtCore.Qt.EditRole or orientation != QtCore.Qt.Horizontal:
-            return False
-
-        result = self.rootItem.setData(section, value)
-        if result:
-            self.headerDataChanged.emit(orientation, section, section)
-
-        return result
-
-class ChapterModel(TreeModel):
-    def __init__(self, rootItem, parent=None):
-        super(ChapterModel, self).__init__(rootItem, parent)
-        self.dragIndex = None
-
-    def flags(self, index):
-        if not index.isValid():
-            return 0
-
-        return QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled
-
-class StoryModel(TreeModel):
-    def __init__(self, rootItem, parent=None):
-        super(StoryModel, self).__init__(rootItem, parent)
-        self.mparent = parent
-
-    # def flags(self, index):
-    #     if index.isValid():
-    #         return QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsDragEnabled | QtCore.Qt.ItemIsDropEnabled
-    #     else:
-    #         return QtCore.Qt.ItemIsDropEnabled
-
-
-    # def mimeData(self, indexes):
-    #     mimeData = QtCore.QMimeData()
-    #     encodedData = QtCore.QByteArray()
-
-    #     if(indexes[0].isValid()):
-    #         self.currIndex = indexes[0]
-    #     else:
-    #         self.currIndex = None
-
-    #     mimeData.setData('text/plain', encodedData)
-    #     return mimeData
-
-    # def mimeTypes(self): 
-    #     return ['text/plain']
-
-    # def supportedDropActions(self):
-    #     return QtCore.Qt.MoveAction
-
-    # def dropMimeData(self, data, action, row, column, parent):
-    #     if(self.currIndex):
-    #         print "++++++++++++++++++++++"
-
-    #     return True
-
-    # def supportedDropActions(self):
-    #     parent = self.mparent 
-    #     currIndex = parent.indexAt(QtGui.QCursor.pos()) 
-    #     dragIndex = parent.selectionModel().currentIndex()
-
-    #     if(currIndex and dragIndex and currIndex != dragIndex):
-    #         currItem = currIndex.internalPointer()
-    #         dragItem = dragIndex.internalPointer()
-
-    #         if(currItem and dragItem):
-    #             currType = currItem.itemData['type']
-    #             dragType = dragItem.itemData['type']
-
-    #             if(currType == dragType and currIndex.parent() == dragIndex.parent()):
-    #                 return QtCore.Qt.MoveAction
-    #             # evt.setDropAction(QtCore.Qt.MoveAction)
-    #             # evt.accept()
-    #             else:
-    #                 return QtCore.Qt.CopyAction
-    #             # evt.ignore()
-    #         else:
-    #             return QtCore.Qt.CopyAction
-    #     else:
-    #         return QtCore.Qt.CopyAction
-    #         # evt.ignore()
-
-    # def dragMoveEvent(self, evt):
-    #     super(StoryModel, self).__init__(evt)
-    #     print evt.pos()
-
-
-######################################################################################################################
+import copy
+import xml.dom.minidom as minidom
+import xml.etree.ElementTree as xml
+
+class UnitData():
+	def __init__(self, name = 'default'):
+		self.name = name
+
+		self.desc = ""
+		self.type = ""
+		self.sentence = ""
+		
+		self.attrib = {}
+		self.children = []
+
+class StoryMgr():
+	def __init__(self):
+		pass
+
+	def newData(self):
+		self.storyData = UnitData('root')
+		card = UnitData('card')
+		card.desc = "new card"
+		self.storyData.children.append(card)
+
+	def setData(self, data):
+		self.storyData = data
+
+	def loadData(self, filename):
+		self.storyData = UnitData('root')
+		root = xml.parse(filename).getroot()
+		for cardNode in root.findall('card'):
+			card = UnitData('card')
+			card.desc = cardNode.attrib['desc']
+			for storyNode in cardNode.findall('story'):
+				story = UnitData('story')
+				story.desc = storyNode.attrib['desc']
+				def parseTree(parentNode, parent):
+					for eleNode in parentNode.findall('element'):
+						element = UnitData('element')
+						element.type = eleNode.attrib['type']
+						element.sentence = eleNode.attrib['sentence']
+
+						for attribNode in eleNode.findall("attr"):
+							key = attribNode.attrib['key']
+							value = attribNode.attrib['value']
+							element.attrib[key] = value
+
+						parseTree(eleNode, element)
+						parent.children.append(element)
+
+				parseTree(storyNode, story)
+				card.children.append(story)
+			self.storyData.children.append(card)
+
+	def save2Xml(self, filename):
+		root = xml.Element('story')
+		tree = xml.ElementTree(root)
+
+		for card in self.storyData.children:
+			cardNode = xml.SubElement(root, card.name)
+			cardNode.attrib['desc'] = card.desc
+			for story in card.children:
+				storyNode = xml.SubElement(cardNode, story.name)
+				storyNode.attrib['desc'] = story.desc
+				def writeTree(parentNode, parent):
+					for element in parent.children:
+						eleNode = xml.SubElement(parentNode, element.name)
+
+						eleNode.attrib['type'] = element.type
+						eleNode.attrib['sentence'] = element.sentence
+
+						for (key, value) in element.attrib.iteritems():
+							attribNode = xml.SubElement(eleNode, 'attr')
+							attribNode.attrib['key'] = key
+							attribNode.attrib['value'] = value
+
+						writeTree(eleNode, element)
+
+				writeTree(storyNode, story)
+
+		# 格式化XML
+		rough_string = xml.tostring(root, 'utf-8')  
+		reparsed = minidom.parseString(rough_string)  
+		string = ''.join(reparsed.toprettyxml(indent="  " , encoding="utf-8"))
+
+		fd = open(filename, "w")
+		fd.write(string)
+		fd.close()	
+
+	def save2Lua(self, filename):
+		storyData = self.getStoryData()
+		if(storyData):
+			(path, name)=os.path.split(filename)
+			name = name.split('.')[0]
+
+			self.fileList = []
+			fatherFD = open(filename, "w")
+			fatherFD.write("module(\"%s\", package.seeall)\n\n" % (name))
+			fatherFD.write("%s = {\n" % name)
+
+			cnt = 1
+			depth = 1
+			for card in storyData.children:
+				for story in card.children:
+					subFileName = name + str(cnt)
+					subFilePath = subFileName + '.lua'
+
+					self.printTo(("%s[\"%s_%s\"] = {\n") % (depth * '\t', card.desc, story.desc))
+
+					def printTree(depth, parent):
+						cntt = 1
+						for element in parent.children:
+							self.printTo(("%s[%d] = {\n") % (depth * '\t', cntt))
+
+							self.printTo(("%stype = \"%s\",\n") % ((depth + 1)* '\t', element.type))
+							self.printTo(("%ssentence = \"%s\",\n") % ((depth + 1) * '\t', element.sentence))
+
+							for (key, value) in element.attrib.iteritems():
+								self.printTo("%s%s = \"%s\",\n" % ((depth + 1) * '\t', key, value))
+
+							self.printTo(("%sbranch = {\n") % ((depth + 1) * '\t'))
+							printTree(depth + 2, element)
+							self.printTo("%s},\n" % ((depth + 1) * '\t'))
+							self.printTo("%s},\n" % (depth * '\t'))
+							cntt += 1
+
+					printTree(depth + 2, story)
+					self.printTo("%s},\n" % (depth * '\t'))
+					string = ''.join(self.fileList)
+					if(len(string) > 8000):
+						subFullPath = path + "/" + subFilePath
+						fd = open(subFullPath, "w")
+						fd.write("module(\"%s\", package.seeall)\n\n" % (subFileName))
+						fd.write("%s = {\n" % subFileName)
+						fd.write(string)
+						fd.write('}\n')
+						fd.close()
+
+						cnt += 1
+						self.fileList = []
+
+					fatherFD.write(('\t[\"%s_%s\"] = \"%s\",\n') % (card.desc, story.desc, subFilePath))
+
+			string = ''.join(self.fileList)
+			if(len(string) > 0):
+				subFileName = name + str(cnt)
+				subFilePath = subFileName + '.lua'
+				subFullPath = path + "/" + subFilePath
+				fd = open(subFullPath, "w")
+				fd.write("module(\"%s\", package.seeall)\n\n" % (subFileName))
+				fd.write("%s = {\n" % subFileName)
+				fd.write(string)
+				fd.write('}\n')
+				fd.close()
+
+			fatherFD.write("}\n")
+			fatherFD.close()
+
+	def printTo(self, string):
+		self.fileList.append(string)
+
+	def getStoryData(self):
+		return self.storyData

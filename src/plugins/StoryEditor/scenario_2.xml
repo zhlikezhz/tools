@@ -1,0 +1,2889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<story>
+  <card desc="30001">
+    <story desc="1">
+      <element sentence="…………" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="2">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="3">
+      <element sentence="No data" type="dialog"/>
+    </story>
+  </card>
+  <card desc="30002">
+    <story desc="1">
+      <element sentence="（周末睡到大中午真是太爽了）" type="dialog"/>
+      <element sentence="（天气真好）" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="（要不要下个厨呢？）" type="dialog"/>
+      <element sentence="（可是家里没什么食材了……好像洗衣液也快用完了？）" type="dialog"/>
+      <element sentence="（……卫生纸也没几卷了）" type="dialog"/>
+      <element sentence="这日子过得。" type="dialog"/>
+      <element sentence="♪~~~♪~~~" type="dialog"/>
+      <element sentence="（嗯？前面那个人……）" type="dialog"/>
+      <element sentence="志南？" type="dialog"/>
+      <element sentence="！" type="dialog"/>
+      <element sentence="（真是志南）" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="（拿着那么多东西居然还能一溜小跑……）" type="dialog"/>
+      <element sentence="&lt;玩家名&gt;！真巧啊！" type="dialog"/>
+      <element sentence="你这是干啥去呢？" type="dialog"/>
+      <element sentence="打算去超市采购，家里消耗品都用得差不多了。" type="dialog"/>
+      <element sentence="看你这样子是刚回来？" type="dialog"/>
+      <element sentence="哈哈，是呀，噢对了！" type="dialog"/>
+      <element sentence="&lt;玩家名&gt;你看！抽纸买三送二！" type="dialog"/>
+      <element sentence="哇！" type="dialog"/>
+      <element sentence="超划算！" type="dialog"/>
+      <element sentence="机不可失，要不我先回去把东西放下，再跟你去一趟！" type="dialog"/>
+      <element sentence="你还有什么没买吗？" type="dialog"/>
+      <element sentence="我想再多买几盒！" type="dialog"/>
+      <element sentence="……你用纸巾那么费噢。" type="dialog"/>
+      <element sentence="啊？" type="dialog"/>
+      <element sentence="……啊。" type="dialog"/>
+      <element sentence="不是啊！我是真的觉得很划算！那、那我还是不买了！" type="dialog"/>
+      <element sentence="别别！买买买，不买不是中国人。" type="dialog"/>
+      <element sentence="（志南好耿直，忍不住想逗真不能怪我）" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="（……是有多委屈）" type="dialog"/>
+      <element sentence="嗯？你手上那一沓是？" type="dialog"/>
+    </story>
+    <story desc="2">
+      <element sentence="你手上那一沓是？" type="dialog"/>
+      <element sentence="啊？噢！正想说呢！……结果被你打岔。" type="dialog"/>
+      <element sentence="看！" type="dialog"/>
+      <element sentence="看什么看，我这不就是问你这是什么呢。" type="dialog"/>
+      <element sentence="我早前就在路口那家超市办了会员。" type="dialog"/>
+      <element sentence="不但每次都有优惠，偶尔还能碰到消费送抵金券的活动！" type="dialog"/>
+      <element sentence="你看今天我消费了这么点儿，就被发了这么厚一叠！" type="dialog"/>
+      <element sentence="那么请问，一张顶多少钱呢？" type="dialog"/>
+      <element sentence="两块！" type="dialog"/>
+      <element sentence="哇噢，五张就是十块。" type="dialog"/>
+      <element sentence="对啊！太实惠了！" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="？" type="dialog"/>
+      <element sentence="怎么啦？" type="dialog"/>
+      <element sentence="志南啊，虽然真的是挺实惠的，但是你也不至于这么激动嘛，闭上眼我还以为在和隔壁的陈阿姨唠嗑呢。" type="dialog"/>
+      <element sentence="不会吧！我有那么婆妈！？" type="dialog"/>
+      <element sentence="你觉得没有吗？" type="dialog"/>
+      <element sentence="我觉得实惠。" type="dialog"/>
+      <element sentence="……行。" type="dialog"/>
+      <element sentence="你觉得不实惠？" type="dialog"/>
+      <element sentence="我觉得实惠，走。" type="dialog"/>
+      <element sentence="啊？去哪儿？" type="dialog"/>
+      <element sentence="你不是还要再去一次吗？" type="dialog"/>
+      <element sentence="啊。" type="dialog"/>
+    </story>
+    <story desc="3">
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+    </story>
+  </card>
+  <card desc="30003"/>
+  <card desc="30004"/>
+  <card desc="30005"/>
+  <card desc="30006"/>
+  <card desc="30007">
+    <story desc="1">
+      <element sentence="（今天活儿好多，提早两个小时来上班真是要命）" type="dialog"/>
+      <element sentence="（饿死了，早饭也没来得及吃……）" type="dialog"/>
+      <element sentence="（一会儿叫个外卖好了）" type="dialog"/>
+      <element sentence="嘟噜噜噜噜……（电话震动）" type="dialog"/>
+      <element sentence="嗯？" type="dialog"/>
+      <element sentence="（志南的信息？）" type="dialog"/>
+      <element sentence="（“&lt;玩家名&gt;，下楼吃包子喽！”）" type="dialog"/>
+      <element sentence="…………什么情况。" type="dialog"/>
+      <element sentence="（姑且下去看看）" type="dialog"/>
+      <element sentence="人呢？……啊。" type="dialog"/>
+      <element sentence="…………" type="dialog"/>
+      <element sentence="（喊我吃包子，结果自己在吃……）" type="dialog"/>
+      <element sentence="志南。" type="dialog"/>
+      <element sentence="啊，&lt;玩家名&gt;！快快，趁热吃！" type="dialog"/>
+      <element sentence="（接过包子）" type="dialog"/>
+      <element sentence="你这是什么情况，怎么一早就在这儿？" type="dialog"/>
+      <element sentence="我当然是特地过来给你送包子的啦。" type="dialog"/>
+      <element sentence="啊，也不能说专程……我是正好今天在附近有事儿，顺便就过来了。" type="dialog"/>
+      <element sentence="呃……也不能说顺便……" type="dialog"/>
+      <element sentence="我说你这人会不会说话~" type="dialog"/>
+      <element sentence="总之！有包子！快吃啦！咱们一边吃一边说。" type="dialog"/>
+      <element sentence="那谢谢啦。（接过包子）" type="dialog"/>
+      <element sentence="对了，你怎么知道我今天没吃早饭的。" type="dialog"/>
+      <element sentence="早上看到你昨晚发的朋友圈啊，你不是说明天得加班，要提早上班嘛。" type="dialog"/>
+      <element sentence="据我对你的了解，八成是没吃早饭，我反正顺道，就干脆买了包子过来啦。" type="dialog"/>
+      <element sentence="那万一“两成”我已经吃过了怎么办~" type="dialog"/>
+      <element sentence="那……我就只有自己都吃了。……好吃吗？" type="dialog"/>
+      <element sentence="好吃~ 叠记包子超赞！就是店家太高冷，外卖起送价要五十，平时很少有机会点它！" type="dialog"/>
+      <element sentence="爱吃就好~ 就怕你不吃包子，其实我还买了两个茶叶蛋。" type="dialog"/>
+      <element sentence="……你也是不怕我真的吃过了。" type="dialog"/>
+      <element sentence="反正我都吃得下~！" type="dialog"/>
+    </story>
+    <story desc="2">
+      <element sentence="你昨晚那条朋友圈也是十二点多发的。" type="dialog"/>
+      <element sentence="…………（吃包子）" type="dialog"/>
+      <element sentence="知道第二天要加班还那么晚睡噢？" type="dialog"/>
+      <element sentence="…………（吃包子）" type="dialog"/>
+      <element sentence="我本来就觉得女孩子晚睡不好，当然不是说男的就可以……" type="dialog"/>
+      <element sentence="…………（吃包子）" type="dialog"/>
+      <element sentence="你怎么不说话呀？" type="dialog"/>
+      <element sentence="我就是看看我不说话你能自言自语到什么程度。" type="dialog"/>
+      <element sentence="……我是认真的，我自己就老熬夜，知道晚睡早起多痛苦！" type="dialog"/>
+      <element sentence="好啦，来来吃包子。" type="dialog"/>
+      <element sentence="……明明是我买的，怎么像你请我一样。" type="dialog"/>
+      <element sentence="咱俩谁跟谁，不要客气！" type="dialog"/>
+      <element sentence="呃，好吧。" type="dialog"/>
+      <element sentence="嘿嘿~" type="dialog"/>
+      <element sentence="你笑啥呢。" type="dialog"/>
+      <element sentence="嘿嘿，没啥！对了茶叶蛋你还吃吗？" type="dialog"/>
+      <element sentence="你还真买了啊！" type="dialog"/>
+      <element sentence="这不是怕你不爱吃包子嘛。" type="dialog"/>
+      <element sentence="那茶叶蛋怎么办？" type="dialog"/>
+      <element sentence="那我就自己吃啦~" type="dialog"/>
+      <element sentence="……志南，你总这么耿直迟早要被坏人骗的。" type="dialog"/>
+      <element sentence="哈哈，没事儿，只要你别骗我就行~" type="dialog"/>
+      <element sentence="……！" type="dialog"/>
+      <element sentence="？" type="dialog"/>
+      <element sentence="怎么啦？没吃饱吗？再来一个？" type="dialog"/>
+      <element sentence="没、没有！我已经很满足了！" type="dialog"/>
+      <element sentence="那就好，剩下的我就自己都吃了，我也还没吃早饭呢。" type="dialog"/>
+      <element sentence="谢谢你的包子，改天我请！那我先回去上班喽，拜拜！" type="dialog"/>
+      <element sentence="（志南这家伙……）" type="dialog"/>
+      <element sentence="怎么突然这么急啊……茶叶蛋真的不要吗！（大声）" type="dialog"/>
+      <element sentence="不~用~啦！" type="dialog"/>
+    </story>
+  </card>
+  <card desc="30008"/>
+  <card desc="30014">
+    <story desc="story_0">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="story_1">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="story_2">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="story_3">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="story_4">
+      <element sentence="No data" type="dialog"/>
+    </story>
+  </card>
+  <card desc="30009"/>
+  <card desc="30010"/>
+  <card desc="30011"/>
+  <card desc="30012"/>
+  <card desc="card_31"/>
+  <card desc="card_32"/>
+  <card desc="30013">
+    <story desc="story_1">
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="story_0">
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+    </story>
+  </card>
+  <card desc="30013">
+    <story desc="story_0">
+      <element sentence="No data" type="dialog"/>
+    </story>
+  </card>
+  <card desc="40001"/>
+  <card desc="40002"/>
+  <card desc="40003"/>
+  <card desc="40004"/>
+  <card desc="40005"/>
+  <card desc="40006"/>
+  <card desc="40007"/>
+  <card desc="50001">
+    <story desc="1">
+      <element sentence="（呼……累死了）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（老板可真能使唤人，动不动就喊我出来跑腿）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（我看看……这个在那边的百货商店就有，这个要去那边的……咦？）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="4"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（那个人好像是……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="……！" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_su"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（真是棋洛，怎么看起来跟做贼似的……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="No data" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（嗯？看口型好像在喊我过去……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="棋洛，你在这儿东张西望地……（小声）干什么呢？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="诶！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（棋洛二话不说把我拽到了旁边的巷子里）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（还真有点疼……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="%s！是我！" type="dialog">
+        <attr key="biaoqing" value="m3_h_wt_01,m3_h_wt_02,m3_h_wt_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="知道是你啦！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哇噢！我装扮得如此隐蔽居然被你发现了哈哈！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="……你是认真的吗？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="挺认真的啊，虽然被你认出来我觉得情有可原啦。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="情有可原？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="当然是因为我的脸早已深深地印在了你的脑海里。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="……难以否认这一点也是蛮不甘心的。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="好啦，不开玩笑了，你在这儿干什么呢？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="我惯例出来跑腿儿，肯定不是在摸鱼啦。倒是你……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（我再一次看了看四周，确实没有看到疑似工作人员的身影）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="倒是你，当红偶像怎么一个人上街？不怕被迷妹绑架？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="怕啊！但是有些时候不得不冒这种风险！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="比如……？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="我已经……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="我已经三天没有吃过什么像样的东西了！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="经纪公司突然抽风，说要走什么清瘦路线，每天只给我吃沙拉和水果，连续三天了！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（呃，其实我最近也……虽说单纯是为了减肥，还是别说出来了……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="你能体会那种生不如死的日子吗？！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="我能想象，一定十分痛苦！（这话倒是真的）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="所以啊！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="所以啥？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="所以我就跑出来自己加餐啦！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="No data" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="……（未完待续）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+    </story>
+    <story desc="2">
+      <element sentence="所以我就跑出来自己加餐啦！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="4"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="怎么啦？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="我在想我是应该理性地劝你回头是岸呢还是……跟你一起去加餐。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哈哈！答案已经很明确了不是嘛~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="不不……我再想想。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="还想什么啊，跟我走，就对面那家热狗店，我跟你讲，赞！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="听你这口气，似乎是那家店的常客？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="呃……！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="哈哈，看来当偶像确实压力很大~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="可不是么，亏得我懂得给自己减压。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="好了先不说了，再磨蹭下去我被人认出来怎么办~！那什么……我被迷妹绑架了怎么办！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="好好~我也节食好几天了，正馋着呢……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="啊？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="…………（说漏嘴了）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="快走啦！你不是说不磨蹭吗，速战速决…！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（结果，还是我去帮棋洛买了热狗，当然还有我自己那一份）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（稍微走几步就有一个行人不多的小公园，我们在这里找了一张阴凉处的长凳坐了下来）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="这家热狗真的很好吃耶！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="我就说吧？看来我们俩口味很相近嘛。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="你还真是一点罪恶感都没有啊，说好的清瘦路线呢？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="算了吧，就我那经纪公司我再了解不过了，过阵子搞不好就变成肌肉路线了，想一出是一出的。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="噗…不至于吧~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（肌肉壮汉的棋洛……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哇……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="你别自己瞎脑补啊！我就是举个例子！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="我觉得我脑补的还挺靠谱的，希望有机会见到真人~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="你就别说风凉话了，我的健康状况我自己自然会把握，这可是作为一名艺人的基本修养。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="从吃热狗的样子倒真看不出啊~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="这不是饿极了嘛，你还说我，你自己不也差不多！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="才没有吧！你看我还剩下两口你都吃完了……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="你这五十步笑百步也是真好意思啊~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="……那这两口我还是别吃了，你没罪恶感我还有罪恶感呢。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="说到这个……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="嗯？（未完待续）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+    </story>
+    <story desc="3">
+      <element sentence="说到这个……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="4"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="嗯？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="你刚说，你在节食？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="呃，是啊……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="为什么？你需要节食吗？你也清瘦路线？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="还真被你说中了，就是清瘦路线！哪像你那么不自觉。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="说实话，其实我还真不怎么吃得胖耶？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="我就知道……真是太让人嫉妒了！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="可我真不觉得你需要节食啊？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_su"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（棋洛稍微前后看了我两眼……有点失礼啊小弟弟）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="别看了，女生是藏肉的你没听过吗？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="什么意思~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="就是穿着衣服看不出来的…！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="噢~？" type="dialog">
+        <attr key="biaoqing" value="m3_h_ac_01"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_a_wt_01,f1_a_wt_02,f1_a_wt_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="总之就是要减……！" type="dialog">
+        <attr key="biaoqing" value="f1_a_wt_02,f1_a_wt_01,f1_a_wt_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哈哈好吧，不过偶尔也可以像我一样加个餐嘛。我提议，以后我们就一起加餐，怎么样~？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="哇你这个人……自己吃不胖还要拖上我？！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哪有啊，我这不是看你帮我买吃的更保险嘛！我的健康饮食生活以后就靠你了。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="搞了半天我就是个跑腿儿的，还要搭进去几千大卡……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="大不了全都我请总行了吧~" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="……你猜我有没有那么好收买。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="有？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="答对了……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="干嘛……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="没想到你真的这么没出息……我惊呆了……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="我也没想到你是这么没礼貌的人……我也惊呆了！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="都被你讲得没胃口了……算了不吃了。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（我起身打算把剩下的热狗扔掉）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="诶别别！多浪费！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（手中的热狗被棋洛夺走了）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（哈唔）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="！！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="这下总算满足了~！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="你、你这个人……！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="不能浪费嘛，况且我正好差一口没吃饱，怎么？人气偶像不嫌弃你你还嫌弃我了？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（这人是真不讲究还是故意的……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="呼……（伸了个懒腰）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="讲真的，今天多亏了你我吃得既满足又开心，不然下次我直接让你买好了等我怎么样~？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="什么怎么样，那也得我正好有时间不是嘛。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="哇你还蛮难约耶。" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="也是真好意思把让人跑腿儿说得这么好听……在公司被老板使唤，出来还要被你使唤……" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="怎么啦？" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（棋洛突然神情严肃起来，看着我身后的方向）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（我也回过头……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="啊……！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+    </story>
+    <story desc="4">
+      <element sentence="（棋洛突然神情严肃起来，看向我身后）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（我也回过头……）" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="啊……！" type="dialog">
+        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（应该没有看错……棋洛也应该注意到了）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="（那个人……在偷钱包！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="喂！" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_a"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="啧…！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m4"/>
+        <attr key="renming" value="小偷"/>
+      </element>
+      <element sentence="！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="受到棋洛呵斥，小偷快速抽出了钱包转身逃跑了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="……棋洛！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="我还没有反应过来，棋洛已经冲了过去。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="别想跑！！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="（怎么办！得去帮棋洛！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="%s你在那儿呆着！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+      </element>
+      <element sentence="可是！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（棋洛说完就自顾自地追了上去！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怎么了怎么了？" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="围观群众"/>
+      </element>
+      <element sentence="好像有人抓小偷！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="围观群众"/>
+      </element>
+      <element sentence="快报警！！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="围观群众"/>
+      </element>
+      <element sentence="（围观的人多了起来）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="棋……！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（还是不要大声喊棋洛的名字好了……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊……！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（棋洛好快！已经追上了！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啧！……你谁啊！少管闲事！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="小偷"/>
+      </element>
+      <element sentence="（小偷被棋洛抓住了胳膊！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="东西交出来！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你有病是吧！关你什么事！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="小偷"/>
+      </element>
+      <element sentence="光天化日你也够胆子！别想跑！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="放开！啧……！你逼我的！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="小偷"/>
+      </element>
+      <element sentence="！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（不妙！小偷有匕首！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="小心啊！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="——！！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（……警察怎么还没来！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="真当我没练过！乖乖束手就擒！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="给我松手！！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="小偷"/>
+      </element>
+      <element sentence="——唔！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="棋洛！！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+    </story>
+    <story desc="5">
+      <element sentence="……………………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（之后很快警察就赶到了，钱包顺利拿了回来，小偷也被带走了）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（在棋洛被认出前我们回避到了公园的另外一侧）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……………………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="唉……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你叹什么气呢？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……………………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……不行。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="什么不行？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你让我再消沉一会儿，我还不想说话。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哈！？为什么要消沉？多亏了你小偷才没逃走不是嘛！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="但我并没能制服他，自己还摔一跤……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（就在警察赶到的前几秒，为了躲开小偷的匕首，棋洛不得不放开了小偷，结果被小偷顺势狠推了一把……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="本来想完全制住他的，我的力量还是太弱。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="可是对方有匕首啊！你没受伤已经是万幸了，而且最终还是抓住了小偷，我觉得你做得很棒！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="但——" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="诶，你这个人。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="太钻牛角尖了吧。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你是觉得自己应该一个人制服小偷才行吗？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="我当然想！……反正觉得自己很逊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="可是结果没变不是吗，小偷抓住就好嘛！而且要不是你及时牵制住那家伙还真不一定能抓到呢！在我看来，你功劳最大！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="呃……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怎么？难道非要一个人功劳全揽你才满足噢~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="！？……我并不是这个意思。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="总之！我觉得自己可以做得更好，很不甘心。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="好吧~我看你是钻不出来了，反正我觉得你刚才很英勇~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="真的？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="当然！还有——" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我是真没见过这么不要命的国民偶像！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="人家大明星随便拍个动作戏都要用替身，你倒好……来真的居然还冲那么快，差点被你吓死！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哈~！都说我有练过！和某些花架子可不一样，先不说刚才，平时拍戏我也全都亲自上阵！我还嫌弃替身没我身手好呢！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我看过我看过~媒体和粉丝都大赞周棋洛实力非凡！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嘿嘿~不愧是我！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="就是嘛，所以有什么好沮丧的，你超棒的~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="………………" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_su"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="%s。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="嗯~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="谢谢啦。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="不客气，好歹我也是人生前辈嘛。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="………………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="又怎么啦？……啊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你手臂在流血！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+    </story>
+    <story desc="6">
+      <element sentence="棋洛！你手臂在流血！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="咦？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="这里这里！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（我指指棋洛的左小臂）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你都不疼的吗！？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="现在有点，刚才大概有点麻了，还真没感觉到……啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="怎么了？疼吗？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="疼倒是还好，只是这下要被经纪人骂了哈哈哈。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="不知道你在哈哈哈什么，赶紧拿矿泉水清理下伤口，我给你贴个创可贴！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哇，你还常备创口贴，不愧是女孩子啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（我拿出包里的矿泉水打湿纸巾，简单清理了一下棋洛的伤口）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="好了，手抬起来了，现在这样我不好贴。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嗯，麻烦你了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="是刚刚摔倒时擦伤的吗？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="应该是吧，当时真没注意，光急着逃离作案现场了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="噗！什么犯罪现场，讲得我们才是贼似的~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="%s。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="嗯？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="其实你刚刚说的……也没错。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="嗯？你是指什么~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="就是说揽功劳什么的……其实我多少，是有点想逞英雄吧。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="怎么啦，现在来说这个~你不是都想通了嘛。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这是两回事，你知道我……很崇拜超级英雄那样的角色。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="虽然我也明白漫画电影和现实是两回事，但关键时刻总是忍不住逞英雄，因此都被经纪人训过好多次了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="原来这种事情已经不是第一次了噢！？还是惯犯啊你！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="可不是么，你看我逃离现场那熟练的步伐。" type="dialog">
+        <attr key="biaoqing" value="m3_h_ac_02,m3_h_ac_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（噗嗤）咳咳，你严肃点~！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="总之我已经做好回去挨训的觉悟了，你就再念叨我了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我哪有念叨你，都说了，在我看来你已经足够称得上英雄了，并不觉得你只是“逞英雄”。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="好啦！别再捧我了！太阳都要下山了，我差不多也要回去了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哈哈，这就不好意思了还超级英雄嘞~……等等！？怎么都这个点了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="呃……我记得你是出来跑腿的？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="啊啊……完了完了，回去绝对要挨骂，这下真变摸鱼了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="能和偶像一起摸鱼你有何不满！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="啊啊……这个月的奖金还有戏吗……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你倒是回应我一下，有点伤自尊啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（怒目）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哇好凶！那……我们赶紧各自回去挨骂吧哈哈~！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="被你害死了……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怪我怪我，下次多请你吃个热狗！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="有没有下次还真要考虑一下！好了不说了我先走了！拜拜！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嗯，拜拜啦。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="呼……呼……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（现在回去应该还好……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（不对……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（东西还没买！！！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊啊啊啊！！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="居然还要考虑，我都要开始怀疑自己的魅力了……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（爱逞英雄这个毛病……再加上催化条件，也是蛮要命的）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（好了，我也回去吧）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="嗯？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（这是什么……是%s掉的吗？）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="-END-" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="  "/>
+      </element>
+    </story>
+  </card>
+  <card desc="50002">
+    <story desc="1">
+      <element sentence="（其实一开始让我陪棋洛来鬼屋我是拒绝的）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="现在去玩别的我觉得还来得及。" type="dialog">
+        <attr key="biaoqing" value="hide"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="去玩别的？为、为什么要去玩别的，今天就是为了这个来的，地震海啸也要进去！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="光是掩人耳目一路来到这儿就够辛苦的了，事到如今怎能打退堂鼓！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你真的做好觉悟了？" type="dialog">
+        <attr key="biaoqing" value="hide"/>
+        <attr key="beijing" value="101"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="当、当然！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="是吗~？那这就进去吧~！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="走！…………等等！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………（斜眼）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这个世界上是没有鬼的！……对吧？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="反正我长这么大没有亲眼见过，即使真有也不会在这里出现嘛，这里都是工作人员假扮的，别说你不知道啊。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="那万一有真的混进去呢…？这可不好说啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="那既然你这么怕我们别进去不就好了~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="不全是因为怕……也是考虑到人身安全，万一那啥……出现了，谁负责？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我要去玩云霄飞车了。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="说好的陪我去鬼屋呢！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="说好的开机前训练呢？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="唔……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="不擅长恐怖片接什么恐怖电影通告嘛，自讨苦吃……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="都说了不是我自己要接！都是经纪公司帮我接的！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="因为要颠覆形象~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="是啊，公司的用意，我虽然理解……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="照现在这个情况来看，颠覆形象是做到了——怂。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="唔……！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="除了飘来飘去的鬼我什么都不怕！真的就是这个不行，就是这个真的……不行！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="——难道你就不怕鬼吗？！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="也不能说不怕，不过这里明摆着是假的不是嘛，大家来玩就是图个刺激~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m3_a_ac_01,m3_a_ac_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="好！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="那走~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="走！我走前面！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哇，看好你~！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="…………（假的假的，都是假的！）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="~~♪（未完待续）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+    </story>
+    <story desc="2">
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="m3_s_to_n"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………！" type="dialog">
+        <attr key="biaoqing" value="m3_s_to_n"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="呼…………" type="dialog">
+        <attr key="biaoqing" value="m3_s_to_n"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你怎么一惊一乍的。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……这里作为游乐园鬼屋，质量挺高的啊？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="嗯嗯！我也觉得~！你看那边那个鬼火~简直以假乱真了！哇……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="唔……确、确实，大概是全息投影什么的吧。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哎棋洛你看那边，那个骷髅还会动！做得真好啊，哇……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……我看你似乎很兴奋啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="是吗~？大概因为以前从来没见过这种技术吧，感觉很新鲜！哈哈~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你这是来鬼屋的态度吗……也罢，假的假的，都是假的。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="~~♪" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怎么样？有感觉吗~对拍戏有帮助吗~？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="不知道。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="啊？什么叫不知道~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="我这次要扮演的角色是一个不信邪的无神论青年，但他却总是遇到各种灵异事件。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你就这么剧透给我可以吗~？不过听起并不吓人嘛，感觉还挺有趣的！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嗯，的确是恐怖喜剧的类型。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="最终，这个不信邪的青年通过强行无视和一些巧合，破解了种种灵异事件，虽然剧情喜感，但……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="但？" type="dialog">
+        <attr key="renwu" value="f1"/>
+      </element>
+      <element sentence="但导演说……该恐怖的地方绝对不含糊，说CG特效没有实感，用了许多道具和真人……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哇，老派专业精神，业界良心！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="还良心嘞！用CG多好多省事儿啊！拍片的时候只要面对空气演就好了！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="导演净在奇怪的地方追求细节……（嘟嘟囔囔）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="好啦别抱怨啦~还要不要继续往前走了~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="唔……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="原来唠嗑竟是你逃避继续前进的策略之一……！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="什么！你也太看扁我了！我这不是分享一下新作情报么！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="开玩笑嘛~不过话说回来，就你现在的情况看来，演这角色……问题不小啊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="可不是吗！不然我干嘛要来这里训练！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="那更要仔细研究研究了，也许习惯了就好了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="但愿如此……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="不过和你在聊了半天，好像是有点适应这里的气氛了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="那就继续走吧~还是说，你还想在这个场景多感受一下？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="走了啦！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+    </story>
+    <story desc="3">
+      <element sentence="（十分钟后）" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="npc"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value=" "/>
+      </element>
+      <element sentence="一旦接受了这个设定……似乎，还可以嘛。" type="dialog">
+        <attr key="biaoqing" value="m3_n_02,m3_n_01,m3_n_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="真的吗~开始乐在其中啦~？" type="dialog">
+        <attr key="biaoqing" value="hide"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="呃，还没到那个程度，只是像你学习，从技术的角度观察了一下这里的布置，确实很赞——" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_h"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="不知道我们剧组有没有这个水准……有点期待。" type="dialog">
+        <attr key="biaoqing" value="m3_h_to_n"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="那肯定不能比这儿差吧~毕竟超人气偶像演男主~" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="咳咳，你这话说的，同剧组的还有许多大前辈呢，人家比我不知道高到哪里去了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_to_su_02"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你和他们谈笑风生。" type="dialog">
+        <attr key="biaoqing" value="hide"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="其实我压力很大，本来就是不擅长的类型，万一在前辈面前丢人那就糗了。" type="dialog">
+        <attr key="biaoqing" value="m3_su_to_n"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="一定没问题的~我看你比刚才已经适应多了~…………啊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怎么了！？" type="dialog">
+        <attr key="biaoqing" value="m3_su_wt_02,m3_su_wt_01,m3_su_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="旁边那口棺材……！我记得一开始盖子是盖好的……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="…………绝对没看错，而且你看……是不是有——" type="dialog">
+        <attr key="biaoqing" value="hide"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="有手伸出来了！！" type="dialog">
+        <attr key="biaoqing" value="m3_su_wt_01,m3_su_wt_02,m3_su_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（Bang！）" type="branch">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="npc"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="棺材盖"/>
+      </element>
+      <element sentence="我去！！直接翻了！？！？" type="dialog">
+        <attr key="biaoqing" value="m3_su_ac_01"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="00"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（完了棋洛吓得偶像包袱都没了）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="棋洛别慌！你、你觉得爬出来的会是什么呢？！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哈？！呃……吸血鬼？！" type="dialog">
+        <attr key="biaoqing" value="m3_su_wt_02,m3_su_wt_01,m3_su_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="00"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我猜是……木乃伊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="咯……咯咯…………" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="npc"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="木乃伊"/>
+      </element>
+      <element sentence="哇！猜、猜对了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你到底是开心还是害怕啊！" type="dialog">
+        <attr key="biaoqing" value="m3_su_wt_01,m3_su_wt_02,m3_su_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哈哈哈~都有~！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你赢了！！" type="dialog">
+        <attr key="biaoqing" value="m3_su_wt_02,m3_su_wt_01,m3_su_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="反正这个房间也看得差不多了！我们赶紧去下一个吧！" type="dialog">
+        <attr key="biaoqing" value="m3_su_ac_01"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="咯咯……别想……走……" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="npc"/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="木乃伊"/>
+      </element>
+      <element sentence="我去！爬出来了！这么敬业！" type="dialog">
+        <attr key="biaoqing" value="m3_su_ac_01"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="啊……！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（手被棋洛抓了过去）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="再不走它就要过来了！" type="dialog">
+        <attr key="biaoqing" value="m3_s_ac_02,m3_s_ac_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="咦，不是说只怕飘来飘去的鬼吗？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这和被它抓到是两码事！走啦！" type="dialog">
+        <attr key="biaoqing" value="m3_a_wt_02,m3_a_wt_01,m3_a_wt_03"/>
+        <attr key="beijing" value="140"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="04"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（棋洛抓着我跑了起来——）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="慢点啦！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+    </story>
+    <story desc="4">
+      <element sentence="哈啊……哈啊……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这就大喘气啊？急需锻炼啊%s！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="yifu" value="00"/>
+        <attr key="ruchang" value="3"/>
+        <attr key="renming" value="周棋洛"/>
+        <attr key="lichang" value="1"/>
+      </element>
+      <element sentence="……我那是被你拽得！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="好吧怪我，那你要不要先休息一下？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（我环顾了一下四周）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="连个坐的地方都没有啊……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="我看看？那边的棺材不是可以坐嘛。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你坐一个给我看看……" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="坐就坐，你也来！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（……居然真的坐在了棺材板上……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（我知道是道具……但实在……有点……）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="呼…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……（还是坐了下来）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这个房间和刚才变化不是特别大嘛，老板不走心啊。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你居然还有余裕想这些，看来是真的适应了。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="恐惧源自未知嘛！既然见识过了这里的套路，自然也就不那么怕了。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="呃……当然还是有点毛毛的，不知道这个房间里还有什么新花样。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………咚。" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="棺材盖"/>
+      </element>
+      <element sentence="哇啊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哇啊！别、别突然敲棺材盖啊！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="不是我啊！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊？？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="难、难道……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="咚咚——" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="棺材盖"/>
+      </element>
+      <element sentence="哇啊！！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哇啊！！！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="（我和棋洛都跳了起来！）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="又、又有东西爬出来了！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="这里的人，不对……这里的鬼怎么都喜欢躲在棺材里啊！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="………………" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="丧尸"/>
+      </element>
+      <element sentence="完了，丧尸忘词儿了，都怪你叫那么大声。" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="难道不是你嫌弃人家只会躲棺材吗！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="吼噢噢噢——！！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="丧尸"/>
+      </element>
+      <element sentence="哇啊！扑过来了！%s快跑！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="又要跑！？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="（棋洛不由分说又抓起我的手跑了起来）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嗷呜——！！" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value=""/>
+        <attr key="renming" value="丧尸"/>
+      </element>
+      <element sentence="你到底是丧尸还是狼人啊！！（未完待续）" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+    </story>
+    <story desc="5">
+      <element sentence="哈啊……哈啊……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="连续这么来……呼……不愧是我也跑不动了……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………（已经累到无力说话）" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="你这是生气还是太累啊？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="…………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="……都有！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="哈哈先别气，我还想说经过如此刺激的两次“逃命”后，你没有爱上我~" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="我还左手右手一个慢动作嘞！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="什么嘛，你没听说过【吊桥效应】吗？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="吊桥效应？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="嗯，就是两人在危险的情况下会心跳加快，会以为自己可能爱上了对方，自然就产生了感情——" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="据说还挺科学的，我信了~！" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="等一下。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="怎么啦？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="你是说，“爱上对方”……对吧？" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="啊……" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哇你占我便宜！？" type="dialog">
+        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="哈！？明明是你先提出来的！" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="我从未见过如此厚颜无耻之人……！！" type="dialog">
+        <attr key="biaoqing" value="m3_s_ac_02,m3_s_ac_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m3"/>
+        <attr key="renming" value="周棋洛"/>
+      </element>
+      <element sentence="……………………" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="我决定安静地离开这个是非之地。" type="dialog">
+        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="f1"/>
+        <attr key="renming" value="%s"/>
+      </element>
+      <element sentence="No data" type="dialog">
+        <attr key="biaoqing" value=""/>
+        <attr key="beijing" value="101"/>
+        <attr key="renwu" value=""/>
+        <attr key="yifu" value=""/>
+        <attr key="ruchang" value="2"/>
+        <attr key="renming" value="吃瓜土狗"/>
+      </element>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+      <element sentence="No data" type="dialog"/>
+    </story>
+    <story desc="6">
+      <element sentence="测试测试测试" type="dialog">
+        <attr key="biaoqing" value="m4_n_01,m4_n_02,m4_n_03"/>
+        <attr key="beijing" value="101"/>
+        <attr key="renwu" value="m4"/>
+        <attr key="yifu" value="01"/>
+        <attr key="ruchang" value="2"/>
+        <attr key="renming" value="王志南"/>
+      </element>
+    </story>
+  </card>
+  <card desc="50003"/>
+  <card desc="50004"/>
+  <card desc="50005"/>
+  <card desc="50006"/>
+  <card desc="50007"/>
+  <card desc="50008"/>
+  <card desc="50009"/>
+</story>
