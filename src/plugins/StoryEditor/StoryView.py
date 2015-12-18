@@ -315,7 +315,7 @@ class StoryView(QtGui.QTreeView):
 	def __init__(self, parent = None):
 		super(StoryView, self).__init__(parent)
 		self.setDragDropMode(QtGui.QAbstractItemView.InternalMove)
-		self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+		# self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 		self.model = None
 
 	def setData(self, unitData):

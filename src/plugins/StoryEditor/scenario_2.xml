@@ -226,200 +226,160 @@
   <card desc="50001">
     <story desc="1">
       <element sentence="（呼……累死了）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
-        <attr key="renming" value="%s"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（老板可真能使唤人，动不动就喊我出来跑腿）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（我看看……这个在那边的百货商店就有，这个要去那边的……咦？）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="…………" type="dialog">
-        <attr key="biaoqing" value="m3_n_01,m3_n_02,m3_n_03"/>
-        <attr key="ruchang" value="4"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="ruchang" value="0"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（那个人好像是……）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="……！" type="dialog">
-        <attr key="biaoqing" value="m3_n_to_su"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（真是棋洛，怎么看起来跟做贼似的……）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="No data" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（嗯？看口型好像在喊我过去……）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="棋洛，你在这儿东张西望地……（小声）干什么呢？" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="诶！" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（棋洛二话不说把我拽到了旁边的巷子里）" type="dialog">
-        <attr key="biaoqing" value="f1_n_01,f1_n_02,f1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（还真有点疼……）" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="%s！是我！" type="dialog">
-        <attr key="biaoqing" value="m3_h_wt_01,m3_h_wt_02,m3_h_wt_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="知道是你啦！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="哇噢！我装扮得如此隐蔽居然被你发现了哈哈！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="……你是认真的吗？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="挺认真的啊，虽然被你认出来我觉得情有可原啦。" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="情有可原？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="当然是因为我的脸早已深深地印在了你的脑海里。" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="……难以否认这一点也是蛮不甘心的。" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="好啦，不开玩笑了，你在这儿干什么呢？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="我惯例出来跑腿儿，肯定不是在摸鱼啦。倒是你……" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（我再一次看了看四周，确实没有看到疑似工作人员的身影）" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="倒是你，当红偶像怎么一个人上街？不怕被迷妹绑架？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="怕啊！但是有些时候不得不冒这种风险！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="比如……？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="我已经……" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="我已经三天没有吃过什么像样的东西了！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="经纪公司突然抽风，说要走什么清瘦路线，每天只给我吃沙拉和水果，连续三天了！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="（呃，其实我最近也……虽说单纯是为了减肥，还是别说出来了……）" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="你能体会那种生不如死的日子吗？！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="我能想象，一定十分痛苦！（这话倒是真的）" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="所以啊！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="所以啥？" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="所以我就跑出来自己加餐啦！" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="No data" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="m3"/>
+        <attr key="renwu" value="m1"/>
       </element>
       <element sentence="……（未完待续）" type="dialog">
-        <attr key="biaoqing" value="m1_n_01,m1_n_02,m1_n_03"/>
         <attr key="ruchang" value="0"/>
-        <attr key="renwu" value="f1"/>
+        <attr key="renwu" value="m1"/>
       </element>
     </story>
     <story desc="2">

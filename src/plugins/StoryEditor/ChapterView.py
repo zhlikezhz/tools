@@ -4,6 +4,7 @@ import sys
 import units
 import copy
 import StoryData
+import AttributeData
 from PyQt4 import QtGui, QtCore
 
 class ChapterItem():
@@ -21,7 +22,7 @@ class ChapterItem():
 		return len(self.children)
 
 	def columnCount(self):
-		return 2
+		return 3
 
 	def appendRow(self, item):
 		self.children.append(item)
@@ -50,6 +51,11 @@ class ChapterItem():
 		if(column == 0):
 			return units._fromUtf8(units.typeMapping(self.getType()))
 		elif(column == 1):
+			if(self.unitData.attrib.has_key('renwu')):
+				showValue = AttributeData.MatchMgr().getShowValue('renwu', self.unitData.attrib['renwu'])
+				return units._fromUtf8(showValue)
+			return ""
+		elif(column == 2):
 			return units._fromUtf8(self.unitData.sentence)
 		return None
 
@@ -61,6 +67,9 @@ class ChapterItem():
 				if(unitType['val'] == value1):
 					self.unitData.type = unitType['key']
 		elif(column == 1):
+			pass
+			#self.unitData.attrib['renwu'] = units._toUtf8(value.toString())
+		elif(column == 2):
 			self.unitData.sentence = units._toUtf8(value.toString())
 
 	def getParent(self):
@@ -144,6 +153,8 @@ class ChapterModel(QtCore.QAbstractItemModel):
 			if(setion == 0):
 				return units._fromUtf8("类型")
 			elif(setion == 1):
+				return units._fromUtf8("人物")
+			elif(setion == 2):
 				return units._fromUtf8("语句")
 		return None
 
@@ -297,18 +308,29 @@ class ChapterView(QtGui.QTreeView):
 		self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 		self.index = None
 		self.model = None
-		self.multiChoose = False
 
-	def updateSelection(self, selected, deselected):
+	def isMultiSelectionModel(self):
+		if (self.model == None or self.selectionModel() == None):
+			return False
+
 		selectionModel = self.selectionModel()
 		indexes = selectionModel.selectedIndexes()
-		number = len(indexes) / 2
+		number = len(indexes) / self.model.columnCount()
 
 		if(number > 1):
-			self.multiChoose = True
-			self.delegateView.setAttributeData(StoryData.UnitData())
-		else:
-			self.multiChoose = False
+			return True
+		return False
+
+	# def updateSelection(self, selected, deselected):
+	# 	selectionModel = self.selectionModel()
+	# 	indexes = selectionModel.selectedIndexes()
+	# 	number = len(indexes) / 2
+
+	# 	if(number > 1):
+	# 		self.multiChoose = True
+	# 		self.delegateView.setAttributeData(StoryData.UnitData())
+	# 	else:
+	# 		self.multiChoose = False
 
 	def setView(self, view):
 		self.delegateView = view
@@ -326,10 +348,10 @@ class ChapterView(QtGui.QTreeView):
 		self.model = ChapterModel(itemRoot)
 		self.setModel(self.model)
 
-		QtCore.QObject.connect(self.selectionModel(), QtCore.SIGNAL(units._fromUtf8("selectionChanged(QItemSelection, QItemSelection)")), self.updateSelection)
+		# QtCore.QObject.connect(self.selectionModel(), QtCore.SIGNAL(units._fromUtf8("selectionChanged(QItemSelection, QItemSelection)")), self.updateSelection)
 
 	def setAttbribute(self, unitData):
-		if(self.multiChoose == False):
+		if(self.isMultiSelectionModel() == False):
 			if(self.index != None and self.index.isValid()):
 				currIndex = self.selectionModel().currentIndex()
 				if(self.index.internalPointer() == currIndex.internalPointer()):
@@ -338,6 +360,9 @@ class ChapterView(QtGui.QTreeView):
 					self.model.setData(index, QtCore.QVariant(units._fromUtf8(unitData.type)))
 
 					index = self.model.index(currIndex.row(), 1, parentIndex)
+					self.model.setData(index, QtCore.QVariant(""))
+
+					index = self.model.index(currIndex.row(), 2, parentIndex)
 					self.model.setData(index, QtCore.QVariant(units._fromUtf8(unitData.sentence)))
 
 					item = index.internalPointer()
@@ -349,13 +374,18 @@ class ChapterView(QtGui.QTreeView):
 
 			indexRowList = []
 			for index in indexes:
+
+				parentIndex = self.model.parent(index)
+				index = self.model.index(index.row(), 1, parentIndex)
+				self.model.setData(index, QtCore.QVariant(""))
+
 				row = index.row()
 				if not (row in indexRowList):
 					indexRowList.append(row)
 					item = index.internalPointer()
 					for (key, value) in unitData.attrib.iteritems():
 						item.unitData.attrib[key] = value
-					item.unitData.attrib = self.delegateView.cleanAttribute(item.unitData.attrib)
+						item.unitData.attrib = AttributeData.MatchMgr().filterAttribute(item.unitData.attrib)
 
 	def addItem(self):
 		if(self.hasFocus()):
@@ -379,14 +409,17 @@ class ChapterView(QtGui.QTreeView):
 			self.model.insertRow(self.model.rowCount(index), index)
 
 	def clickRowLeft(self):
-		if (self.model == None or self.selectionModel() == None or self.multiChoose == True):
+		if (self.model == None or self.selectionModel() == None):
 			return False
 
-		index = self.selectionModel().currentIndex()
-		if(index.isValid()):
-			self.index = index
-			item = self.model.getItem(index)
-			self.delegateView.setAttributeData(item.unitData)
+		if(self.isMultiSelectionModel() == False):
+			index = self.selectionModel().currentIndex()
+			if(index.isValid()):
+				self.index = index
+				item = self.model.getItem(index)
+				self.delegateView.setAttributeData(item.unitData)
+		else:
+			self.delegateView.setAttributeData(StoryData.UnitData())
 
 	def clickRowRight(self):
 		if (self.model == None or self.selectionModel() == None):

@@ -105,9 +105,6 @@ class MainWin(QtGui.QMainWindow, UIMainWin.Ui_storyWindow):
 		totalWords = self.storyView.calculateTotalWords()
 		self.setWords(totalWords)
 
-	def cleanAttribute(self, data):
-		return self.attributeView.cleanAttribute(data)
-
 	def closeEvent(self, event): 
 		if(self.storyMgr != None):
 			ret = QtGui.QMessageBox.warning(self, units._fromUtf8('保存'), 
